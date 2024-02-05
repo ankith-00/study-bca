@@ -42,7 +42,7 @@ html {
 }
 .links{
   margin-top: 14px;
-  margin-left: 18px;
+  margin-left: 22px;
 }
 .links a {
   text-decoration : none ;
@@ -63,7 +63,7 @@ html {
   position: absolute;
   margin-top: 48px;
   height: auto;
-  width: 100%;
+  width: 97%;
   
   padding: 14px;
 }
@@ -74,15 +74,15 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 98%;
-  height: auto;
+  width: 96%;
+  height: 420px;
   
 }
 .box{
   width: 168px; 
   height: 200px;
   border : 1px solid #000;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center ; 
@@ -101,6 +101,9 @@ html {
 }
 .rec-container .box img{
     margin-top: 20px;
+}
+.rec-container .box span{
+  margin-left: 45px;  
 }
 .container-01 .heading{
   font-size : 15px;
@@ -142,7 +145,6 @@ td {
 a{
     text-decoration : none;
 }
-
 button{
     padding :4px 10px 4px 10px;
     border: 1px solid #000000;
@@ -152,7 +154,6 @@ button{
 button a {
     color : #000;
 }
-
 
 /* STUDY-BCA LOGO ANIMATION 
 @keyframes typewriter {
