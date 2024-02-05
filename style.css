@@ -113,7 +113,7 @@ html {
   text-decoration: none;
 }
 .rec-container{
-    height: 205px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
