@@ -99,19 +99,8 @@ html {
     text-decoration: none;
     color: #000;
 }
-/*New code */
-.rec-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 96%;
-  height: 205px;  
-}
 .rec-container .box img{
     margin-top: 20px;
-}
-.rec-container .box span{
-  margin-left: 45px;  
 }
 .container-01 .heading{
   font-size : 15px;
