@@ -82,7 +82,7 @@ html {
   width: 168px; 
   height: 200px;
   border : 1px solid #000;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center ; 
@@ -104,6 +104,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 96%;
+  height: 205px;  
+  padding : 0px 14px 0px 14px;   
 }
 .rec-container .box img{
     margin-top: 20px;
