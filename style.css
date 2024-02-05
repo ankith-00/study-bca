@@ -87,9 +87,6 @@ html {
   flex-wrap: wrap;
   justify-content: center ; 
 }
-.margin{
-    margin-left: 40px;
-}
 .box img{
     margin-top: 20px;
 }
@@ -116,7 +113,7 @@ html {
   text-decoration: none;
 }
 .rec-container{
-    height: auto;
+    height: 420px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
