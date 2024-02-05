@@ -79,10 +79,10 @@ html {
   
 }
 .box{
-  width: 163px; 
+  width: 160px; 
   height: 200px;
   border : 1px solid #000;
-  margin-bottom: 20px;
+  margin: 0px 0px 20px 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center ; 
@@ -129,7 +129,7 @@ table {
     margin-top: 40px;
     border-collapse: collapse;
     border: 1px solid black;
-    width: 98%;
+    width: 96%;
 }
 
 td {
