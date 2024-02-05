@@ -87,7 +87,9 @@ html {
   flex-wrap: wrap;
   justify-content: center ; 
 }
-
+.margin{
+    margin-left: 40px;
+}
 .box img{
     margin-top: 20px;
 }
@@ -102,7 +104,7 @@ html {
 .rec-container .box img{
     margin-top: 20px;
 }
-.rec-container .box span{
+.rec-container span{
   margin-left: 45px;  
 }
 .container-01 .heading{
