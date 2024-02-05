@@ -63,7 +63,7 @@ html {
   position: absolute;
   margin-top: 48px;
   height: auto;
-  width: 97%;
+  width: 98%;
   
   padding: 14px;
 }
@@ -79,7 +79,7 @@ html {
   
 }
 .box{
-  width: 168px; 
+  width: 163px; 
   height: 200px;
   border : 1px solid #000;
   margin-bottom: 20px;
@@ -129,7 +129,7 @@ table {
     margin-top: 40px;
     border-collapse: collapse;
     border: 1px solid black;
-    width: 100%;
+    width: 98%;
 }
 
 td {
