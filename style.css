@@ -63,9 +63,8 @@ html {
   position: absolute;
   margin-top: 48px;
   height: auto;
-  width: 98%;
-  
-  padding: 14px;
+  width: 98%; 
+  padding: 13px;
 }
 .container-01 p{
   font-size: 14px;
