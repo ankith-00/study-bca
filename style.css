@@ -1,18 +1,18 @@
-html {
+body {
   padding: 0px;
-  height: 100%;
-  width: 100%;
-  
+  margin : 0px;  
 }
 *{
   font-family: andalé Mono,monospace;  
+  
 }
-.header{ 
-  margin: -8px -3px 0px 0px;
+.header{
   width: 100%;
   height: 55px;
   position: fixed;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   z-index: 100;
   background: #fff;
   
@@ -22,10 +22,11 @@ html {
   margin-left: 4px;
 }
 .text-logo{
-  margin-top: -1px;
-  margin-left: 4px;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 60px;
 }
-.logo-text{ 
+.text-logo p{ 
   font-weight: bolder;
   font-size: 16px;
   letter-spacing: 2px;
@@ -39,14 +40,17 @@ html {
   
 }
 .links{
-  margin-top: 14px;
-  margin-left: 22px;
+  position: relative ;
+  margin : 20px 12px 0px 4px;
+
+  
 }
 .links a {
   text-decoration : none ;
   font-size: 15px;
   color : #000;
-  margin-left: 20px;
+  margin-left: 8px;
+  
 }
 
 .container-01 .find-text{
@@ -61,8 +65,9 @@ html {
   position: absolute;
   margin-top: 48px;
   height: auto;
-  width: 98%; 
-  padding: 13px;
+  width: 97%;
+  
+  padding: 14px;
 }
 .container-01 p{
   font-size: 14px;
@@ -76,14 +81,15 @@ html {
   
 }
 .box{
-  width: 160px; 
+  width: 168px; 
   height: 200px;
   border : 1px solid #000;
-  margin: 0px 0px 20px 5px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center ; 
 }
+
 .box img{
     margin-top: 20px;
 }
@@ -98,7 +104,7 @@ html {
 .rec-container .box img{
     margin-top: 20px;
 }
-.rec-container span{
+.rec-container .box span{
   margin-left: 45px;  
 }
 .container-01 .heading{
@@ -117,13 +123,15 @@ html {
     justtify-contant: space-between;   
 }
 
-
+.margin{
+    margin-left: 20px;
+}
 
 table {
     margin-top: 40px;
     border-collapse: collapse;
     border: 1px solid black;
-    width: 96%;
+    width: 100%;
 }
 
 td {
@@ -162,4 +170,3 @@ button a {
 */
 
 
-  
