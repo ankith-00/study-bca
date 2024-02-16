@@ -65,9 +65,9 @@ body {
   position: absolute;
   margin-top: 48px;
   height: auto;
-  width: 97%;
+  width: 100%;
   
-  padding: 14px;
+  padding: 18px;
 }
 .container-01 p{
   font-size: 14px;
