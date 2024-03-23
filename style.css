@@ -372,7 +372,7 @@ html{
     }
     
     .landing_page .explore{
-        transform: translateY(-10px);
+        transform: translateY(-80px);
        
     }.landing_page button{
         margin-top : 1.5em;
