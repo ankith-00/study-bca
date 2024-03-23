@@ -17,6 +17,404 @@
  
 <!-- STYLE FILE  -->
 <link rel="stylesheet" href="style.css">
+<style>
+/* AUTHOR : ANKITH KUMAR         */
+/* BENGALURU CITY UNIVERSITY     */
+/* PROJECT - 01 : STUDY ( BCA )  */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin : 0;
+    padding : 0;
+    font-family : "Lexend", sans-serif; 
+}
+   
+.header{
+  width           : 100%;
+  height          : auto;
+  position        : fixed;
+  display         : grid;
+  z-index         : 100;
+  margin-top      : 0.5em;
+  
+}.nav_bar{
+    width : 93%;
+    height : 3.5em;
+    display : flex;
+    justify-content : space-between;
+    border : 1px solid #000;
+    border-radius : 1em;
+    z-index : 100;
+    background : #28282B;    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
+    
+}.menu:after{
+  position        : absolute;
+  right           : 1rem;
+  
+}.menu{
+    max-height    : 0;
+    overflow : hidden; 
+    margin-top : -1.8em;
+    transition    : max-height 0.3s ease-out; 
+     
+}.menu_content{   
+   height : 65vh;
+   width : 93.1%;
+   border-radius : 1em; 
+   padding-top : 4em;
+   background : #28282B;   
+    
+}.menu_content  a  { 
+    display : flex;
+    margin-left : 3em;
+    
+}.menu_content p{
+    display : flex;
+    font-family : "Lexend", sans-serif; 
+    font-size : 1.3em;
+    font-weight : 700;
+    margin : 0 2em 0 1em;
+    color : #fff;  
+    padding-bottom : 8px;    
+    width :90%;
+    border-bottom : 2px solid orange ;
+    
+}.menu_content ul{
+    list-style : none;
+    margin-top : 1em;
+    
+}.menu_content a {
+    text-decoration : none;
+    font-size : 0.95em;
+    padding-top : 0.7em;
+    color : #fff;
+    
+}.material-symbols-outlined{
+    font-size : 2.5em;
+    font-weight : 800;
+    padding : 0.2em 0.3em 0 0.3em;
+    color : #fff;
+    
+}.hamburger{
+    cursor: pointer;
+    font-size : 2.8em;
+    font-weight : normal;
+    padding : 0.1em 0.3em 0 0.3em;
+    
+}
+
+
+.container {
+    width : 100%;
+    height : auto;
+    display : flex ;
+    justify-content : center;
+    align-items : center;
+    background : #fff;
+    
+    
+}.container-content{
+    width : 80%;
+    height : auto;
+    background : #fff;
+    
+}
+
+
+.landing_page{
+    padding-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+
+  
+}.landing_page .box{
+    width: 50%;
+    height: auto;
+    
+}.landing_page  img{
+    padding-left: 6em;
+    width: 85%;
+    object-fit: cover;
+
+}.box p{
+    color: #1B1B1B;
+    font-size: 2.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}.box span{
+    font-size: 1.2em;
+    color: #1A1110;
+
+}.box button{
+    cursor: pointer;
+    margin-top: 4em;
+    border-radius: 1em;
+    padding: 1em;
+    width: 50%;
+    background-color: #28282B;
+    color: #fff;
+    transition: background-color 0.5s ease;
+
+}.box button:hover{
+    border: 2px solid #28282B;
+    background-color: #fff;
+    color : #000;
+}
+
+#notes{
+    color: #fff;
+    position: relative;
+    margin-bottom: 5.5em;
+}
+
+
+.h3{
+    color: #000;
+    font-size: 1.42rem;
+    padding: 0 0 20px 20px;
+    font-weight: 600;
+  
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 0px auto;
+    padding: 20px;
+    gap: 20px;
+    
+    
+}.card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+    
+}.card-list .card-item:hover {
+    border: 2px solid #000;
+    
+}.card-list .card-item img {
+    width: 51%;
+    aspect-ratio: 8/8;
+    border-radius: 8px;
+    object-fit: cover;
+    
+}.card-item h3 {
+    color: #000;
+    font-size: 1.42rem;
+    margin-top: 28px;
+    font-weight: 600;
+    
+}.card-list p {
+    font-size : 0.85em;
+    color : #000;
+}
+
+
+.upload_back{
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 8rem; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    
+}.upload_popup{
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 4em;
+    border-radius: 0.5em;
+    width: 38%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  
+
+}@-webkit-keyframes animatetop {
+    from {
+        top:-300px; 
+        opacity:0
+
+    } to {
+        top:0; 
+        opacity:1;
+    }
+
+}@keyframes animatetop {
+    from {
+        top:-300px; 
+        opacity:0;
+    }to {
+        top:0; 
+        opacity:1;
+    }
+}
+
+.upload_popup h3{
+    padding-left: 0;
+    padding-bottom: 1.5em;
+
+}#x {
+    border-radius: 0;
+    font-size: 0.8em;
+    font-weight: 700;
+    position: absolute;
+    margin: 2em 2em 0 0 ;
+    top: 0;
+    right: 0;
+    padding: 0.35em  0.65em;
+    background-color: #28282B;
+    color :  #fff;
+    border: 1px solid #28282B;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    
+}#x:hover{
+    background: #fff;
+    color : #28282B;
+
+}.upload_popup p, label{
+    font-size: 0.9em;
+
+}.upload_popup input{
+    cursor: pointer;
+    accent-color: #000;
+    width: 1.1em;
+    height: 1.1em;
+
+}.upload_popup button{
+    padding : 0.5em 4em;
+    background-color: transparent;
+    border: 1px solid #28282B;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    border-radius: 0.8em;
+
+}.upload_popup button:hover{
+    background: #28282B;
+    color : #fff;
+}
+
+.upload{
+    margin-top: 3em;
+    width: auto;
+    padding: 0 0.5em 0 1.5em;
+    
+}.upload p, .footer p{
+    font-size: 0.9em;
+
+}.upload button{
+    background-color: #28282B;
+    color: #fff;
+    border-radius: 0.8em;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+    padding: 0.5em 4em;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+}.upload button:hover{
+    border: 2px solid #28282B;
+    background-color: #fff;
+    color : #000;
+}
+
+.footer{
+    width: auto;
+    margin-top: 3em;
+    padding: 0 0.5em 0 1.5em;
+
+}.footer a{
+    text-decoration: none;
+}
+
+
+
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width : 480px){
+  
+    .menu_content {
+       width : 93.4%; 
+    }
+    .container-content{
+        width : 100%;
+    }
+    
+    .landing_page{
+        margin-top: 8em;
+        padding: 1.5em;
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+    .landing_page .box{    
+        width: 100%;
+        height: auto;
+    }
+    .box p{
+        width: 100%;
+        font-size: 1.5em;
+
+    }
+    .box span{
+        font-size: 1em;
+    }
+    .img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box img{
+        margin-top: 2em;
+        padding-left: 0;
+        width : 95%;
+        object-fit: cover;
+    }
+    
+    .landing_page .explore{
+        transform: translateY(-130px);
+       
+    }.upload_popup{
+        margin-top: 6em;
+        padding: 3em 1.5em 3em 1.5em;
+        width: 88%;
+        height: auto;
+    }
+   
+  
+   
+}
+
+
+
+
+
+
+    
+</style>
+
+
+    
 </head>
 <body>
     
