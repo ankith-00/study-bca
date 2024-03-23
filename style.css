@@ -363,9 +363,9 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 4em;
     }
     .box img{
+        padding-top: 4em;
         padding-left: 0;
         width : 95%;
         object-fit: cover;
