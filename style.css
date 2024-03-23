@@ -372,9 +372,12 @@ html{
     }
     
     .landing_page .explore{
-        transform: translateY(-180px);
+        transform: translateY(-185px);
        
-    }.upload_popup{
+    }.landing_page button{
+        margin-top : 1.5em;
+    }   
+    .upload_popup{
         padding: 3em 1.5em 3em 1.5em;
         width: 88%;
         height: auto;
