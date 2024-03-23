@@ -363,7 +363,7 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateY(-80px);
+        margin-top: 1em;
     }
     .box img{
         padding-left: 0;
