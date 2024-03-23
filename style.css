@@ -366,7 +366,6 @@ html{
         align-items: center;
     }
     .box img{
-        margin-top: 2em;
         padding-left: 0;
         width : 95%;
         object-fit: cover;
