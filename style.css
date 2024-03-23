@@ -342,8 +342,8 @@ html{
         width : 100%;
     }
     
-    .landing_page{
-        
+    .landing_page{ 
+        padding-top: 0px;
         padding: 1.5em;
         flex-direction: column-reverse;
         height: 90vh;
@@ -355,7 +355,6 @@ html{
     .box p{
         width: 100%;
         font-size: 1.5em;
-
     }
     .box span{
         font-size: 1em;
@@ -364,6 +363,7 @@ html{
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: translateY(-80px);
     }
     .box img{
         padding-left: 0;
@@ -375,7 +375,6 @@ html{
         transform: translateY(-130px);
        
     }.upload_popup{
-        margin-top: 3em;
         padding: 3em 1.5em 3em 1.5em;
         width: 88%;
         height: auto;
