@@ -343,7 +343,7 @@ html{
     }
     
     .landing_page{
-        margin-top: 8em;
+        
         padding: 1.5em;
         flex-direction: column-reverse;
         height: 90vh;
@@ -375,7 +375,7 @@ html{
         transform: translateY(-130px);
        
     }.upload_popup{
-        margin-top: 6em;
+        margin-top: 3em;
         padding: 3em 1.5em 3em 1.5em;
         width: 88%;
         height: auto;
