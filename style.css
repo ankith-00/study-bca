@@ -365,14 +365,14 @@ html{
         align-items: center;
     }
     .box img{
-        padding-top: 4em;
+        padding-top: 7em;
         padding-left: 0;
         width : 95%;
         object-fit: cover;
     }
     
     .landing_page .explore{
-        transform: translateY(-130px);
+        transform: translateY(-180px);
        
     }.upload_popup{
         padding: 3em 1.5em 3em 1.5em;
