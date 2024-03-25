@@ -365,14 +365,14 @@ html{
         align-items: center;
     }
     .box img{
-        padding-top: 6.5em;
+        padding-top: 5.5em;
         padding-left: 0;
         width : 95%;
         object-fit: cover;
     }
     
     .landing_page .explore{
-        transform: translateY(-80px);
+        transform: translateY(-60px);
        
     }.landing_page button{
         margin-top : 1.5em;
