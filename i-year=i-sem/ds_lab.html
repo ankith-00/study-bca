@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DS Lab Manual 01</title>
+    <link rel="stylesheet" href="prism.css">
+    
+<!--- GOOGLE ICON LINK -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<!-- GOOGLE FONT LINK -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet"> 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F5X4M59SCT');
+</script>
+
+<style>
+*{
+  margin         : 0px ;
+  padding        : 0px;
+  box-sizing     : border-box;
+  font-family    : 'Lexend', sans-serif; 
+  
+}
+
+.back{
+  background     : #ffff;  
+  position       : fixed ;
+  z-index        : 100;
+  height         : 2.9em;
+  width          : 100%;
+  display        : flex;
+  padding        : 0.5em 0 0.2em 0.4em;
+  border         : 1px solid rgba(0,0,0,0.2);   
+  color          : #000;   
+    
+}.material-symbols-outlined {    
+    color        : #000;
+    font-weigh   : normal;
+    font-size    : 1.8em;
+    
+}.heading {
+    width        : 100%;
+    display      : flex;
+    justify-content : space-between;
+    
+}.heading p{
+  font-size      : 0.98em; 
+  margin         : 0.3em 0 0 1.5em;  
+  font-weight    : 600;
+  letter-spacing : 0.8px; 
+  
+}.published{
+    font-weight  : normal;
+}  
+
+.container {
+    width        : 100%;
+    height       : auto;
+    display      : flex ;
+    justify-content : center;
+    align-item   : center;
+    background   : #f8f8f8;    
+    
+}.container-content{
+    margin       : 1.5em 0 0 0;
+    padding      : 2em;
+    width        : 75%;
+    height       : auto;
+    background   : #fff;
+    
+} 
+
+h3{
+    padding-top    : 1em;
+    width          : 100%;
+    
+    
+}.sub{
+    font-size      : 0.8em;
+    padding-bottom : 1.5px;
+    border-bottom  : 2px solid orange;
+    
+}.program_heading{
+    font-size   : 0.95em ;
+    font-weight : bold;
+    
+}.program_name{
+   font-size    : 0.95em;
+    
+}.margin{
+  margin-top    : 5em; 
+    
+}
+
+@media only screen and (max-width : 480px){
+
+   .container-content {
+       width    : 100%;
+       padding  : 0.95em;
+       padding-top : 3em;
+       
+    }.sem{
+       padding-right : 1em;
+       
+    }.rec-01{
+       justify-content : space-between;
+       
+    }  
+   
+}     
+</style>    
+</head>
+<body>
+<!-- NAV START -->
+<div class="back">    
+   <a href=" ">
+     <span class="material-symbols-outlined">
+first_page </span>
+   </a>
+  <div class="heading">
+    <p> ASTRO <span class="published">द्वारा प्रकाशित </span></p> 
+  </div> 
+</div>
+<!-- NAV END -->        
+    
+<!-- CONTAINER -->    
+<div class="container">
+  <!-- CONTAINER CONTENT -->
+  <div class="container-content">
+  
+  <h3>DATA STRUCTURES</h3>
+  <p class="sub">Lab Manual</p>  
+  <br/><br/>   
+            
+<!-- PROGRAM NO - 01 -->
+<p class="program_name"><span class="program_heading">PROGRAM - 01 : </span> Given (4,7,3,2,1,7,9,0) find the location of 7 using Linear and Binary  search and also display its first occurrence.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+// Binary Search function
+int binarySearch(int arr[],int size, int target)
+{
+   int left=0;
+   int right=size-1;
+   while(left<=right)
+   {
+      int mid=left+(right-left)/2;        
+      if(arr[mid]==target)
+      {
+         return mid;
+      }
+      else if(arr[mid]&lt;target)
+      {
+         left=mid+1;
+      }
+      else
+      {
+         right=mid-1;
+      }
+   }
+   return -1; //Element Not Found
+}
+
+//Linear Search Function
+int linearSearch(int i,int arr[],int size,int target)
+{
+   for(i=0;i&lt;size;i++)
+   {
+      if(arr[i]==target)
+      {
+         return i;
+      }
+   }
+   return -1; //Element not found
+}
+
+int main()
+{
+   int arr[]={4,7,3,2,1,7,9};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int i,j,temp,location,FO,target=7;
+   int binaryLocation;
+   int linearLocation;
+   clrscr();
+
+   //Sort the array
+   for(i=0;i&lt;size-1;i++)
+   {
+      for(j=0;j&lt;size-i-1;j++)
+      {
+         if(arr[j]>arr[j+1])
+         {
+            //Swap arr[j] and arr[j+1]
+            temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=temp;
+          }
+       }
+   }
+  
+   binaryLocation=binarySearch(arr,size,target);
+   linearLocation=linearSearch(i,arr,size,target);
+  
+   if(binaryLocation!=-1)
+   {
+      printf("\nUSING BINARY SEARCH\n”);
+      printf(“The element %d is found at index :%d\n",target,binaryLocation);
+      FO=binaryLocation;
+      while(FO>0&&arr[FO-1]==target)
+      {
+         FO--;
+      }
+      printf("\nThe First Occurrence of %d is at index : %d\n\n",target,FO);
+   }
+   else
+   {
+      printf("Element %d not found using binary search\n",target);
+   }
+   if(linearLocation!=-1)
+   {
+      printf("USING LINEAR SEARCH  \n”);
+      printf(“The element %d is found at index : %d\n",target,linearLocation);
+   }
+   else
+   {
+     printf("Element %d is not found using linear search\n",target);
+   }
+   getch();
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">USING BINARY SEARCH 
+The element 7 is found at index : 5
+
+The first occurance of 7 is at index : 4;  
+
+USING LINEAR SEARCH 
+The element 7 is found at index : 4</code></pre>    
+
+
+
+<!-- PROGRAM  NO - 02 -->   
+<p class="program_name margin"><span class="program_heading">PROGRAM - 02 : </span>Given (5,3,1,6,0,2,4) order the numbers in ascending order using Bubble Sort Algorithm. </p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+void bubbleSort(int arr[], int n)
+{
+   int i, j, temp;
+   for (i = 0; i &lt; n-1; i++)
+   {
+      for (j = 0; j &lt; n-i-1; j++)
+      {
+         if (arr[j] &gt; arr[j+1])
+         {
+            temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+         }
+      }
+      printf("Pass - %d: ", i+1);
+      for (int k = 0; k &lt; n; k++)
+      {
+         printf("%d ", arr[k]);
+      }
+      printf("\n");
+   }
+}
+
+
+int main()
+{
+   int arr[] = {5, 3, 1, 6, 0, 2, 4};
+   int n = sizeof(arr) / sizeof(arr[0]);        
+   printf("Original array: ");
+   for (int i = 0; i &lt; n; i++)
+   {
+      printf("%d ", arr[i]);
+   }
+   printf("\n\n");
+   bubbleSort(arr, n);
+   printf("\n\n");
+   printf("Sorted array: ");
+   for (int i = 0; i &lt; n; i++)
+   {
+      printf("%d ", arr[i]);
+   }
+   getch()    
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Original array : 5 3 1 6 0 2 4 
+
+pass - 1 : 3 1 5 0 2 4 6
+pass - 2 : 1 3 0 2 4 5 6
+pass - 3 : 1 0 2 3 4 5 6
+pass - 4 : 0 1 2 3 4 5 6 
+pass - 5 : 0 1 2 3 4 5 6</code></pre>
+
+
+
+
+
+
+
+
+<!-- PROGRAM  NO - 03 -->
+<p class="program_name margin"><span class="program_heading">PROGRAM - 03 : </span>Perform the Insertion and Selection Sort on the input  (75,8,1,16,48,3,7,0) and display the output in descending order.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+// Insertion sort function 
+void insertionSort(int arr[], int n)
+{
+   int i, key, j;
+   for (i = 1; i &lt; n; i++)
+   {
+     key = arr[i];
+     j = i - 1;
+     while (j &gt;= 0 && arr[j] &lt; key)
+     {
+        arr[j + 1] = arr[j];
+        j = j - 1;
+     }
+     arr[j + 1] = key;
+   }
+}
+
+
+// Selection sort function
+void selectionSort(int arr[], int n)
+{
+   int i, j, max_idx;
+   for (i = 0; i &lt; n - 1; i++)
+   {
+      max_idx = i;
+      for (j = i + 1; j &lt; n; j++)
+      {
+         if (arr[j] &gt; arr[max_idx])
+         {
+            max_idx = j;
+            int temp = arr[max_idx];
+            arr[max_idx] = arr[i];
+            arr[i] = temp;
+         }
+      }
+   }
+}
+
+int main()
+{
+   int arr[] = {75, 8, 1, 16, 48, 3, 7, 0};
+   int n = sizeof(arr) / sizeof(arr[0]);
+   clrscr();
+
+   printf("\nArray before sorting : ");
+   for (int i = 0; i &lt; n; i++)
+   {
+      printf("%d ", arr[i]);
+   }   
+   insertionSort(arr, n);
+   printf("\n\nINSERTION SORT");
+   printf("\nArray after Insertion Sort \nIn descending order : ");
+   for (int i = 0; i &lt; n; i++)
+   {
+      printf("%d ", arr[i]);
+   }
+   selectionSort(arr, n);
+   printf("\n\nSELECTION SORT");
+   printf("\nArray after Selection Sort \nIn descending order : ");
+   for (int i = 0; i &lt; n; i++)
+   {
+      printf("%d ", arr[i]);
+   }
+   getch();
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Array before sorting : 75 8 1 16 48 3 7 0
+INSERTION SORT
+Array after Insertion sort 
+In descending order : 75 48 16 8 7 3 1 
+
+SELECTION SORT
+Array after Selection sort 
+In descending order : 75 48 16 8 7 3 1</code></pre>
+
+
+   
+<!-- PROGRAM  NO - 04 -->
+<p class="program_name margin"><span class="program_heading">PROGRAM - 04 : </span>Write a program to insert the elements (61,16,8,27) into a singly linked list and delete 8,61,27 from the list. Display your list after each insertion and deletion.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;stdlib.h&gt;
+
+//Define a structure for the singly linked list
+struct Node
+{
+   int data;
+   struct Node* next;
+};
+
+//Function to display the linked list
+void displayList(struct Node* head)
+{
+   struct Node* current = head;
+   while(current!=NULL)
+   {
+      printf("%d→", current->data);
+      current =current->next;
+   }
+   printf("NULL\n");
+}
+
+//Function to insert a new element at the beginning of the linked list
+struct Node* insertelement(struct Node* head,int data)
+{
+   struct Node* newNode = (struct    Node*)malloc(sizeof(struct Node));
+   newNode ->data = data;
+   newNode ->next = head;
+   return newNode;
+}
+
+//Function to delete a specific element from the linked list
+struct Node* deleteElement(struct Node* head,int data)
+{
+   struct Node* current =head;
+   struct Node* prev = NULL;
+   while(current != NULL)
+   {
+     if(current->data==data)
+     {
+        if(prev==NULL)
+        {
+           //If the element to delete is the head of the list
+           head=current->next;
+        }
+        else
+        {
+           prev->next=current->next;
+        }
+        free(current);
+        return head;
+     }
+     prev=current;
+     current=current->next;
+   }
+   return head;
+}
+
+int main()
+{
+   struct Node* head = NULL;
+   clrscr();
+
+
+   //Insert element into the list
+   printf("\nINSERTING ELEMENTS\n")
+ 
+   head=insertelement(head, 61);
+   printf("Linkedlist after inserting 61 :  ");
+   displayList(head);
+
+   head=insertelement(head, 16);
+   printf("Linkedlist after insertin 16  :   ");
+   displayList(head);
+
+   head=insertelement(head,8);
+   printf("Linkedlist after inserting 8  :  ");
+   displayList(head);
+
+   head=insertelement(head,27);
+   printf("Linkedlist after inserting 27 :  ");
+   displayList(head);
+   printf("\n");
+
+
+   //Delete elements from the list
+   printf("\nDELETING ELEMENTS\n");
+        
+   head = deleteElement(head,8);
+   printf("Linkedlist after deleting 8  :  ");
+   displayList(head);
+
+   head = deleteElement(head, 61);
+   printf("Linkedlist after deleting 61 :  ");
+   displayList(head);
+
+   head= deleteElement(head,27);
+   printf("Linkedlist after deleting 27 :  ");
+   displayList(head);
+
+
+   //Free memory and clean up
+   while(head!= NULL)
+   {
+      struct Node* temp=head;
+      head = head->next;
+      free(temp);
+   }
+   getch();
+   return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">INSERTING ELEMENTS
+Linkedlist after inserting 61 : 61->NULL
+Linkedlist after inserting 16 : 16->61->NULL
+Linkedlist after inserting 8  :  8->16->61->NULL
+Linkedlist after inserting 27 : 27->8->16->61->NULL
+
+DELETING ELEMENTS
+Linkedlist after deleting  8  : 27->16->61->NULL
+Linkedlist after inserting 61 : 27->8->16->NULL
+Linkedlist after inserting 27 : 8->16->61->NULL</code></pre>
+
+
+   
+<!-- PROGRAM  NO - 05 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 05 : </span>Write a program to insert the elements (61,16,8,27) into a linear queue and delete three elements from the list. Display your list after each insertion and deletion.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#define MAX_SIZE 5
+
+int queue[MAX_SIZE];
+
+int front = -1;
+int rear = -1;
+
+void enqueue(int element)
+{
+   if (rear == MAX_SIZE - 1)
+   {
+      printf("Queue is full. Cannot insert element.\n");
+   } 
+   else
+   {
+      if (front == -1)
+      {
+         front = 0;
+      }
+      rear++;
+      queue[rear] = element;
+      printf("Element %d inserted successfully. \n" ,element);
+   }
+}
+
+void dequeue()
+{
+   if (front == -1 || front &gt; rear)
+   {
+      printf("Queue is empty. Cannot delete elements. \n");
+   } 
+   else
+   {
+      printf("Element %d deleted successfully. \n", queue[front] );
+      front++;
+   }
+}
+
+void display()
+{
+   if (front == -1 || front > rear)
+   {
+      printf("Queue is empty.\n");
+   }
+   else
+   {
+      printf("Elements in the queue: ");
+      for (int i = front; i <= rear; i++)
+      {
+          printf("%d ", queue[i]);
+      }
+      printf("\n");
+   }
+}
+
+int main()
+{
+   printf("\nINSERTING ELEMENTS \n--------------------------\n" );
+
+   enqueue(61);
+   display();
+
+   enqueue(16);
+   display();
+
+   enqueue(8);
+   display();
+
+   enqueue(27);
+   printf("\n");
+   display();
+
+   printf("\n\nDELETING ELEMENTS \n------------------------\n");
+   dequeue();
+   display();
+
+   dequeue();
+   display();
+
+   dequeue();
+   printf("\n");
+   display();
+
+   getch();
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">INSERTING ELEMENTS 
+--------------------------
+Element 61 inserted successfully. 
+Elements in queue : 61 
+Element 16 inserted successfully. 
+Elements in queue : 61 16
+Element 8 inserted successfully. 
+Elements in queue : 61 16 8
+Element 27 inserted successfully. 
+
+Elements in queue : 61 16 8 27
+
+
+DELETING ELEMENTS 
+--------------------------
+Element 61 deleted successfully.
+Elements in the queue : 16 8 27
+Element 16 deleted successfully.
+Elements in the queue : 8 27
+Element 8 deleted successfully.
+
+Elements in the queue : 27
+</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 06 -->
+<p class="program_name margin"><span class="program_heading">PROGRAM - 06 : </span>Write a c program to insert the elements {61,16,8,27} into a circular queue and delete 4 elements from the list. Display your list after each insertion and deletion.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+#define MAX_SIZE 4
+
+//Circular Queue structure
+struct cirque
+{
+   int items[MAX_SIZE];
+   int front,rear;
+};
+
+//Function to initialize the circular queue
+void initque(struct cirque *que)
+{
+   que->front=-1;
+   que->rear=-1;
+}
+
+//Function to check if the queue is empty
+int isEmpty(struct cirque *que)
+{
+   return(que->front==-1 && que->rear==-1);
+}
+int isFull(struct cirque *que)
+{
+   return(que->front==(que->rear+1)%MAX_SIZE);
+}
+
+//Function to insert an element into the circular queue 
+void enque(struct cirque *que,int value)
+{
+   if(isFull(que))
+   {
+      printf("Queue is full. Cannot insert %d.\n",value);
+      return;
+   }
+   if(isEmpty(que))
+   {
+      que->front=0;
+      que->rear=0;
+   }
+   else
+   {
+      que->rear=(que->rear+1)%MAX_SIZE;
+   }
+   que->items[que->rear]=value;
+   printf("Inserted %d into the the queue.\n",value);
+}
+
+// Function to insert an element into the circular queue 
+void enque(struct cirque *que,int value)
+{
+   if(isFull(que))
+   {
+      printf("Queue is full. Cannot insert %d.\n",value);
+
+      return;
+   }
+   if(isEmpty(que))
+   {
+      que->front=0;
+      que->rear=0;
+   }
+   else
+   {
+      que->rear=(que->rear+1)%MAX_SIZE;
+   }
+      que->items[que->rear]=value;
+      printf("Inserted %d into the the queue.\n",value);
+}
+
+
+// Function to delete an element from the circular queue 
+void deque(struct cirque *que)
+{
+   if(isEmpty(que))
+   {
+     printf("Queue is empty. Cannot delete.\n");
+     return;
+   }
+   printf("Deleted %d from the queue.\n:" , que->items[que->front]);
+   if(que->front==que->rear)
+   {
+      //Last element in the queue
+      initque(que);
+   }
+   else
+   {
+      que->front=(que->front+1)%MAX_SIZE;
+   }
+}
+
+// Function to display the elements in the circular queue 
+void display(struct cirque *que)
+{
+   int i;
+   if(isEmpty(que))
+   {
+      printf("Queue is empty.\n");
+      return;
+   }
+   printf("Current state of the queue : ");
+   i=que->front;
+  do{
+       printf(" %d ",que->items[i]);
+       i=(i+1)%MAX_SIZE;
+     }while(i!=(que->rear+1)%MAX_SIZE);
+    printf("\n");
+}
+
+//Main function
+int main()
+{
+   struct cirque que;
+   clrscr();
+   initque(&que);
+
+   //Inserting elements into the circular queue
+   printf("\nADING AN ELEMENT\n");
+
+   enque(&que,61);
+   display(&que);
+
+   enque(&que,16);
+   display(&que);
+
+   enque(&que,8);
+   display(&que);
+
+   enque(&que,27);
+   display(&que);
+
+   //Deleting elements from the circular que
+   printf("\nDELETING AN ELEMENT\n");
+
+   deque(&que);
+   display(&que);
+
+   deque(&que);
+   display(&que);
+
+   deque(&que);
+   display(&que);
+
+   deque(&que);
+   display(&que);
+
+   getch();
+   return 0;
+
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">ADDING AN ELEMENT 
+Inserted 61 into the queue.
+Current state of the queue : 61
+Inserted 16 into the queue.
+Current state of the queue : 61 16
+Inserted 8 into the queue.
+Current state of the queue : 61 16 8 
+Inserted 27 into the queue.
+Current state of the queue : 61 16 8 27
+
+DELETING AN ELEMENT
+Deleting 61 from queue.
+Current status of queu : 16 8 2
+Deleting 16 from queue.
+Current status of queu : 8 27
+Deleting 8 from queue.
+Current status of queu : 27
+Deleting 27 from queue.
+Queue is empty. 
+</code></pre>
+
+
+   
+<!-- PROGRAM  NO - 07 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 07 : </span> Write a c program to insert the elements {61,16,8,27} into an ordered singly linked list and delete 8,61,27 from the list. Display your list after each insertion and deletion.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;stdlib.h&gt;
+
+// Node structure for the linked list
+struct Node
+{
+   int data;
+   struct Node* next;
+};
+
+
+// Function to create a new node
+struct Node* createNode(int value)
+{
+    struct Node* newNode = (struct l Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to insert an element into the ordered linked list
+void insertOrdered(struct Node** head, int value)
+{
+    struct Node* newNode = createNode(value);
+    if (*head == NULL || value < (*head)->data)
+    {
+       newNode->next = *head; *head = newNode;
+    }
+    else
+   {
+       struct Node* current = *head;
+       while (current->next != NULL & current->next->data < value)
+       {
+          current = current->next;
+       }
+       newNode->next = current->next;
+       current->next = newNode;
+    }
+    printf("Inserted %d into the list.\n",value);
+}
+
+// Function to delete a specific element from the linked list
+void deleteNode(struct Node* *head, int value)
+{
+   if (*head == NULL)
+   {
+      printf("List is empty. Cannot delete %d.\n", value);
+      return;
+   }
+   struct Node* temp = *head;
+   struct Node* prev = NULL;
+   
+   // Find the node to be deleted
+   while (temp != NULL && temp->data != value)
+   {
+      prev = temp;
+      temp = temp->next;
+   }
+   if (temp == NULL)
+   {
+      printf("%d not found in the list. Cannot delete.\n", value);
+      return;
+   }
+   if (prev == NULL)
+   {
+      // Deleting the head node;
+      *head = temp->next;
+   }
+   else
+   {
+      // Deleting a non-head node
+      prev->next = temp->next;
+   }
+   free(temp);
+   printf("Deleted %d from the list.\n", value);
+}
+
+// Function to display the elements in the linked list 
+void displayList(struct Node* head)
+{
+    if (head == NULL)
+    {
+       printf("List is empty.\n");
+       return;
+    }
+    printf("Current state of the list: ");
+    while (head != NULL)
+    {
+       printf("%d ", head->data);
+       head = head->next;
+    }
+   printf("\n");
+}
+
+// Main function
+int main()
+{
+   struct Node* head = NULL;
+   clrscr();
+ 
+
+   //Inserting elements into the ordered linked list 
+   printf("\nINSERTING ELEMENTS \n");
+
+   insertOrdered(&head, 61);
+   displayList(head);
+
+   insertOrdered(&head, 16);
+   displayList(head);
+
+   insertOrdered(&head, 8);
+   displayList(head);
+
+   insertOrdered(&head, 27);
+   displayList(head);
+
+   // Deleting elements from the linked list
+   printf("\nDELETING ELEMENTS \n");
+
+   deleteNode(&head, 8);
+   displayList(head);
+ 
+   deleteNode(&head, 61);
+   displayList(head);
+
+   deleteNode(&head, 27);
+   displayList(head);
+
+   getch();
+   return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">INSERTING ELEMENTS 
+inserting 61 into the list.
+Current status of the list : 61
+inserting 16 into the list.
+Current status of the list : 61 16
+inserting 8 into the list.
+Current status of the list : 61 16 8
+inserting 27 into the list.
+Current status of the list : 61 16 8 27
+
+
+DELETING ELEMENTS
+Deleting 8 from list.
+Current status of the list : 61 16 27
+Deleting 61 from list.
+Current status of the list : 16 27
+Deleting 16 from list.
+Current status of the list : 27</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 08 -->
+<p class="program_name margin"><span class="program_heading">PROGRAM - 08 : </span>Write a program to add 6x+10x²+0x+5 and 4x²+2x+1 using a linked list.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;stdlib.h&gt;
+
+struct Node
+{
+   int coefficient;
+   int exponent;
+   struct Node* next;
+};
+
+
+struct Node* createNode(int coefficient, int exponent)
+{
+   struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+   newNode->coefficient = coefficient;
+   newNode->exponent = exponent;
+   newNode->next = NULL;
+   return newNode;
+}
+
+struct Node* addPolynomials(struct Node* poly1, struct Node* poly2)
+{
+    struct Node* result = NULL;
+    struct Node* temp = NULL;
+    while (poly1 != NULL || poly2 != NULL)
+   {
+      int coeff1 = (poly1 != NULL) ? poly1->coefficient : 0;
+      int coeff2 = (poly2 != NULL) ? poly2->coefficient : 0;
+      int expo1 = (poly1 != NULL) ? poly1->exponent : -1;
+      int expo2 = (poly2 != NULL) ? poly2->exponent : -1;
+      if (expo1 == expo2)
+      {
+         int sumCoefficients = coeff1 + coeff2;
+         if (sumCoefficients != 0)
+         {
+            temp = createNode(sumCoefficients,expo1);     
+            temp->next = result;
+            result = temp;
+         }
+         poly1 = poly1->next;
+         poly2 = poly2->next;
+      }
+      else
+      {
+         if (expo1 > expo2)
+         {
+            temp = createNode(coeff1, expo1);
+            temp->next = result;
+            result = temp;
+            poly1 = poly1->next;
+         }
+         else
+         {
+            temp = createNode(coeff2, expo2);
+            temp->next = result;
+            result = temp;
+            poly2 = poly2->next;
+         }
+   }
+   return result;
+}
+
+int main()
+{
+   struct Node* poly1 = createNode(6, 3);
+   clrscr();
+
+    poly1->next = createNode(10, 2);
+    poly1->next->next = createNode(0, 1);
+    poly1->next->next->next = createNode(5, 0);
+    struct Node* poly2 = createNode(4, 2);
+    poly2->next = createNode(2, 1);
+    poly2->next->next = createNode(1, 0);
+
+    printf("Polynomial 1: ");
+    displayPolynomial(poly1);
+
+    printf("Polynomial 2: ");
+    displayPolynomial(poly2);
+
+    struct Node* result = addPolynomials(poly1, poly2);
+    printf("Result: ");
+    displayPolynomial(result);
+
+    freePolynomial(poly1);
+    freePolynomial(poly2);
+    freePolynomial(result);
+
+    getch();
+    return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Polynomial 1 : 6x^3 + 10x^²  + 0x^1 + 5^x0
+Polynomial 2 : 4x^2 + 2x^1 + 1x^0
+Result : 6x^0 2x^1 14x^2 6x^3</code></pre>
+
+
+   
+<!-- PROGRAM  NO - 09 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 09 : </span>Write a program to push 5,9,34,17,32 into stack and pop 3 times from the stack, also display the popped numbers.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+#define MAX_SIZE 5
+
+int stack[MAX_SIZE];
+int top=-1;
+
+int isFull()
+{
+   return top==MAX_SIZE-1;
+}
+
+int isEmpty()
+{
+   return top==-1;
+}
+
+void push(int item)
+{
+   if(isFull())
+   {
+       printf("Stack is full.Cannot push %d.\n",item);
+   }
+   else
+   {
+      top++;
+      stack[top]=item;  
+      printf("Pushed %d  onto the stack \n",item);
+   }
+}
+
+int pop()
+{
+   if(isEmpty())
+   {
+      printf("Stack is empty.cannot pop.\n");
+      return -1;
+   }        
+   else
+   {
+      int item=stack[top];
+      top--;
+      return item;
+   }
+}
+
+int main()
+{
+   int i,poppedelele;
+   printf("\nPUSH\n\n");
+   push(5);
+   push(9);
+   push(34);
+   push(17);
+   push(32);
+
+   printf("\nPOP\n\n");
+   for(i=0;i<3;i++)
+   {
+      poppedelele=pop();
+      if(poppedelele!=-1)
+      {
+         printf("Popped %d from the stack\n",poppedelele);
+      }
+    }
+    getch();
+    return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">PUSH
+Pushed 5 onto the stack
+Pushed 9 onto the stack
+Pushed 34 onto the stack
+Pushed 17 onto the stack
+Pushed 32 onto the stack
+
+POP
+poped 32 from stack
+poped 17 from stack
+poped 34 from stack</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 10 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 10 : </span>Write a recursive program to find GCD of 4,6,8</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+int findGCD(int a,int b)
+{
+   if(b==0)
+   {
+     return a;
+   }
+   else
+   {
+       return findGCD(b,a%b);
+   }
+}
+
+int main()
+{
+   int n1=4,n2=6,n3=8;
+   int gcd1,gcd2;
+   clrscr();
+
+   gcd1=findGCD(n1,n2);
+   gcd2=findGCD(gcd1,n3);
+   printf("\nGCD\n\nOF %d %d and %d is : %d", n1, n2,n3,gcd2);
+   getch();
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">GCD of 4 , 6 and 8 is : 2</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 11 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 11 : </span>Write a program to insert the elements ( 5,7,0,6,3,9 ) into a circular queue and delete 6,9 & 5 from it( using linked list implementation ).</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;stdlib.h&gt;
+
+// Node structure for the linked list
+struct Node
+{
+   int data;
+   struct Node* next;
+};
+
+// Circular Queue structure
+struct CircularQueue
+{
+   struct Node* front;
+   struct Node* rear;
+};
+
+
+// Function to create a new node
+struct Node* createNode(int value)
+{
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to initialize the circular queue
+void initializeQueue(struct CircularQueue *queue)
+{
+   queue->front = NULL;
+   queue->rear = NULL;
+}
+
+// Function to check if the queue is empty
+int isEmpty(struct CircularQueue *queue)
+{
+   return (queue->front == NULL && queue->rear == NULL);
+}
+
+
+// Function to insert an element into the circular queue 
+void enqueue(struct CircularQueue *queue, int value)
+{
+   struct Node* newNode = createNode(value);
+   if (isEmpty(queue))
+   {
+      queue->front = newNode;
+      queue->rear = newNode;
+      newNode->next = newNode
+   }
+   else
+   {
+      newNode->next = queue->front;
+      queue->rear->next = newNode;
+      queue->rear = newNode;
+   }
+   printf("Inserted %d into the queue.\n",value);
+}
+
+// Function to delete a specific element from the circular queue 
+void dequeue(struct CircularQueue *queue, int value)
+{
+   if (isEmpty(queue))
+   {
+      printf("Queue is empty. Cannot delete %d.\n", value);
+      return;
+   }
+   struct Node* current = queue->front;
+   struct Node* prev = NULL;
+
+   // Find the node to be deleted
+   do
+   {
+      if (current->data == value)
+      {
+         break;
+      }
+      prev = current;
+      current = current->next;
+   } while (current != queue->front);
+   
+   if (current == queue->front)
+   {
+      // Deleting the front node
+     if (queue->front->next == queue->front)
+     {
+         // Only one node in the queue
+         initializeQueue(queue);
+      }
+      else
+      {
+         queue->front = queue->front->next;
+         queue->rear->next = queue->front;
+      }
+    }
+    else
+    {
+         // Deleting a non-front node
+         prev->next = current->next;
+
+         // Check if the deleted node is the rear 
+         if (current == queue->rear)
+         {
+            queue->rear = prev;
+         }
+      }
+      free(current);
+      printf("Deleted %d from the queue.\n",value);
+}
+
+// Function to display the elements in the circular queue 
+void displayQueue(struct CircularQueue *queue)
+{
+    if (isEmpty(queue))
+    {
+       printf("Queue is empty.\n");
+       return;
+    }
+    printf("Current state of the queue: ");
+    struct Node* current = queue->front;
+  
+   do
+   {
+      printf("%d ", current->data);
+      current = current->next;
+   } while (current != queue->front);
+   
+   printf("\n");
+}
+
+
+
+// Main function
+int main()
+{
+   struct CircularQueue queue;
+   initializeQueue(&queue);
+   clrscr();
+
+   // Inserting elements into the circular    queue
+   printf("\nINSERTING ELEMENTS\n");
+ 
+   enqueue(&queue, 5);
+   displayQueue(&queue);
+
+   enqueue(&queue, 7);
+   displayQueue(&queue);
+
+   enqueue(&queue, 0);
+   displayQueue(&queue);
+ 
+   enqueue(&queue, 6);
+   displayQueue(&queue);
+
+   enqueue(&queue, 3);
+   displayQueue(&queue);
+
+   enqueue(&queue, 9);
+   displayQueue(&queue);
+
+   // Deleting elements from the circular queue
+   printf("\nDELETING ELEMENTS\n");
+  
+   dequeue(&queue, 6);
+   displayQueue(&queue);
+
+   dequeue(&queue, 9);
+   displayQueue(&queue);
+
+   dequeue(&queue, 5);
+   displayQueue(&queue);
+
+   getch();
+   return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">INSERTING 
+Inserted 5 into the queue 
+Current status of queue : 5 
+Inserted 7 into the queue
+Current status of queue : 5 7
+Inserted 0 into the queue
+Current status of queue : 5 7 0  
+Inserted 6 into the queue 
+Current status of queue : 5 7 0 6
+Inserted 3 into the queue 
+Current status of queue : 5 7 0 6 3
+5 Inserted 9 into the queue 
+Current status of queue : 5 7 0 6 3 9 
+
+DELETING 
+Deleted 6 from queue
+Current status of queue : 5 7 0 3 9
+Deleted 9 from queue
+Current status of queue : 5 7 0 3 
+Deleted 5 from queue
+Current status of queue : 7 0 3 9</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 12 -->  
+<p class="program_name margin"><span class="program_heading">PROGRAM - 12 : </span>Write a program to convert an infix expression x^y/(5*z)+2 to its postfix expression</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;string.h&gt;
+#define MAX_SIZE 50
+
+int mystack[MAX_SIZE];
+int top;
+
+//Function to check if a character is an operator
+int isOperator(char c)
+{
+   return(c=='+'||c=='-'||c=='*'||c=='/'||c=='^');
+}
+
+//Function to get the precedence of an operator
+int getPrecedence(char operator)
+{
+   if(operator =='^')
+   return 3;
+   if(operator=='*'||operator=='/')
+   return 2;
+   if(operator=='+'||operator=='-')
+   return 1;
+   return 0;
+}
+
+
+//Function to push an element onto the stack
+void push(int item)
+{
+   if(top ==MAX_SIZE-1)
+   {
+      printf("Stack Overflow\n");
+   }
+   else
+  {
+      mystack[++top]=item;
+  }
+}
+
+//Function to pop an element from the stack
+int pop()
+{
+   if(top == -1)
+   {
+      printf("Stack Underflow\n");
+      return -1;
+   }
+   else
+   {
+      return mystack[top--];
+   }
+}
+
+void infixToPostfix(char infix[])
+{
+   char postfix[MAX_SIZE],i;
+   int postfixIndex=0;
+   for(i=0;infix[i]!='\0'; i++)
+   {
+      char c = infix[i];
+      if(c=='(')
+     {
+         push(c);
+     }
+     else
+     {  
+         if(c == ')')
+         {
+            while(top>=0 && mystack[top]!='(')
+            {
+                postfix[postfixIndex++]=pop();
+            }
+            pop();
+         }
+         else if(!isOperator(c))
+         {
+            postfix[postfixIndex++]=c;
+         }
+         else
+         {
+            while(top>=0 && getPrecedence(mystack[top])>=getPrecedence(c))
+            {
+                postfix[postfixIndex++]=pop();
+            }
+            push(c);
+         }
+     }
+     while(top>=0)
+     {
+         postfix[postfixIndex++]=pop();
+     }
+     postfix[postfixIndex++] ='\0';
+     printf("\nPostfix Expression : %s",postfix );
+}
+
+int main()
+{
+   char infix[MAX_SIZE];
+   clrscr();
+
+   printf("\nEnter the infix expression\n(without spaces) :");
+   gets(infix, MAX_SIZE, stdin);
+   infixToPostfix(infix);
+
+   getch();
+   return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Enter the infix expression\n(without spaces) : x^y/(5*z)+2
+Postfix expression : xy^5z*/2+</code></pre>
+
+
+ 
+<!-- PROGRAM  NO - 13 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 13 : </span>Write a program to evaluate a postfix expression : 5 3 +8 2 - *</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#define MAX_SIZE 50
+
+int stack[MAX_SIZE];
+int top=-1;
+
+int isOperand(char c)
+{
+   return(c>='0' && c<'9');
+}
+
+
+void push(int item)
+{
+   if(top==MAX_SIZE-1)   
+   {
+       printf("Stack Overflow\n");
+       exit(1);
+   }
+   stack[++top]=item;
+
+}
+
+int pop()
+{
+
+   if(top==-1)
+    {
+        printf("Stack underflow\n");
+        exit(1);
+    }
+    return stack[top--];
+}
+
+int evaluatePostfix(char postfix[])
+{
+
+   int i=0;
+   while(postfix[i]!='\0')
+   {
+      char c=postfix[i];
+      if(isOperand(c))
+      {
+          push(c-'0');
+
+      }
+      else
+      {
+          int operand2=pop();
+          int operand1=pop();
+          int result;
+          switch(c)
+          {
+             case '+': result=operand1+operand2;
+             break;
+             case '-': result=operand1-operand2;
+             break;
+             case '*': result=operand1*operand2;
+             break;
+             case '/': result=operand1/operand2;
+             break;
+             default:
+                printf("Invalid operator:%c\n",c);
+                exit(1);
+          }
+          push(result);
+      }
+      i++;
+   }
+   return pop();
+}
+
+int main()
+{
+   char postfix[]="5 3 + 8 2 - *";
+   int result;
+   clrscr();
+
+   result=evaluatePostfix(postfix);
+   printf("Result of the postfix expression:%d\n",result);        
+   getch();
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Result of the postfix expression: 48</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 14 --> 
+<p class="program_name margin"><span class="program_heading">PROGRAM - 14 : </span>Write a program to create a binary tree with the elements (18,15,40,50,30,17,41) after creation insert 45 and 19 into the tree and delete 15,17 and 41 from the tree. Display the tree on each insertion and deletion operation</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;stdlin.h&gt;
+
+// Define a structure for a binary tree node
+struct Node
+{
+   int data;
+   struct Node *left;
+   struct Node *right;
+};
+
+
+// Function to create a new node
+struct Node *createNode(int value)
+{
+   struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
+   newNode->data = value;
+   newNode->left = newNode->right = NULL;
+   return newNode;
+}
+
+// Function to insert a value into the binary tree 
+struct Node *insert(struct Node *root, int value)
+{
+   if (root == NULL)
+      return createNode(value);
+   if (value < root->data)
+      root->left = insert(root->left, value)
+   else if (value > root->data);
+      root->right = insert(root->right, value);
+   return root;
+}
+
+// Function to find the minimum value in a binary tree 
+struct Node *minValueNode(struct Node *node)
+{
+   struct Node *current = node;
+   while (current->left != NULL)
+   current = current->left;
+   return current;
+}
+
+// Function to delete a value from the binary tree 
+struct Node *deleteNode(struct Node *root, int value)
+{
+   if (root == NULL)
+      return root;
+   if (value &lt; root->data)
+      root->left = deleteNode(root->left,value);
+   else if (value &gt; root->data)
+      root->right = deleteNode(root->right,value);
+   else
+   {
+       // Node with only one child or no child
+       if (root->left == NULL)
+       {
+           struct Node *temp = root->right;
+           free(root);
+           return temp;
+       }
+       else if (root->right == NULL)
+       {
+           struct Node *temp = root->left;
+           free(root);
+           return temp;
+       }
+       // Node with two children, get the inorder
+       // Successor (smallest in the right Subtree 
+       struct Node *temp = minValueNode(root->right);    
+      // Copy the inorder successor's data to this node 
+       root->data = temp->data;
+      // Delete the inorder successor
+       root->right = deleteNode(root->right,temp->data);
+   }
+   return root;
+}
+
+// Function to print the elements of the binary tree 
+
+//Inorder traversal
+void inorderTraversal(struct Node *root)
+{
+   if (root != NULL)
+   {
+      inorderTraversal(root->left);
+      printf("%d ", root->data);
+      inorderTraversal(root->right);
+   }
+}
+
+int main()
+{
+    struct Node *root = NULL;
+   // Insert elements into the binary tree
+   int elements[] = {18, 15, 40, 50, 30, 17,41};
+   
+   int numElements = sizeof(elements)  sizeof(elements[0]);
+   int i;
+   for (i = 0; i < numElements; i++)
+   {
+      root = insert(root, elements[i]);
+      printf("Tree after inserting %d: ",elements[i]);
+      inorderTraversal(root);
+      printf("\n");
+   }
+   
+   // Insert additional elements
+   root = insert(root, 45);
+   printf("Tree after inserting 45: ");
+   inorderTraversal(root);
+   printf("\n"); 
+   
+   root = insert(root, 19);
+   printf("Tree after inserting 19: ");   
+   inorderTraversal(root);
+   printf("\n");
+
+   // Delete elements from the binary tree
+   int elementsToDelete[] = {15, 17, 41};
+
+   int numElementsToDelete = sizeof(elementsToDelete) sizeof(elementsToDelete[0]);
+   for (i = 0; i < numElementsToDelete; i++)
+   {
+       root = deleteNode(root,elementsToDelete[i]);
+       printf("\nTree after deleting %d: ", elementsToDelete[i]);
+       inorderTraversal(root);
+       printf("\n");
+    }
+    getch();
+    return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Tree after inserting 18 : 18
+Tree after inserting 15 : 15 18
+Tree after inserting 40 : 15 18 40
+Tree after inserting 50 : 15 18 40 50
+Tree after inserting 30 : 15 18 30 40 50 
+Tree after inserting 30 : 15 17 18 30 40 50 
+Tree after inserting 41 : 15 17 18 30 40 41 50 
+Tree after inserting 45 : 15 17 18 30 40 41 45 50 
+Tree after inserting 19 : 15 17 18 19 30 40 41 45 50 
+
+Tree after deleting 15 : 17 18 19 30 40 41 45 50 
+Tree after deleting 17 : 18 19 30 40 41 45 50 
+Tree after deleting 41 : 18 19 30 40 45 50 30</code></pre>
+
+
+  
+<!-- PROGRAM  NO - 15 -->
+<p class="program_name margin"><span class="program_heading">PROGRAM - 15 : </span>Write a program to create a binary search tree with the elements (2,5,1,3,9,0,6) and perform inorder. preorder and post order traversal.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;stdlib.h&gt;
+
+// Structure for a node
+struct Node
+{
+   int data;
+   struct Node* left;
+   struct Node* right;
+};
+
+
+// Function to create a new node
+struct Node* createNode(int data)
+{
+   struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+   newNode->data = data;
+   newNode->left = NULL;
+   newNode->right = NULL;
+   return newNode;
+}
+
+// Function to insert a node in BST
+struct Node* insert(struct Node* root, int data)
+{
+   if (root == NULL)
+   {
+      return createNode(data);
+   }
+   else if (data &lt; root->data)
+   {
+      root->left = insert(root->left, data);
+   }
+   else if (data &gt; root->data)
+   {
+      root->right = insert(root->right, data);
+   }
+   return root;
+}
+
+// Function for inorder traversal
+void inorder(struct Node* root)
+{
+   if (root != NULL)
+    {
+       inorder(root->left);
+       printf("%d ", root->data);
+       inorder(root->right);
+    }
+}
+
+// Function for preorder traversal
+void preorder(struct Node* root)
+{
+   if (root != NULL) 
+   {
+      printf("%d ", root->data);
+      preorder(root->left);
+      preorder(root->right);
+    }
+}
+
+// Function for postorder traversal
+void postorder(struct Node* root)
+{
+   if (root != NULL)
+   {
+      postorder(root->left);
+      postorder(root->right);
+      printf("%d ", root->data);
+    }
+}
+
+// Function for postorder traversal
+void postorder(struct Node* root)
+{
+   if (root != NULL)
+   {
+      npostorder(root->left);
+      postorder(root->right);
+      printf("%d ", root->data);
+
+    }
+}
+
+int main()
+{
+   struct Node* root = NULL;
+   int elements[] = {2, 5, 1, 3, 9, 0, 6};
+   int numElements = sizeof(elements) sizeof(elements[0]);
+   clrscr();
+
+ 
+   // Inserting elements into the BST
+   for (int i = 0; i < numElements; i++)
+   {
+      root = insert(root, elements[i]);
+   }
+
+   printf("Inorder traversal   : ");
+   inorder(root);
+   printf("\n\n");
+
+   printf("Preorder traversal  : ");
+   preorder(root);
+   printf("\n\n");
+
+   printf("Postorder traversal : ");
+   postorder(root);
+   printf("\n\n");
+
+   getch();
+   return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Inorder traversal   : 0 1 2 3 5 6 9 
+Preorder traversal  : 2 1 0 5 3 9 6
+Postorder traversal : 0 1 3 6 9 5 2</code></pre>
+
+
+   
+<!-- PROGRAM  NO - 16 -->   
+<p class="program_name margin"><span class="program_heading">PROGRAM - 16 : </span>Write a program to Sort the following elements using heap sort { 9.16, 32, 8, 4, 1, 5, 8, 0 }</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+// Function to perform heapify operation on the array
+void heapify(int arr[], int n, int i)
+{
+   int largest = i;
+   int leftChild = 2 * i + 1;
+   int rightChild = 2 * i + 2;
+
+   // Check if left child is larger than root
+   if (leftChild &lt; n &&  arr[leftChild]arr[largest])
+   {
+      largest = leftChild;
+   }
+
+   // Check if right child is larger than largest so far 
+   if (rightChild &lt; n &&arr[rightChild]arr[largest])
+   { 
+      largest = rightChild;
+   }
+
+   // If largest is not the root, swap and recursively heapify the affected subtree 
+   if (largest != i)
+   {
+      int temp = arr[i];
+      arr[i] = arr[largest];
+      arr[largest] = temp;
+      heapify(arr, n, largest);     
+   }
+}
+
+// Function to perform Heap Sort
+void heapSort(int arr[], int n)
+{
+   int i;
+   // Build max heap
+   for (i = n / 2 - 1; i >= 0; i--)
+   {
+       heapify(arr, n, i);    
+   }
+
+   // Extract elements from the heap one by one
+   for (i = n - 1; i > 0; i--)
+   {
+      // Swap the root (maximum element) with the last element
+      int temp = arr[0];
+      arr[0] = arr[i];
+      arr[i] = temp;
+
+      // Call heapify on the reduced heap
+      heapify(arr, i, 0);
+   }
+}
+
+// Function to print an array
+void printArray(int arr[], int size)
+{
+   int i;
+   for (i = 0; i < size; i++)
+   {
+      printf("%d ", arr[i]);
+   }
+   printf("\n");
+}
+
+// Main function
+int main()
+{
+   // Given elements
+   int arr[] = {9, 16, 32, 8, 4, 1, 5, 8, 0};
+   int n = sizeof(arr) / sizeof(arr[0]);
+   clrscr();
+ 
+   printf("Original array: ");
+   printArray(arr, n);
+
+   // Perform Heap Sort
+   heapSort(arr, n);
+   printf("Sorted array: ");
+   printArray(arr, n);
+   getch();
+   return 0;
+}</code></pre> <br/>
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">Original array : 9 16 32 8 4 1 5 8 0 
+Sorted array : 0 1 4 5 9 16 32</code></pre>
+
+
+<!-- PROGRAM  NO - 17 -->
+<p class="program_name margin"><span class="program_heading">PROGRAM - 17 : </span> Given SI=("Flowers"); <br/> S2=("are beautiful")<br/>
+I. Find the length of S1<br/>
+II. Concatenate S1 and S2<br/>
+III. Extract the substring "low" from SI<br/>
+IV. Find "are" in S2 and replace it with "is”</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;string.h&gt;
+
+int main()
+{
+   // Given strings
+   char S1[] = "Flowers";
+   char S2[] = "are beautiful";
+   clrscr();
+
+  
+   // I. Find the length of S1
+   int lengthS1 = strlen(S1);
+   printf("I. Length of S1: %d\n", lengthS1);
+
+   // II. Concatenate S1 and S2
+   char concatenated[50];
+
+   //Assuming a maximum length for the concatenated string
+   strcpy(concatenated, S1);
+   strcat(concatenated, " ");
+   strcat(concatenated, S2);
+   printf("II. Concatenated string: %s\n",concatenated);
+
+   // III. Extract the substring "low" from S1
+   char substring[4];
+
+   // Assuming a maximum length for the substrig
+   strncpy(substring, S1+1, 3);
+   substring[3] = '\0';
+   printf("III. Extracted substring from S1: %s\n",substring);  
+ 
+   // IV. Find "are" in S2 and replace it with "is” declares the 'found' variable and replace here.
+   char*found=strstr(S2,"are");
+   if(found!=NULL)
+   {
+     strncpy(found,"is",2);
+     found[2]='\0';
+   }
+   printf("IV. Modified S2: %s\n", S2);
+
+   getch();
+   return 0;
+}</code></pre> <br/>
+
+<span class="program_heading">OUTPUT</span>
+<br/>
+<pre><code class="language-">I. Length of S1 : 7 
+II. Concatenated string : flowers are beautiful 
+III. Extracted substring from S1 : low  
+IV. Modified S2 : is</code></pre>
+  
+ 
+       
+  </div>
+  <!-- END OF CONATINER CONTENT -->
+</div>
+<!-- END OF CONTAINER  -->
+<script src="prism.js"></script>  
+</body>
+</html>
