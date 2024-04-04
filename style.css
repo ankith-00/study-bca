@@ -446,7 +446,7 @@ html{
     border-radius: 10px 10px 0 10px;
     max-width: 85%;
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 1em;
     background: #28282B;
   }
   .chatbox .incoming p {
@@ -478,7 +478,7 @@ html{
     resize: none;
     max-height: 1.5em;
     padding: 15px 15px 15px 0;
-    font-size: 0.95rem;
+    font-size: 1em;
   }
   .chat-input span {
     align-self: flex-end;
