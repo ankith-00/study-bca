@@ -73,7 +73,30 @@ radio_button_unchecked </span>
 <div class="container"> 
  <!-- CONATINER CONTENT-BOX -->
  <div class="container-content">
- 
+     
+ <!-- CHATBOT STARTS HERE -->
+ <button class="chatbot-toggler">
+    <span class="material-symbols-outlined">radio_button_unchecked</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Astro</h2>
+      <span class="close-btn">x</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">radio_button_unchecked</span>
+        <p>Hi I am AStro !</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Ask any question..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">GO</span>
+    </div>
+  </div>
+  <!-- CHATBOT ENDS HERE -->
+     
   <!-- LANDING PAGE -->
   <div class="landing_page">
     <!-- BOX - 01-->
@@ -275,8 +298,126 @@ function check_box(){
     
 }
 
-
-
+document.addEventListener('contextmenu', function(event){
+  event.preventDefault();
+})    
 </script>
+<script type="importmap">
+  {
+    "imports": {
+      "@google/generative-ai": "https://esm.run/@google/generative-ai"
+    }
+  }
+</script>
+
+<!-- CHATBOT SCRIPT --->
+<script type="module">
+  import { GoogleGenerativeAI } from "@google/generative-ai";
+  const genAI = new GoogleGenerativeAI('AIzaSyCrJBo9cGU1iDlJ86Bb1T8lpyG1jjwLDps');
+
+
+  const chatbotToggler = document.querySelector(".chatbot-toggler");
+  const closeBtn = document.querySelector(".close-btn");
+  const chatbox = document.querySelector(".chatbox");
+  const chatInput = document.querySelector(".chat-input textarea");
+  const sendChatBtn = document.querySelector(".chat-input span");
+
+  let userMessage = null;
+  const inputInitHeight = chatInput.scrollHeight;
+
+  async function runModel(prompt){
+      const model =genAI.getGenerativeModel({model : "gemini-pro"});
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text  = await response.text();
+      return text;
+  }
+
+
+  const createChatLi = (message, className) => {
+      const chatLi = document.createElement("li");
+      chatLi.classList.add("chat", `${className}`);
+      let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">radio_button_unchecked </span><p></p>`;
+      chatLi.innerHTML = chatContent;
+
+
+      
+      chatLi.querySelector("p").textContent = message;
+      return chatLi;
+  }
+
+  const generateResponse = async (chatElement, userMessage) => {
+      const messageElement = chatElement.querySelector("p");
+      try{
+          const answer  = await runModel(userMessage);
+          
+          let answer2 = answer.split("**");
+          let answer3 =" ";
+
+          for(let i=0; i < answer2.length; i++){
+            if(i==0 || i%2 !==1){
+              answer3 += answer2[i];
+            }
+            else{
+              answer3 += "# " + answer2[i] ;
+            }
+          }
+
+          let answer4 = answer3.split("*").join("•");
+          let answer5 = answer4.split("• #").join("\n•");
+
+          messageElement.textContent = answer5;
+      }catch(error){
+          console.error("Failed to generate response", error);
+          messageElement.textContent = "Sorry, somthing went wrong.";
+      }
+      chatbox.scrollTo(0, chatbox.scrollHeight);
+
+  }
+
+  const handleChat = () => {
+      userMessage = chatInput.value.trim();
+      if(!userMessage) return;
+
+      // Clear the input textarea and set its height to default
+      chatInput.value = "";
+      chatInput.style.height = `${inputInitHeight}px`;
+
+      // Append the user's message to the chatbox
+      chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+      chatbox.scrollTo(0, chatbox.scrollHeight);
+
+      setTimeout(() => {
+          // Display "Thinking..." message while waiting for the response
+          const incomingChatLi = createChatLi("Generating response wait...", "incoming");
+          chatbox.appendChild(incomingChatLi);
+          chatbox.scrollTo(0, chatbox.scrollHeight);
+          generateResponse(incomingChatLi, userMessage);
+      }, 600);
+  }
+
+  chatInput.addEventListener("input", () => {
+      // Adjust the height of the input textarea based on its content
+      chatInput.style.height = `${inputInitHeight}px`;
+      chatInput.style.height = `${chatInput.scrollHeight}px`;
+  });
+
+  chatInput.addEventListener("keydown", (e) => {
+      // If Enter key is pressed without Shift key and the window
+      // width is greater than 800px, handle the chat
+      if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+          e.preventDefault();
+          handleChat();
+      }
+  });
+
+  sendChatBtn.addEventListener("click", handleChat);
+  closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+  chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+</script>
+
+
+
+    
 </body>
 </html>
