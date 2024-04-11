@@ -6,7 +6,7 @@
 
 ## Author
 
-- [Ankith Kumar](https://github.com/ankith-00?tab=repositories)
+- [Ankith Kumar](https://www.instagram.com/ankith_8900?igsh=aXN6b2p6dzBzeHBq)
 
 
 ## Recources available
