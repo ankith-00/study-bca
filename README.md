@@ -1,5 +1,5 @@
-## STUDY ( BCA ) | ASTRO
-" STUDY ( BCA ) | ASTRO is a online notes sharing website by a BCA BCU [ Bengaluru City University ] student for all BCA students ".
+## STUDY ( BCA ) 
+" STUDY ( BCA ) is a online notes sharing website by a BCA BCU [ Bengaluru City University ] student for all BCA students ".
 
 
 
