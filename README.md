@@ -11,6 +11,7 @@
 
 ## Recources available
 
+- Handwritten notes
 - Question papers
 - Assignments
 - Notes [ I-SEM to IV-SEM ]
