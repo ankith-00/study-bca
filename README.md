@@ -1,5 +1,7 @@
 ## STUDY ( BCA ) 
 " STUDY ( BCA ) is a online notes sharing website by a BCA BCU [ Bengaluru City University ] student for all BCA students ".
+- Notes available on this website is designed as per syllabus define by Bengaluru City University.
+- NEP 2021 BCA ( 4-Years | houners ) 
 
 
 
