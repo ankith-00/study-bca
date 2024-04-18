@@ -6,7 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> PST Lab Manual</title></title>
-    <link rel="stylesheet" href="prism.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
     
 <!--- GOOGLE ICON LINK -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -23,8 +27,6 @@
   margin         : 0px ;
   padding        : 0px;
   box-sizing     : border-box;
-  font-family    : 'Lexend', sans-serif; 
-  
 }
 
 .back{
@@ -50,7 +52,7 @@
     
 }.heading p{
   font-size      : 0.98em; 
-  margin         : 0.3em 0 0 1.5em;  
+  margin         : 0.3em 0 0 0.8em;  
   font-weight    : 600;
   letter-spacing : 0.8px; 
   
@@ -95,6 +97,12 @@ h3{
 }.margin{
   margin-top    : 5em; 
     
+}
+p{
+    font-family    : 'Lexend', sans-serif; 
+}
+code{
+    font-family: Courier, monospace;
 }
 
 @media only screen and (max-width : 480px){
@@ -918,6 +926,6 @@ Size of Union EMP2 = 52</code></pre>
   <!-- END OF CONTAINER CONTENT  -->
 </div>
 <!-- END OF CONTAINER  -->
-<script src="prism.js"></script>  
+<script>hljs.highlightAll();</script>   
 </body>
 </html>
