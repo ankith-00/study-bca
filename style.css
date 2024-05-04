@@ -110,23 +110,23 @@ html{
     justify-content: space-between;
     align-items: center;
     width: auto;
-    height: 100vh;
-
   
 }.landing_page .box{
     width: 50%;
     height: auto;
+    margin: 5.2em 0 0 0;
     
 }.landing_page  img{
     padding-left: 6em;
-    width: 85%;
+    width: 82%;
     object-fit: cover;
 
 }.box p{
     color: #1B1B1B;
-    font-size: 2.8em;
+    font-size: 2.7em;
     font-weight: 600;
     text-transform: uppercase;
+    padding-top: 2em;
 
 }.box span{
     font-size: 1.2em;
@@ -167,7 +167,7 @@ html{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     max-width: 1250px;
-    margin: 0px auto;
+    /* margin: 0px auto; */
     padding: 20px;
     gap: 20px;
     
@@ -498,7 +498,7 @@ html{
 
 
 /* MOBILE RESPONSIVE */
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 680px){
   
     .menu_content {
        width : 93.4%; 
@@ -511,7 +511,7 @@ html{
         padding-top: 0px;
         padding: 1.5em;
         flex-direction: column-reverse;
-        height: 90vh;
+
     }
     .landing_page .box{    
         width: 100%;
@@ -530,18 +530,25 @@ html{
         align-items: center;
     }
     .box img{
-        padding-top: 6em;
+        padding-top: 1em;
         padding-left: 0;
-        width : 95%;
+        width : 85%;
         object-fit: cover;
     }
     
     .landing_page .explore{
-        transform: translateY(-60px);
+        transform: translateY(-40px);
        
     }.landing_page button{
         margin-top : 1.5em;
-    }   
+    } 
+
+  #notes{
+    margin-top: -6.1em;
+  }
+    
+  
+
     .upload_popup{
         padding: 3em 1.5em 3em 1.5em;
         width: 88%;
