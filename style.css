@@ -503,6 +503,11 @@ html{
     .menu_content {
        width : 93.4%; 
     }
+
+    .menu_content  a {
+       margin-left: 3em;
+        
+    }
     .container-content{
         width : 100%;
     }
