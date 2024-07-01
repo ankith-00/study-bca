@@ -549,10 +549,10 @@ class FirstYear{
         className = sc.nextLine();
         
         System. out .println("Enter Class Teacher Name:");
-        ClassTeacher = sc.nextLine();
+        classTeacher = sc.nextLine();
         
         System.out.println("Enter the No of Students :"); 
-        StdCount = Integer.parseInt(sc.nextlLine());
+        stdCount = Integer.parseInt(sc.nextlLine());
         
         System.out.println ("Enter Name of all Students : "); 
         for (int i=0; i &lt; stdCount; i++){
@@ -560,7 +560,7 @@ class FirstYear{
         }
         
         
-        System.out.println("Enter Marks of all Students : “); 
+        System.out.println("Enter Marks of all Students : "); 
         for (int i = 0; i &lt; stdCount; i++){
             stdMarks[i] = sc.nextInt();
             sc.nextLine();
@@ -575,7 +575,7 @@ class FirstYear{
                 K = i;
             }
          }
-        System.out.println("The Best Student is =” + stdNames[k]);
+        System.out.println("The Best Student is = " + stdNames[k]);
     }
 }
 
@@ -735,9 +735,9 @@ Student Age : 20</code></pre></p><br><br>
 <pre><code class="language-java">class NegArrayExcep{ 
     public static void main(String args[]) { 
         try { 
-            int s[]=new int[-5]; 
+              int s[]=new int[-5]; 
         } catch(NegativeArraySizeException e) { 
-            e.printStackTrace(); 
+              e.printStackTrace(); 
         } 
         System.out.println("Error:Negative Array Size Exception"); 
     } 
@@ -756,7 +756,7 @@ Student Age : 20</code></pre></p><br><br>
                 System.out.println("Matched"); 
             else 
                 System.out.println("Not Matched"); 
-            } 
+        } 
         catch(NullPointerException e){ 
             System.out.println("Error: Null Pointer Exception"); 
         } finally{ 
@@ -824,7 +824,7 @@ RUN CMD - 02 : java Drawings.java</code></pre></p><br><br>
 <!-- PROGRAM - 17 -->
 <p class="m-h">PROGRAM - 17 : <span class="def">WAP WAP to Create an applet and draw grid lines</span></p>
 <pre><code class="language-java">import java.awt .*;
-import java.applet .*;
+import java.applet.*;
 
 public class Grid extends Applet {
     public void paint(Graphics g) {
@@ -834,10 +834,9 @@ public class Grid extends Applet {
             x= 20;	
         
         for (column = 1; column &lt; 5; column++) {
-            g.drawRect(x, y, 40, 40);
-
-        x = x + 20;
-        Y = y + 20;
+            g.drawRect(x, y, 40, 40)
+	x = x + 20;
+        y = y + 20;
     }
 }
 
@@ -923,7 +922,7 @@ Price          : Rs 29</code></pre></p><br>
 <p style="font-family: Open Sans, sans-serif;"><b>NOTE : </b><br> <span style="font-size: 0.9em;">Access to this document is restricted to subscribers only. </span> <br>View manual : <a href="https://drive.google.com/file/d/1_eU6J5CS5Tp9pIC7tEA9QdxF5TMZEx_2/view?usp=drive_link">Java Lab Manual</a> <br></p>
 -->
             <br><br>
-            <p style="font-size: 0.96em;"><i>Last updated on 30 JUNE 2024 BY : <a href="https://www.instagram.com/ankith_8900">Ankith Kumar </a> ( Bengaluru City University )</i></p>
+            <p style="font-size: 0.93em;"><i>Last updated on 30 JUNE 2024 BY : Ankith Kumar ( Bengaluru City University )</i></p>
         </div>
         <!-- END OF CONTAINER CONTENT -->
     </div>
