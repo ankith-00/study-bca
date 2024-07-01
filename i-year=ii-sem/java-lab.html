@@ -221,21 +221,21 @@ public class MonthOfYear{
 <pre><code class="language-java">import java.util.*;
 
 class PayOutOfBoundsException extends Exception{
-    PayOutOfBoundsException(String[] args){
-        System.out.println(“Pay out of Bounds Exception : ” + msg);
+    PayOutOfBoundsException(String msg){
+        System.out.println("Pay out of Bounds Exception : " + msg);
     }	
 }
     
 public class UserDefineException{
     public static void main(String argv[] ) throws PayOutOfBoundsException{
-        System.out.println(“Enter the Employee Salary :  ”);
+        System.out.println("Enter the Employee Salary :  ");
         Scanner sc = new Scanner(System.in);
             
-        Int pay = sc.nextInt();
-        If(pay &lt; 10000 || pay > 50000 ){
-            throw new PayOutOfBoundsException(“Salary is not in valid range”);
+        int pay = sc.nextInt();
+        if(pay &lt; 10000 || pay > 50000 ){
+            throw new PayOutOfBoundsException("Salary is not in valid range");
         }else
-            System.out.println(“Employee eligible for 30% hike”)
+            System.out.println("Employee eligible for 30% hike")
     }
 }</code></pre><br>
 <p><b>OUTPUT</b><pre><code class="language-plaintext">RUN - 1
