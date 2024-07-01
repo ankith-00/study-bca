@@ -851,22 +851,22 @@ RUN CMD - 02 : java Grind.java</code></pre></p><br><br>
 
 
 <!-- PROGRAM - 18 -->
-<p class="m-h">PROGRAM - 18 : <span class="def">WAP WAP which creates a frame with two buttons Father and Mother. When we click the father button the name of the father, his age and designation must appear. when we click mother similar details of mother also appear</span></p>
-<pre><code class="language-java">import java.awt .*;
-import java.awt.event .*;
+<p class="m-h">PROGRAM - 18 : <span class="def">WAP which creates a frame with two buttons Father and Mother. When we click the father button the name of the father, his age and designation must appear. when we click mother similar details of mother also appear</span></p>
+<pre><code class="language-java">import java.awt.*;
+import java.awt.event.*;
 
-public class ButtonClickActionEvents {
+public class Main{
     public static void main(String[] args) {
         Frame f = new Frame("Button Event");
 
-        Label 1 = new Label("DETAILS OF PARENTS");
+        Label l = new Label("DETAILS OF PARENTS");
 
-        1.setFont(new Font("Calibri", Font.BOLD, 16));
+        l.setFont(new Font("Calibri", Font.BOLD, 16));
         Label nl = new Label();
         Label dl= new Label();
         Label al = new Label();
 
-        1.setBounds(20, 20, 500, 50);
+        l.setBounds(20, 20, 500, 50);
         nl.setBounds(20, 110, 500, 30);
         dl.setBounds(20, 150, 500, 30);
         al.setBounds(20, 190, 500, 30);
@@ -876,9 +876,9 @@ public class ButtonClickActionEvents {
 
         mb.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                nl.setText ("NAME :" + “ ” + "Aishwarya");
-                dl.setText("DESIGNATION :" + “ ” + "Professor");
-                al.setText("AGE :" + “ ” + "42");
+                nl.setText ("NAME :" + " " + "Aishwarya");
+                dl.setText("DESIGNATION :" + " " + "Professor");
+                al.setText("AGE :" + " " + "42");
             }
         });
 
@@ -889,17 +889,17 @@ public class ButtonClickActionEvents {
 
         fb.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                nl.setText("NAME:" + "Ram”);
-                dl.setText("DESIGNATION:" + “Manager”);
-                al.setText("AGE:" + "44”);
+                nl.setText("NAME:" + "Ram");
+                dl.setText("DESIGNATION:" + "Manager");
+                al.setText("AGE:" + "44");
             }
         });
 
         // adding elements to the frame
         f.add(mb);
         f.add(fb);
-        f.add(1);
-        f.add(n1);
+        f.add(l);
+        f.add(nl);
         f.add(dl);
         f.add(al);
 
@@ -910,20 +910,20 @@ public class ButtonClickActionEvents {
     }
 
 }</code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">RUN CMD - 01 : javac ButtonClickActionEvents.java 
-RUN CMD - 02 : java ButtonClickActionEvents,java</code></pre></p><br><br> <br> 
+<p><b>OUTPUT</b><pre><code class="language-plaintext">RUN CMD - 01 : javac Main.java 
+RUN CMD - 02 : java Main.java</code></pre></p><br><br> <br> 
 
 
-
+<!----
 <p style="font-family: Open Sans, sans-serif;">Get a print copy of this lab manual <pre><code class="language-plaintext" style="background-color: #fff; color : #000;">Title          : Java Lab Manual
 Total Programs : 1 - 24 
 Total Pages    : 44 
 Price          : Rs 29</code></pre></p><br>
 
 <p style="font-family: Open Sans, sans-serif;"><b>NOTE : </b><br> <span style="font-size: 0.9em;">Access to this document is restricted to subscribers only. </span> <br>View manual : <a href="https://drive.google.com/file/d/1_eU6J5CS5Tp9pIC7tEA9QdxF5TMZEx_2/view?usp=drive_link">Java Lab Manual</a> <br></p>
-
+-->
             <br><br>
-            <p style="font-size: 0.95em; font-family: Open Sans, sans-serif;"><i>Last updated on 30 JUNE 2024 BY : <a href="https://www.instagram.com/ankith_8900">Ankith Kumar </a> <br/>( Bengaluru City University )</i></p>
+            <p style="font-size: 0.96em;"><i>Last updated on 30 JUNE 2024 BY : <a href="https://www.instagram.com/ankith_8900">Ankith Kumar </a> ( Bengaluru City University )</i></p>
         </div>
         <!-- END OF CONTAINER CONTENT -->
     </div>
