@@ -526,7 +526,7 @@ class FirstYear{
 
     }
 
-    publilc void bestStudent(){
+    public void bestStudent(){
         int best = 0, k =-1;
         for(int i = 0 ; i&lt;stdCount; i++){
             if(studentMarks[i] > best){
@@ -534,7 +534,10 @@ class FirstYear{
                 k = i;
             }
         }
-        System.out.println("The best Student is = " + studentMarks[k]);
+        System.out.println("The best Student is ");
+	System.out.println("Name \t\tMarks);
+	System.out.println("--------------------------------------------);
+	System.out.println(stdNames[i] + "\t" +studentMarks[i]);
     }
 }
 
@@ -545,7 +548,10 @@ public class student{
     }
 }
 </code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">
+<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as : student.java
+RUN CMD - 01 : javac student.java
+RUN CMD - 02 : java student
+	
 Enter the class Name : BCA
 Enter the class teacher Name : K-K mam
 Enter the total no of students : 2
