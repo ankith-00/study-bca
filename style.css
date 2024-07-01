@@ -41,7 +41,7 @@ html{
     transition    : max-height 0.3s ease-out; 
      
 }.menu_content{   
-   height : 68vh;
+   height : 62vh;
    width : 93.1%;
    border-radius : 1em; 
    padding-top : 4em;
@@ -500,7 +500,7 @@ html{
 @media only screen and (max-width : 680px){
   
     .menu_content {
-       width : 93.4%; 
+       width : 95.4%; 
     }
 
     .menu_content  a {
