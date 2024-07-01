@@ -184,7 +184,7 @@ code{
     }
 }</code></pre> <br>
             <p><b>OUTPUT</b></p>
-            <pre><code class="language-plaintext">INST    - 01 : Save this file as Main.java
+            <pre><code class="language-plaintext">INST    - 01 : Save this file as : Main.java
 RUN CMD - 01 : javac Main.java
 RUN CMD - 02 : java Main
 
@@ -201,7 +201,7 @@ public class MonthOfYear{
         System.out.println("Current Month = " + month[cal.get(Calendar.MONTH)]);
     }
 }</code></pre><br>
-<p><b>OUTPUT</b></p><pre><code class="language-plaintext">INST    - 01 : Save this file as MonthOfYear.java
+<p><b>OUTPUT</b></p><pre><code class="language-plaintext">INST    - 01 : Save this file as : MonthOfYear.java
 RUN CMD - 01 : javac MonthOfYear.java
 RUN CMD - 02 : java MonthOfYear
 
@@ -220,7 +220,7 @@ Current month = April</code></pre> <br><br>
             }
     }
 }</code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">class="language-plaintext">INST    - 01 : Save this file as DevisionByZero.java
+<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as : DevisionByZero.java
 RUN CMD - 01 : javac DevisionByZero.java
 RUN CMD - 02 : java DevisionByZero
 
@@ -249,7 +249,7 @@ public class UserDefineException{
             System.out.println("Employee eligible for 30% hike");
     }
 }</code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as UserDefineException.java
+<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as : UserDefineException.java
 RUN CMD - 01 : javac UserDefineException.java
 RUN CMD - 02 : java UserDefineException
 	
@@ -288,7 +288,7 @@ Employee eligible for 30% hike</code></pre></p><br><br>
             System.out.println("By using float values   : " + a.addition(10.2f , 20.3f));
     }
 }</code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as MehodOverLoading.java
+<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as : MehodOverLoading.java
 RUN CMD - 01 : javac MehodOverLoading.java
 RUN CMD - 02 : java MehodOverLoading
 
@@ -340,7 +340,11 @@ public class Main{
     }
 }
 </code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">sum of 20 and 10 : 30
+<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as : Main.java
+RUN CMD - 01 : javac Main.java
+RUN CMD - 02 : java Main
+
+sum of 20 and 10 : 30
 Difference of 20 and 10 : 10
 Multiplication of 20 and 10 : 200
 Division of 20 and 10 : 2</code></pre></p><br><br>
@@ -363,7 +367,7 @@ Division of 20 and 10 : 2</code></pre></p><br><br>
     }
 }
 
-public class staticDemo{
+public class staticVariable{
     public static void main(String[] args){
         System.out.println("Object sharing the static variable - Collage Name\n");
         
@@ -373,7 +377,7 @@ public class staticDemo{
         s1.display();
         s2.display();
 
-        system.out.println("\nStatic values changed by one of objectts \n");
+        System.out.println("\nStatic values changed by one of objectts \n");
         
         s1.collageName = "BCU";
         
@@ -382,7 +386,11 @@ public class staticDemo{
     }
 
 }</code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">Object sharing static variable - Collage Name 
+<p><b>OUTPUT</b><pre><code class="language-plaintext">INST    - 01 : Save this file as : staticVariable.java
+RUN CMD - 01 : javac staticVariable.java
+RUN CMD - 02 : java staticVariable
+	
+Object sharing static variable - Collage Name 
 
 PES collage 1001 Srikanth 
 PES collage 1002 Indumathi
