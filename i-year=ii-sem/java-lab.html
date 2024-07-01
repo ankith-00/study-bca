@@ -534,10 +534,10 @@ class FirstYear{
                 k = i;
             }
         }
-        System.out.println("The best Student is ");
-	System.out.println("Name \t\tMarks);
-	System.out.println("--------------------------------------------);
-	System.out.println(stdNames[i] + "\t" +studentMarks[i]);
+        System.out.println("\nThe best Student is ");
+	System.out.println("\nName \t\tMarks);
+	System.out.println("---------------------------);
+	System.out.println(stdNames[i] + "\t\t" +studentMarks[i]);
     }
 }
 
@@ -559,79 +559,18 @@ Enter name of all the student of the class :
 Ankith
 Astro
 Enter marks of all students : 
-12 
+100 
 40
 
-The best student is = Astro</code></pre></p><br><br>
+The best student is  
 
+Name 		 Marks
+---------------------------
+Ankith            100<code></pre></p><br><br>
 
 
 <!-- PROGRAM - 10 -->
-<p class="m-h">PROGRAM - 10 : <span class="def">WAP to define a class called first year with the above attribute and define a suitable constructor. Also write a method called bestStudent() which processes a first year object and returns the student with the highest total mark in the main method define a first year object and return the best student of the class</span></p>
-<pre><code class="language-java">import java.util.*;
-class FirstYear{
-    String className;
-    String classTeacher;
-    int stdCount;
-    int stdMarks[] = new int[50];
-    String stdNames[] = new String[50]; 
-    Scanner sc = new Scanner(System.in) ;
-    
-    public FirstYear(){ 
-        getinfo();
-    }
-    
-    public void getinfo(){
-        System.out.println("Enter Class Name:") ;
-        className = sc.nextLine();
-        
-        System. out .println("Enter Class Teacher Name:");
-        classTeacher = sc.nextLine();
-        
-        System.out.println("Enter the No of Students :"); 
-        stdCount = Integer.parseInt(sc.nextlLine());
-        
-        System.out.println ("Enter Name of all Students : "); 
-        for (int i=0; i &lt; stdCount; i++){
-            stdNames[i] = sc.nextLine();
-        }
-        
-        
-        System.out.println("Enter Marks of all Students : "); 
-        for (int i = 0; i &lt; stdCount; i++){
-            stdMarks[i] = sc.nextInt();
-            sc.nextLine();
-        }
-    }
-
-    public void bestStudent(){
-        int best=0, k=1;
-        for (int i=0; i &lt; stdCount; i++){
-            if(stdMarks[i]> best){
-                best = stdMarks[i];
-                K = i;
-            }
-         }
-        System.out.println("The Best Student is = " + stdNames[k]);
-    }
-}
-
-public class Student{
-    public static void main (String args[]){
-        FirstYear fy = new FirstYear();
-        fy.bestStudent();
-    }
-}</code></pre><br>
-<p><b>OUTPUT</b><pre><code class="language-plaintext">Enter Class Name : BCA-A			 					 |
-Enter Class Teacher Name : KK-mam						 
-Enter the No of Student : 2							 
-Enter Name of all Student : Astro Ankith				 
-Enter Marks of all Student : 40 10						 
-The Best Student is = Astro</code></pre></p><br><br>
-
-
-<!-- PROGRAM - 11 -->
-<p class="m-h">PROGRAM - 11 : <span class="def">WAP WAP to define a class called employee with the name and date of appointment. Create ten employee objects as an array and sort them as per their date of appointment. ie, print them as per their seniority.</span></p>
+<p class="m-h">PROGRAM - 10 : <span class="def">WAP WAP to define a class called employee with the name and date of appointment. Create ten employee objects as an array and sort them as per their date of appointment. ie, print them as per their seniority.</span></p>
 <pre><code class="language-java">import java.util.Date;
 
 class Employee{
@@ -712,8 +651,8 @@ Employee name : Ibad            Appointment Date : 28/6/2023</code></pre></p><br
 
 
 
-<!-- PROGRAM - 12 -->
-<p class="m-h">PROGRAM - 12 : <span class="def">WAP create a package ‘student. Fulltime.BCA' in your current working directory <br>Create a default class student in the above package with the following attributes: <br>Have method for storing for storing as well as displaying
+<!-- PROGRAM - 11 -->
+<p class="m-h">PROGRAM - 11 : <span class="def">WAP create a package ‘student. Fulltime.BCA' in your current working directory <br>Create a default class student in the above package with the following attributes: <br>Have method for storing for storing as well as displaying
 <pre><code class="language-java">// Save this file as BCAStudent.java 
 package student.fulltime.bca;
 import java.util.Scanner;
@@ -767,8 +706,8 @@ Student Age : 20</code></pre></p><br><br>
 
 
 
-<!-- PROGRAM - 13 -->
-<p class="m-h">PROGRAM - 13 : <span class="def">WAP Write a small program to catch Negative Array Size Exception. This exception is caused when the array is initialized to negative values.</span></p>
+<!-- PROGRAM - 12 -->
+<p class="m-h">PROGRAM - 12 : <span class="def">WAP Write a small program to catch Negative Array Size Exception. This exception is caused when the array is initialized to negative values.</span></p>
 <pre><code class="language-java">class NegArrayExcep{ 
     public static void main(String args[]) { 
         try { 
@@ -783,8 +722,8 @@ Student Age : 20</code></pre></p><br><br>
 
 
 
-<!-- PROGRAM - 14 -->
-<p class="m-h">PROGRAM - 14 : <span class="def">WAP Write a program to handle Null Pointer Exception and use the "finally" Method to display a message to the user</span></p>
+<!-- PROGRAM - 13 -->
+<p class="m-h">PROGRAM - 13 : <span class="def">WAP Write a program to handle Null Pointer Exception and use the "finally" Method to display a message to the user</span></p>
 <pre><code class="language-java">class NullPointerException{ 
     public static void main(String args[]){ 
         String name = null; 
@@ -806,8 +745,8 @@ Finally Block Executed</code></pre></p><br><br>
 
 
 
-<!-- PROGRAM - 15 -->
-<p class="m-h">PROGRAM - 15 : <span class="def">WAP  which create and display a message on the window.</span></p>
+<!-- PROGRAM - 14 -->
+<p class="m-h">PROGRAM - 14 : <span class="def">WAP  which create and display a message on the window.</span></p>
 <pre><code class="language-java">import java.awt.*;
 
 public class Frame{
@@ -830,8 +769,8 @@ RUN CMD - 02 : java Frame.java</code></pre></p><br><br>
 
 
 
-<!-- PROGRAM - 16 -->
-<p class="m-h">PROGRAM - 16 : <span class="def">WAP to draw several shapes in the created window</span></p>
+<!-- PROGRAM - 15 -->
+<p class="m-h">PROGRAM - 15 : <span class="def">WAP to draw several shapes in the created window</span></p>
 <pre><code class="language-java">import java.awt.*;
 public class Drawings extends Canvas{
     public void paint(Graphics g) {
@@ -858,8 +797,8 @@ RUN CMD - 02 : java Drawings.java</code></pre></p><br><br>
 
 
 
-<!-- PROGRAM - 17 -->
-<p class="m-h">PROGRAM - 17 : <span class="def">WAP WAP to Create an applet and draw grid lines</span></p>
+<!-- PROGRAM - 16 -->
+<p class="m-h">PROGRAM - 16 : <span class="def">WAP WAP to Create an applet and draw grid lines</span></p>
 <pre><code class="language-java">import java.awt .*;
 import java.applet.*;
 
@@ -886,8 +825,8 @@ public class Grid extends Applet {
 RUN CMD - 02 : java Grind.java</code></pre></p><br><br>
 
 
-<!-- PROGRAM - 18 -->
-<p class="m-h">PROGRAM - 18 : <span class="def">WAP which creates a frame with two buttons Father and Mother. When we click the father button the name of the father, his age and designation must appear. when we click mother similar details of mother also appear</span></p>
+<!-- PROGRAM - 17 -->
+<p class="m-h">PROGRAM - 17 : <span class="def">WAP which creates a frame with two buttons Father and Mother. When we click the father button the name of the father, his age and designation must appear. when we click mother similar details of mother also appear</span></p>
 <pre><code class="language-java">import java.awt.*;
 import java.awt.event.*;
 
