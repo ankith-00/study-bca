@@ -192,19 +192,20 @@ Hello World</code></pre> <br><br>
 
 <!-- PROGRAM - 02 -->
 <p class="m-h">PROGRAM - 02 : <span class="def">WAP to print month of the year , months of year should to held in array.</span></p>
-<pre><code class="language-java">import java.util.Calender;
+<pre><code class="language-java">import java.util.Calendar;
 
 public class MonthOfYear{
     public static void main(String[] args){
         Calendar cal = Calendar.getInstance();
         String[] month = {"January", "February" , "March" , "April", "May", "June", "July", "August", "September" , "October", "November", "December" }; 
-        System.out.println("Current Month = " + month[cal.get(Calender.MONTH)]);
+        System.out.println("Current Month = " + month[cal.get(Calendar.MONTH)]);
     }
 }</code></pre><br>
 <p><b>OUTPUT</b></p><pre><code class="language-plaintext">INST    - 01 : Save this file as MonthOfYear.java
 RUN CMD - 01 : javac MonthOfYear.java
 RUN CMD - 02 : java MonthOfYear
-	Current month = April</code></pre> <br><br>
+
+Current month = April</code></pre> <br><br>
 
 <!-- PROGRAM - 03 -->
 <p class="m-h">PROGRAM - 03 : <span class="def">WAP WAP to demonstrate a division by zero exception.</span></p>
