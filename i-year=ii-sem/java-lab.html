@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Lab Manual</title>
+
+    <!--- GOOGLE ICON LINK -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- GOOGLE FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- CDN FOR HIGHLIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-size: 0.98em;
+    margin: 0.3em 0 0 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: 'Lexend', sans-serif;
+
+}.publish-text {
+    font-weight: normal;
+    font-family: 'Lexend', sans-serif;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 78%;
+    height: auto;
+    background: #fff;
+
+}
+
+
+/* CHAPTER OR UNIT NAME & SUB HEADING */
+.m-h{
+    font-size: 1.1em;
+    margin: 1em 0 0.8em 0;
+    font-weight: bold;
+    
+
+}.def{
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.subject{
+    font-size: 0.9em;
+    padding-bottom: 1.5px;
+    border-bottom: 2px solid orange;
+
+}
+
+.subject , .m-h , .def, h3 ,p{
+    font-family: 'Lexend', sans-serif;
+}
+
+
+.author{
+    font-size: 0.95em;
+    color: gray;
+    font-family: Open Sans, sans-serif;
+}
+a{
+    text-decoration: none;
+    font-size: 0.9em;
+
+}
+button{
+    margin:0.8em 0 1.5em 0;
+    padding: 0.7em 1em;
+    width: 25%;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 1.1em;
+    cursor: pointer;
+
+}
+button:hover{
+    background: #000;
+    color: #fff;
+    transition: ease 0.5s;
+}
+
+code{
+    line-height: 1.4;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: lighter;
+}
+
+
+
+@media only screen and (max-width : 680px) {
+
+    .container-content {
+        width: 100%;
+        padding: 0.95em;
+        padding-top: 3em;
+
+    }.def, .m-h{
+        font-size: 1em;
+    }
+    button{
+        width: 40%;
+    }
+}
+
+
+
+
+</style>  
+</head>
+<body>
+    <!-- NAV START -->
+    <div class="back-arrow">
+        <a href="../ii-sem">
+            <span class="material-symbols-outlined">first_page </span>
+        </a>
+        <div class="nav-heading">
+            <p> STUDY( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+        </div>
+    </div>
+    <!-- NAV END -->
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- CONTAINER CONTENT -->
+        <div class="container-content">
+            <h3>LAB MANUAL</h3>
+            <p class="subject">Object Oriented Programing Using Java</p>
+            <br> <br>
+            <!-- PROGRAM - 01 -->
+            <p class="m-h">PROGRAM - 01 : <span class="def">&nbsp;WAP to print the message " welcome to Java ".</span></p>
+            <pre><code class="language-java">public class Main{
+    public static void main( String[] args){
+        System.out.println("Hello World");
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : Main.java
+Compile Program : javac Main.java
+Run Program     : java Main
+
+Hello world</code></pre> <br><br>
+
+<!-- PROGRAM - 02 -->
+<p class="m-h">PROGRAM - 02 : <span class="def">WAP to print month of the year , months of year should to held in array.</span></p>
+<pre><code class="language-java">import java.util.Calendar;
+
+public class MonthOfYear{
+    public static void main(String[] args){
+        Calendar cal = Calendar.getInstance();
+        String[] month = {"January", "February" , "March" , "April", "May", "June", "July", "August", "September" , "October", "November", "December" }; 
+        System.out.println("Current Month = " + month[cal.get(Calendar.MONTH)]);
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : MonthOfYear.java
+Compile Program : javac MonthOfYear.java
+Run Program     : java MonthOfYear
+
+Current month = May</code></pre> <br><br>
+
+<!-- PROGRAM - 03 -->
+<p class="m-h">PROGRAM - 03 : <span class="def">WAP WAP to demonstrate a division by zero exception.</span></p>
+<pre><code class="language-java">public class DevisionByZero{
+    public static void main(String[] args){
+	    int a = 5;
+	    int b = 0;
+	    try{
+	        System.out.println(a/b);
+            } catch(ArithmeticException e){
+	        System.out.println("Division by Zero is not possible");
+            }
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : DevisionByZero.java
+Compile Program : javac DevisionByZero.java
+Run Program     : java DevisionByZero
+
+Division by Zero is not possible</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 04 -->
+<p class="m-h">PROGRAM - 04 : <span class="def">WAP to create user define exception say Pay Out of Bounds.</span></p>
+<pre><code class="language-java">import java.util.*;
+
+class PayOutOfBoundsException extends Exception{
+    PayOutOfBoundsException(String msg){
+        System.out.println("Pay out of Bounds Exception : " + msg);
+    }	
+}
+    
+public class UserDefineException{
+    public static void main(String argv[] ) throws PayOutOfBoundsException{
+        System.out.println("Enter the Employee Salary :  ");
+        Scanner sc = new Scanner(System.in);
+            
+        int pay = sc.nextInt();
+        if(pay &lt; 10000 || pay > 50000 ){
+            throw new PayOutOfBoundsException("Salary is not in valid range");
+        }else
+            System.out.println("Employee eligible for 30% hike");
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : UserDefineException.java
+Compile Program : javac UserDefineException.java
+Run Program     : java UserDefineException
+    
+RUN - 01
+Enter the Employee Salary : 90000
+Pay Out of Bounds Exception : Salary is mot in valid range 
+    
+RUN - 02
+Enter the Employee salary : 20000
+Employee eligible for 30% hike</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 05 -->
+<p class="m-h">PROGRAM - 05 : <span class="def">WAP to add two integers and two float numbers. When no argument supplied , give a default value to calculate the sum. Use function overloading.</span></p>
+<pre><code class="language-java">public class MehodOverLoading{
+    int addition(){
+	    return (10 + 20);
+    }
+
+    int addition(int x, int y){
+	    return (x + y);
+    }
+
+    float addition (float a, float b){
+	    return (a + b);
+    }
+
+    public static void main(String[] args){
+	    MehodOverLoading a = new MehodOverLoading();
+	    System.out.println("By using default values : " + a.addition());
+	    System.out.println("By using integer values : " + a.addition(20,10));
+            System.out.println("By using float values   : " + a.addition(10.2f , 20.3f));
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : MehodOverLoading.java
+Compile Program : javac MehodOverLoading.java
+Run Program     : java MehodOverLoading
+
+By using default values : 30
+By using integer values : 50
+By using float values   : 30.5</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 06 -->
+<p class="m-h">PROGRAM - 06 : <span class="def">WAP to perform mathematical operations : Create a class called AddSub with methods to add and subtract. Create another class called MulDiv that extends from AddSub class to use the member data of the super class. MulDiv should have methods to multiply and divide. A main function should access the methods and perform the mathematical operations.
+    </span></p>
+<pre><code class="language-java">class AddSub{
+    int n1, n2;
+    public AddSub(int x, int y){
+        n1=x;
+        n2=y;
+    }
+
+    public int add(){
+        return (n1+n2);
+    }
+
+    public int sub() {
+        return (n1 - n2);
+    }
+}
+
+class MulDiv extends AddSub{
+    public MulDiv(int x, int y){
+        super(x,y);
+    }
+
+    public int mul(){
+        return(n1*n2);
+    }
+
+    public int div(){
+        return (n1/n2);
+    }
+}
+
+public class MathematicalOperation{
+    public static void main(String[] args){
+        MulDiv obj = new MulDiv(20, 10);
+        System.out.println("Sum of 20 and 10 : " + obj.add());
+        System.out.println("Difference of 20 and 10 : " + obj.sub());
+        System.out.println("Multiplication of 20 and 10 : " + obj.mul());
+        System.out.println("Division of 20 and 10 : " + obj.div());
+    }
+}
+</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : MathematicalOperation.java
+Compile Program : javac MathematicalOperation.java
+Run Program     : java MathematicalOperation
+
+sum of 20 and 10 : 30
+Difference of 20 and 10 : 10
+Multiplication of 20 and 10 : 200
+Division of 20 and 10 : 2</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 07 -->
+<p class="m-h">PROGRAM - 07 : <span class="def">WAP with a class variable that is available for all instances of a class. Use static variable declaration. Observe the changes that occur in the object’s member variable values.</span></p>
+<pre><code class="language-java">class student{
+    static String collageName = "PES collage";
+    int rollNo;
+    String name;
+
+    student(int rollNo , String name){
+        this.rollNo = rollNo;
+        this.name = name;
+    }
+
+    void display(){
+        System.out.println(collageName + " " + rollNo + " " + name);
+    }
+}
+
+public class staticVariable{
+    public static void main(String[] args){
+        System.out.println("Object sharing the static variable - Collage Name\n");
+        
+        student s1 = new student(1001 , "Srikanth");
+        student s2 = new student(1002 , "Indumathi");
+
+        s1.display();
+        s2.display();
+
+        System.out.println("Static values changed by one of objectts \n");
+        
+        s1.collageName = "BCU";
+        
+        s1.display();
+        s2.display();
+    }
+
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : staticVariable.java
+Compile Program : javac staticVariable.java
+Run Program     : java staticVariable
+
+Object sharing static variable - Collage Name 
+PES collage 1001 Srikanth 
+PES collage 1002 Indumathi
+
+Static variable changed by one of the object 
+BCU 1001 Srikanth
+BCU 1002 Indumathi
+</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 08 -->
+<p class="m-h">PROGRAM - 08 : <span class="def">WAP to create a student class with following attributes: &nbsp;Enrollment_id , Name,  Mark of sub1, Mark of sub2, Mark of sub3, Total Marks Total of the three marks must be calculated only when the student passes in all three subjects. <br>The pass mark for each subject is 50. If a candidate fails in any one of the subjects his total mark must be declared as zero. <br>Using this condition, write a constructor for this class. Write separate functions for accepting and displaying student details. <br>In the main method create an array of three student objects and display the details
+    </span></p>
+<pre><code class="language-java">import java.util.*;
+
+class student{
+    Scanner sc = new Scanner(System.in);
+    String Enrolllment_ID;
+    String Name;
+    int sub1, sub2, sub3, total;
+
+    student(){
+        readStudentInfo();
+    }
+
+    public void readStudentInfo(){
+        System.out.println("Enter student Details");
+
+        System.out.println("Enter Name : ");
+        Name = sc.next();
+
+        System.out.println("Enrollment ID : ");
+        Enrolllment_ID = sc.next();
+
+        System.out.println("Enter marks of 3 subjects : ");
+        sub1 = sc.nextInt();
+        sub2 = sc.nextInt();
+        sub3 = sc.nextInt();
+
+        if(sub1 &lt;= 50 && sub2 &lt;=50 && sub3 &lt;= 50)
+            total = sub1+sub2+sub3;
+        else
+            total = 0;
+    }
+
+    public void displayInfo(){
+        System.out.println(Enrolllment_ID + "\t\t" + Name + "\t" + total);
+    }
+}
+
+public class studentInfo{
+    public static void main(String[] args){
+
+    student s[] = new student[3];
+
+    for(int i=0; i&lt;3; i++){
+        s[i] = new student();
+    }
+
+    System.out.println("\n\t\t Student Details\n");
+    System.out.println("Enrollment N0 \t Name \t Total");
+    System.out.println("--------------------------------------\n");
+    for(int i=0; i&lt;3; i++){
+        s[i].displayInfo();
+    }
+
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : studentInfo.java
+Compile Program : javac studentInfo.java
+Run Program     : java studentInfo
+
+Enter student details 
+Enter Enrollment ID : BCU001
+Enter Name : Astro
+Enter three subject marks : 55 60 70
+
+Enter student details 
+Enter Enrollment ID : BCU002
+Enter Name : Ankith 
+Enter three subject marks : 10 20 40
+
+Enter student details 
+Enter Enrollment ID : BCU003
+Enter Name : Ramesh
+Enter three subject marks : 58 79 80
+
+
+Student Details 
+
+Enrolllment_ID      Name        Total
+--------------------------------------
+BCU001              Astro       185
+BCU002              Ankith      0
+BCU003              Ramesh      217</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 09 -->
+<p class="m-h">PROGRAM - 09 : <span class="def">WAP In a college first year class have the following attributesName of the class (BCA, BCom, BSc), Name of the staff, No of the students in the class, Array of students in the class. Display best student of class with highest marks.</span></p>
+<pre><code class="language-java">import java.util.*;
+
+class FirstYear{
+    String className;
+    String classTeacher;
+    int student;
+    int stdCount;
+    int studentMarks[] = new int[50];
+    String stdNames[] = new String[50];
+    Scanner sc = new Scanner(System.in);
+
+    public FirstYear(){
+        getInfo();
+    }
+
+    public void getInfo(){
+        System.out.println("Enter class Name : ");
+        className = sc.nextLine();
+
+        System.out.println("Enter class teacher Name : ");
+        className = sc.nextLine();
+
+        System.out.println("Enter total no of the student in the class : ");
+        stdCount = Integer.parseInt(sc.nextLine()); 
+
+        System.out.println("Enter name of all the student of the class : ");
+        for(int i=0; i&lt;stdCount; i++)
+            stdNames[i] = sc.nextLine();
+
+        System.out.println("Enter marks of all the students of the class : ");
+        for(int i=0; i&lt;stdCount; i++)
+            studentMarks[i] = sc.nextInt();
+
+    }
+
+    public void bestStudent(){
+        int best = 0, k =-1;
+        for(int i = 0 ; i&lt;stdCount; i++){
+            if(studentMarks[i] > best){
+                best = studentMarks[i];
+                k = i;
+            }
+        }
+        System.out.println("The best Student is = " + studentMarks[k]);
+    }
+}
+
+public class student{
+    public static void main(String[] args){
+        FirstYear fy = new FirstYear();
+        fy.bestStudent();
+    }
+}
+</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : student.java
+Compile Program : javac student.java
+Run Program     : java student
+
+Enter the class Name : BCA
+Enter the class teacher Name : K-K mam
+Enter the total no of students : 2
+Enter name of all the student of the class : 
+Ankith
+Astro
+Enter marks of all students : 
+100 
+80
+
+The best student is = Astro</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 10 -->
+<p class="m-h">PROGRAM - 10 : <span class="def">WAP WAP to define a class called employee with the name and date of appointment. Create ten employee objects as an array and sort them as per their date of appointment. ie, print them as per their seniority.</span></p>
+<pre><code class="language-java">import java.util.Date;
+
+class Employee{
+    String name;
+    Date appdate;
+
+    public Employee(String nm , Date apdt){
+        name  = nm;
+        appdate = apdt;
+    }
+    public void display(){
+        System.out.println("Employee name : " + name + "\t Appointment Date : " + appdate.getDate() + "/" + appdate.getMonth() + "/" + appdate.getYear());
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+
+        Employee emp[] =  new Employee[10];
+
+        emp[0] = new Employee("Astro" , new Date(1999 , 05 , 22));
+        emp[1] = new Employee("Ankith" , new Date(2009 , 04 , 25));
+        emp[2] = new Employee("Yuhanna" , new Date(2005 , 01 , 25));
+        emp[3] = new Employee("Aseem" , new Date(2010 , 01 , 01));
+        emp[4] = new Employee("Saurab" , new Date(2000 , 05 , 19));
+        emp[5] = new Employee("Sujan" , new Date(2022 , 04 , 22));
+        emp[6] = new Employee("Tufail" , new Date(2000 , 01 , 25));
+        emp[7] = new Employee("Ibad" , new Date(2023 , 06 , 28));
+        emp[8] = new Employee("Pradeep" , new Date(2002 , 05, 07));
+        emp[9] = new Employee("Yashwanth" , new Date(2000 , 01 , 21));
+
+        System.out.println("List of Eployees");
+        System.out.println("------------------------------------------------------------------------");
+        for(int i=0; i &lt; emp.length; i++)
+            emp[i].display();
+
+        for(int i=0; i &lt; emp.length; i++){
+            for(int j=i+1; j &lt; emp.length; j++){
+                if(emp[i].appdate.after(emp[j].appdate)){
+                    Employee t = emp[i];
+                    emp[i] = emp[j];
+                    emp[j] = t;
+                }
+            }
+        }
+        
+        System.out.println("\nList of Emloyee seniority wise");
+        System.out.println("------------------------------------------------------------------------");
+            for(int i=0; i &lt; emp.length; i++)
+                emp[i].display();
+    }
+}
+</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : Main.java
+Compile Program : javac Main.java
+Run Program     : java Main
+
+List of Eployees
+------------------------------------------------------------------------
+Employee name : Astro	        Appointment Date : 22/5/1999
+Employee name : Ankith	        Appointment Date : 25/4/2009
+Employee name : Yuhanna	        Appointment Date : 25/1/2005
+Employee name : Aseem	        Appointment Date : 1/1/2010
+Employee name : Saurab	        Appointment Date : 19/5/2000
+Employee name : Sujan	        Appointment Date : 22/4/2022
+Employee name : Tufail	        Appointment Date : 25/1/2000
+Employee name : Ibad	        Appointment Date : 28/6/2023
+Employee name : Pradeep	        Appointment Date : 7/5/2002
+Employee name : Yashwanth       Appointment Date : 21/1/2000
+
+List of Emloyee seniority wise
+------------------------------------------------------------------------
+Employee name : Astro	        Appointment Date : 22/5/1999
+Employee name : Yashwanth       Appointment Date : 21/1/2000
+Employee name : Tufail	        Appointment Date : 25/1/2000
+Employee name : Saurab	        Appointment Date : 19/5/2000
+Employee name : Pradeep	        Appointment Date : 7/5/2002
+Employee name : Yuhanna	        Appointment Date : 25/1/2005
+Employee name : Ankith	        Appointment Date : 25/4/2009
+Employee name : Aseem	        Appointment Date : 1/1/2010
+Employee name : Sujan	        Appointment Date : 22/4/2022
+Employee name : Ibad            Appointment Date : 28/6/2023</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 11 -->
+<p class="m-h">PROGRAM - 11 : <span class="def">WAP create a package ‘student. Fulltime.BCA' in your current working directory <br>Create a default class student in the above package with the following attributes: <br>Have method for storing for storing as well as displaying
+<pre><code class="language-java">// Save this file as BCAStudent.java 
+package student.fulltime.bca;
+import java.util.Scanner;
+
+public class BCAStudent {
+    String name, sex;
+    int age;
+    Scanner sc = new Scanner(System.in);
+
+    public void getdata() {
+        System.out.println("Student Name: ");
+        name = sc.nextLine();
+        System.out.println("Student Sex: ");
+        sex = sc.nextLine();
+        System.out.println("Student Age: ");
+        age = sc.nextInt();
+    }
+
+    public void display() {
+        System.out.println("\nStudent Details are ");
+        System.out.println("Student Name:" + name);
+        System.out.println("Student Age:" + age);
+        System.out.println("Student Sex:" + sex);
+    }
+}
+
+    
+// Compile BCAStudent.java 
+// Create this file hierarchy :  student\fulltime\bca
+// Move	   BCAStudent.class 	to bca folder
+    
+// save this file as PackageDemo.java in outside of the student folder
+    
+import student.fulltime.bca.BCAStudent;
+
+public class PackageDemo {
+    public static void main(String args[]) {
+        BCAStudent std = new BCAStudent();
+        std.getdata();
+        std.display();
+    }
+}</code></pre><br>
+<pre><code class="language-plaintext">Student Name : Astro								 
+Student Sex : Male									 
+Student Age : 20									 
+													 
+Student Details are 								 
+Student Name : Astro								 
+Student Sex : Male									 
+Student Age : 20</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 12 -->
+<p class="m-h">PROGRAM - 12 : <span class="def">WAP Write a small program to catch Negative Array Size Exception. This exception is caused when the array is initialized to negative values.</span></p>
+<pre><code class="language-java">class NegArrayExcep{ 
+    public static void main(String args[]) { 
+        try { 
+            int s[]=new int[-5]; 
+        } catch(NegativeArraySizeException e) { 
+            e.printStackTrace(); 
+        } 
+        System.out.println("Error:Negative Array Size Exception"); 
+    } 
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : NegArrayExcep.java
+Compile Program : javac NegArrayExcep.java
+Run Program     : java NegArrayExcep
+
+java.lang.NegativeArraySizeException: -5
+Error:Negative Array Size Exception
+    at Main.main(Main.java:4)</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 13 -->
+<p class="m-h">PROGRAM - 13 : <span class="def">WAP Write a program to handle Null Pointer Exception and use the "finally" Method to display a message to the user</span></p>
+<pre><code class="language-java">class NullPointerException{ 
+    public static void main(String args[]){ 
+        String name = null; 
+        try{ 
+            if(name.equals("Bengaluru")) 
+                System.out.println("Matched"); 
+            else 
+                System.out.println("Not Matched"); 
+            } 
+        catch(NullPointerException e){ 
+            System.out.println("Error: Null Pointer Exception"); 
+        } finally{ 
+            System.out.println("Finally Block Executed	"); 
+        } 
+    } 
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : NullPointerException.java
+Compile Program : javac NullPointerException.java
+Run Program     : java NullPointerException
+
+Error: null pointer Exception					
+Finally Block Executed</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 14 -->
+<p class="m-h">PROGRAM - 14 : <span class="def">WAP  which create and display a message on the window.</span></p>
+<pre><code class="language-java">import java.applet.Applet;
+import java.awt.*;
+
+public class Main extends Applet{
+    public void paint(Graphics g){
+        g.drawString("Hello World" , 90, 70);
+    }
+    public static void main(String[] args){
+        Main m = new Main();
+        Frame f = new Frame("Applet Program - 01 ");
+        f.add(m);
+        f.setSize(300, 400);
+        f.setVisible(true);
+    }
+
+}
+</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : Main.java
+Compile Program : javac Main.java
+Run Program     : java Main</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 15 -->
+<p class="m-h">PROGRAM - 15 : <span class="def">WAP to draw several shapes in the created window</span></p>
+<pre><code class="language-java">import java.awt.*;
+public class Drawings extends Canvas{
+    public void paint(Graphics g) {
+        g.drawRect(50, 75, 100, 50);
+        g.fillRect(200, 75, 50, 50);
+        g.drawRoundRect(50, 150, 100, 50, 15, 15);
+        g.fillRoundRect(175, 150, 100, 50, 15, 15);
+        g.drawOval(50, 275, 100, 50);
+        g.fillOval(175, 275, 100, 50);
+        g.drawArc(20, 350, 100, 50, 25, 75);
+        g.fillArc(175, 350, 100, 50, 25, 75);
+    }
+
+    public static void main(String[] args) {
+        Drawings m = new Drawings();
+        Frame f = new Frame("Shapes");
+        f.add(m);
+        f.setSize(300, 450);
+        f.setVisible(true);
+    }    
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : Drawings.java
+Compile Program : javac Drawings.java
+Run Program     : java Drawings</code></pre></p><br><br>
+
+
+
+<!-- PROGRAM - 16 -->
+<p class="m-h">PROGRAM - 16 : <span class="def">WAP WAP to Create an applet and draw grid lines</span></p>
+<pre><code class="language-java">import java.awt .*;
+import java.applet.*;
+
+public class Grid extends Applet{
+    public void paint(Graphics g){
+        int row, column, x, y = 20;	
+        
+        for (row = 1; row &lt; 5; row++) {
+            x= 20;	
+            for (column = 1; column &lt; 5; column++) {
+                g.drawRect(x, y, 40, 40);
+                x = x + 20;
+            }
+            y = y + 20;
+        }
+    }
+    public static void main(String[] args){
+        Grid gr = new Grid();
+        Frame f = new Frame("Grid Lines");
+        f.add(gr);
+        f.setSize(300, 450);
+        f.setVisible(true);
+    }
+}
+
+</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : Grid.java
+Compile Program : javac Grid.java
+Run Program     : java Grid</code></pre></p><br><br>
+
+
+<!-- PROGRAM - 17 -->
+<p class="m-h">PROGRAM - 17 : <span class="def">WAP WAP which creates a frame with two buttons Father and Mother. When we click the father button the name of the father, his age and designation must appear. when we click mother similar details of mother also appear</span></p>
+<pre><code class="language-java">import java.awt .*;
+import java.awt.event.*;
+
+public class ButtonEventListner{
+    public static void main(String[] args) {
+        Frame f = new Frame("Button Event");
+
+        Label l = new Label("DETAILS OF PARENTS");
+
+        l.setFont(new Font("Calibri", Font.BOLD, 16));
+        Label nl = new Label();
+        Label dl = new Label();
+        Label al = new Label();
+
+        l.setBounds(20, 20, 500, 50);
+        nl.setBounds(20, 110, 500, 30);
+        dl.setBounds(20, 150, 500, 30);
+        al.setBounds(20, 190, 500, 30);
+
+        Button mb = new Button("Mother");
+        mb.setBounds(20, 70, 50, 30);
+
+        mb.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                nl.setText("NAME :" + " "+ "Aishwarya");
+                dl.setText("DESIGNATION :" + " "+ "Professor");
+                al.setText("AGE :" + " "+ "42");
+            }
+        });
+
+
+        Button fb = new Button("Father");
+        fb.setBounds(80, 70, 50, 30);
+
+
+        fb.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                nl.setText("NAME:" + "Ram");
+                dl.setText("DESIGNATION:" + "Manager");
+                al.setText("AGE:" + "44");
+            }
+        });
+
+        // adding elements to the frame
+        f.add(mb);
+        f.add(fb);
+        f.add(l);
+        f.add(nl);
+        f.add(dl);
+        f.add(al);
+
+        // setting size, layout and visibility
+        f.setSize(250, 250);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+
+}</code></pre><br>
+<pre><code class="language-plaintext">Instruction     : Save this file as : ButtonEventListner.java
+Compile Program : javac ButtonEventListnerjava
+Run Program     : java ButtonEventListner</code></pre></p><br><br> <br> 
+
+
+<!---
+<p style="font-family: Open Sans, sans-serif;">Get a print copy of this lab manual <pre><code class="language-plaintext" style="background-color: #fff; color : #000;">Title          : Java Lab Manual
+Total Programs : 23  
+Total Pages    : 44 Pages
+Price          : Rs 29</code></pre></p><br>
+-->
+<p style="font-family: Open Sans, sans-serif;"><b>NOTE : </b><br> <span style="font-size: 0.9em;">Access to this document is restricted to subscribers only. </span> <br>View manual : <a href="https://drive.google.com/file/d/1_eU6J5CS5Tp9pIC7tEA9QdxF5TMZEx_2/view?usp=drive_link">Java Lab Manual</a> <br></p>
+
+            <br><br>
+            <p style="font-size: 0.88em;"><i>Last updated on 30 JUNE 2024 BY : Ankith Kumar </a>( Bengaluru City University )</i></p>
+        </div>
+        <!-- END OF CONTAINER CONTENT -->
+    </div>
+    <!-- END OF CONTAINER -->
+<script>hljs.highlightAll();</script>
+</body>
+</html>
