@@ -17,14 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src=""></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F5X4M59SCT');
-</script> 
+
  
 <!-- STYLE FILE  -->
 <link rel="stylesheet" href="style.css">    
@@ -314,7 +307,7 @@ document.addEventListener('contextmenu', function(event){
 <!-- CHATBOT SCRIPT --->
 <script type="module">
   import { GoogleGenerativeAI } from "@google/generative-ai";
-  const genAI = new GoogleGenerativeAI('AIzaSyCbHMCjciykMz69dhucL8Xc5czv2S7GyKk');
+  const genAI = new GoogleGenerativeAI('AIzaSyDaXsx9a1vtfSuOwRrpXYUTgu9qHGxsel4');
 
 
   const chatbotToggler = document.querySelector(".chatbot-toggler");
@@ -327,7 +320,7 @@ document.addEventListener('contextmenu', function(event){
   const inputInitHeight = chatInput.scrollHeight;
 
   async function runModel(prompt){
-      const model =genAI.getGenerativeModel({model : "gemini-pro"});
+      const model = genAI.getGenerativeModel({model : "gemini-1.5-flash"});
       const result = await model.generateContent(prompt);
       const response = await result.response;
       const text  = await response.text();
