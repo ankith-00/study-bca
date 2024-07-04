@@ -964,7 +964,7 @@ Accounts    2       1
 
 
 <!-- PROGRAM - 09  -->
-<p class="m-h">PROGRAM - 09 : <span class="def">&nbsp; Execute Following queries </span> <ul class="def" style="margin: 0.5em 0 0 1.5em; list-style: number;"><li>For each project on which more than 2 employees work , retrieve the project number project name and the number of employee who work on that project</li></ul></p>
+<p class="m-h">PROGRAM - 09 : <span class="def">&nbsp; Execute Following queries </span> <ul class="def" style="margin: 0.5em 0 0 1.5em; list-style: number;"><li>For each project on which more than 2 employees work , retrieve the project number project name and the number of employee who work on that project</li></ul></p><br>
 <pre><code class="language-plaintext">STEP - 01 : For each project on which more than 2 employees work , retrieve the project number project name and the number of employee who work on that project
 ----------------------------------------------------------------------------------------------------
 SQL> select P.PNO , P.PName , count(*) As “NO_OF_EMP_WORKING” from Project P.works_on W where P.PNO=W.PNUM group by P.PNO, P.PNAME having count(*)>2;
