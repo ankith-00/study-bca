@@ -231,7 +231,14 @@ radio_button_unchecked </span>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <script>
+    
+// BLOCKING DOUBLE CLICK    
+document.addEventListener('contextmenu', function(event){
+  event.preventDefault();
+}) 
 
+
+    
 // NAV-BAR JS
 const nav_bar = document.querySelectorAll(".nav_bar");
 
