@@ -195,10 +195,10 @@ img{
             <center><br> <img src="https://i.ibb.co/Gk6sFmR/Screenshot-2024-0632-211518.png" alt="" width="200" height="200"><p>Pay using above QR and enter UTR NO</p> <br> <br></center>
             
             <label for="utr no">UTR NO</label>
-            <input type="text" placeholder="UTR NO" name="UTR NO" required>
+            <input type="number" placeholder="UTR NO" name="UTR NO" required>
 
 
-            <button type="submit" value="submit" id="submit">SUBSCRIBE</button>
+            <button type="submit" value="submit" id="submit">SUBMIT</button>
         </form>
 
     </div>
@@ -214,7 +214,7 @@ img{
     form.addEventListener('submit', e => {
       e.preventDefault()
       btn.disabled = true
-      btn.innerHTML = "Loading..."
+      btn.innerHTML = "Submitting..."
 
       console.log(form)
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
