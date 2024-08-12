@@ -1,10 +1,12 @@
-<!-- I YEAR | II=SEM -->
+<!-- STUDY ( BCA )-->
+<!-- I-YEAR | II-SEM  [ SEP ]-->
+<!-- Author : Ankith Kumar -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>I - YEAR | II - SEM </title>
+    <title>I - YEAR | II - SEM : SEP</title>
     
 <!--- GOOGLE ICON LINK -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -13,16 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">    
-
-<!--  GOOGLE TAG [ GTAG.JS]  -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-F5X4M59SCT');
-</script>
-  
+    
+       
 <!-- STYLE TAG START -->    
 <style>
 *{
@@ -33,6 +27,7 @@
   
 }
 
+/* NAV BAR */
 .back{
   background     : #ffff;  
   position       : fixed ;
@@ -56,7 +51,7 @@
     
 }.heading p{
   font-size      : 0.98em; 
-  margin         : 0.3em 0 0 1.5em;  
+  margin         : 0.3em 0 0 1em;  
   font-weight    : 600;
   letter-spacing : 0.8px; 
   
@@ -64,12 +59,13 @@
    padding-right : 3em;
 }    
 
+/* CONTAINER */
 .container {
     width        : 100%;
     height       : auto;
     display      : flex ;
     justify-content : center;
-    align-items   : center;
+    align-items  : center;
     background   : #fff;
     
     
@@ -82,6 +78,7 @@
     
 }
 
+/* UNIT BOXES */
 .rec-container{  
   display        : flex;
   flex-wrap      : wrap;
@@ -93,15 +90,15 @@
 }.box{
   width          : 10.6em; 
   height         : 12.5em;
-  border         : 1px solid #000; 
-  margin-bottom  : 1.5em;  
+  border         : 1px solid #000;
+  margin-bottom  : 1.5em;
+  cursor: pointer;
   display        : grid;
   justify-content : center ; 
+  align-items : center;  
   margin-bottom  : 1em;
-  cursor : pointer ;
-}    
-    
-.box img{
+  
+}.box img{
     margin-top   : 2em;
    
 }.box span{
@@ -113,6 +110,7 @@
     
 }
 
+/* ASSIGNMENT TABLE */
 table {
     border-collapse : collapse;
     border          : 1px solid black;
@@ -126,23 +124,22 @@ table {
     border        : 1px solid #000;
     padding-left  : 1em;
     padding-right : 1em;
-  justify-content : center ;
+    justify-content : center ;
   
  }
+
+
+/* BASIC */ 
 .MH{
     font-size   : 1.08em;
     font-weight : 500;
 }
 
-
 a{
     text-decoration : none;
 }
 
-.rec-01{
-    justify-content : space-around;
-}
-
+/* FOOTER */
 .footer{
     width: auto;
     margin: 2.8em 0 1em 0;
@@ -150,70 +147,9 @@ a{
 }.footer a{
     text-decoration: none;
 }
-.footer p{
-    font-size : 0.85em;
-}
 
 
-
-.notification_background{
-    display: flex;
-    justify-content: center;
-
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-}
-.notification{
-    margin-top: 6em;
-    background-color: #fff;
-    width: 60%;
-    height: 30em;
-    padding: 2em 4em 2em 4em;
-}
-#x{
-    margin-top: 0;
-    display: flex;
-    float: right;
-    padding: 0.45em 0.85em;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-}
-.notification button{
-    margin-top: 4em;
-    padding: 0.65em 1.65em;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #000;
-    cursor: pointer;
-}
-
-#close{
-    margin-left: 0.7em;
-    background-color: #fff;
-    color: black;
-    border: 1px solid #000;
-}
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 680px){
    .container-content{
         width    : 100%;
         padding  : 0.95em;
@@ -222,255 +158,163 @@ a{
     .sem{
       padding-right : 1em;
     } 
-    .rec-01{
-        justify-content : space-between;
-    }  
-    .notification{
-        width: 92%;
-        padding: 2.5em 1.5em 1.5em 1.5em;
-        height: 32.3em;
-    }
-    .notification p{
-        font-size: 0.9em;
-    }
-    #x{
-        display: none;
-    }
     .none{
         display: none;
-    }
+    } 
+
    
 }     
     
 </style>    
 <!-- STYLE TAG END HERE  -->    
+
+
 </head>
 <body>
+
 <!-- NAV START -->
 <div class="back">    
-   <a href="index.html">
-     <span class="material-symbols-outlined">
-first_page </span>
-   </a>
-  <div class="heading">
-    <p> STUDY ( BCA ) </p> 
-    <p class="sem">II - SEM </p> 
-  </div> 
+    <a href="../index.html">
+        <span class="material-symbols-outlined"> first_page </span>
+    </a>
+    <div class="heading">
+        <p> STUDY ( BCA ) </p> 
+        <p class="sem">II - SEM </p> 
+    </div> 
 </div>
 <!-- NAV END -->    
     
     
 <!-- CONTAINER -->    
 <div class="container">
-  <div class="container-content">
-<!---
-    <div class="notification_background" id="modal">
-    
-        <div class="notification">
-          <button id="x">X</button>
-          <h3>IMPORTANT NOTICE !</h3><br> <br>
-          <P>Note : <br><br>The content on this page is accessable to subscribers only. In order to acess the content, you will need to buy a subscription for Rs 79. <br><br> Benifits : <br> <ul style="list-style-type: number; margin: 0.4em 0 0 1.8em;"><li style="font-size: 0.9em;">All units notes of 3 core subjects.</li><li style="font-size: 0.9em;">Lab Manuals</li><li style="font-size: 0.9em;">Previous year QP solutions.</li> <li style="font-size: 0.9em;">OE - notes</li><li style="font-size: 0.9em;">Important QNA of all core subjects.</li></ul><br> <span style="font-size: 0.9em;">If subscribed ignore and close.</span></P>
-          <button onclick="location.href='registration.html';">Subscribe</button>
-          <button id="close">Close</button>
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <h3> I - YEAR &nbsp;|&nbsp; II - SEM : SEP</h3> <br/><br/>
+
+        <!-- SUB - 01 -->
+        <h3 class="MH">Data Structure </h3>
+        <div class="rec-container">
+            <!-- UNIT - I -->           
+            <div class="box" onclick="location.href=' ';" >       
+                <img src="https://i.ibb.co/gSD7Wqk/structure.png" height="85" width="85"/>
+                <span style="margin-left: 8px;">UNIT - I </span>      
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/5GrwHC1/array.png" height="100" width="100"/>
+                <span style="margin-left: 14px;"> UNIT - II </span>     
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href=' ';">       
+                <img src="https://i.ibb.co/6DYx0dL/list.png" height="85" width="85" />
+                <span style="margin-left: 20px;"> UNIT - III </span>
+            </div> 
+            <!-- UNIT - Iv -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/0rQsqhk/2764894.png" height="90" width="90"/>
+                <span > UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
+        <!-- SUB - 02 -->
+        <h3 class="MH"> OOS using java</h3>
+        <div class="rec-container">      
+            <!-- UNIT - I -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/vkB4dkJ/file.png" height="90" width="90"/>
+                <span> UNIT - I </span>     
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/p2VcbPp/inheritance.png" height="90" width="90" />
+                <span > UNIT - II </span>
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/ph944Vx/emergency-button.png" height="90" width="90"/>
+                <span> UNIT - III </span>
+            </div> 
+            <!-- UNIT - IV -->
+            <div class="box" onclick="location.href=' ';">       
+                <img src="https://i.ibb.co/ThYx4Wj/problem.png" height="90" width="90"/>
+                <span style="margin-left: 16px;"> UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
+        <!-- SUB - 03 -->
+        <h3 class="MH"> Operating System </h3>
+        <div class="rec-container">      
+            <!-- UNIT - I -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/Tc956s6/operating-system.png" height="80" width="80" />
+                <span> UNIT - I </span>
+            </div>
+            <!-- UNIT - II -->  
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/mbDKK9y/synchronization-1.png" height="80" width="80">
+                <span style="margin-left: 12px;"> UNIT - II </span>
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/YbtC17h/storage-device.png" height="100" width="100">
+                <span> UNIT - III </span>
+            </div> 
+            <!-- UNIT - IV -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/7SS9nmR/linux.png" height="90" width="90" >
+                <span style="margin-left: 18px;"> UNIT - IV </span>
+            </div> 
+        </div> <br/><br/> <br>
+
+        <!-- LAB MANUAL -->
+        <h3 class="MH"> DS &nbsp; & &nbsp;OS&nbsp; Lab Manual</h3> 
+        <div class="rec-container">
+            <!-- UNIT - JAVA -->
+            <div class="box" onclick="location.href=' ';">
+                <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
+                <span style="margin-left: 41px;"> DS</span>   
+            </div>
+            <!-- UNIT - DBMS -->
+            <div class="box " onclick="location.href=' ';">
+                <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
+                <span style="margin-left: 45px;"> OS </span>
+            </div>
+            <div class="box none" style="visibility: hidden;"></div>
+            <div class="box none" style="visibility: hidden;"></div>
+        </div> <br/><br/>
+
+        <!-- ASSIGNMENT -->
+        <h3 class="MH"> Assignments </h3> 
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"> TOPIC NAME  </td>
+                    <td style="font-weight: bold;"> PREV        </td>
+                </tr>  
+
+                <tr>
+                    <td >Lab Manual : Linux & shell programming</td>
+                    <td ><a href=" ">Prev</a></td>
+                </tr> 
+
+                <tr>
+                    <td> </td>
+                    <td ><a href=" ">Prev</a></td>
+                </tr>      
+            </tbody>
+        </table>
+
+        <!-- FOOTER  -->
+        <div class="footer">
+            <P> Website BY : <a href="">Astro</a> 
+                <br>Bengaluru City University 
+                <br>( Dept. Bachalores of Computer Application )
+            </P> 
         </div>
-
+        <!-- FOOTER ENDS HERE  -->   
     </div>
---->
-
-   <h3> I - YEAR &nbsp;|&nbsp; II - SEM </h3> <br/><br/>
-   
-   
-   <h3 class="MH">Computer Architecture</h3>
-   
-   <div class="rec-container">      
-      
-    <div class="box" onclick="location.href='i-year=ii-sem/CA-01.html';" >       
-       <img src="https://i.ibb.co/K9DDJ94/numbers.png" height="90" width="90"/>
-       <span style="margin-left: 8px;">UNIT - I </span>      
-    </div>
-    
-    
-    <div class="box" onclick="location.href=' ';"> 
-       <img src="https://i.ibb.co/YT0YC41/cpu.png" height="80" width="80"/>
-       <span style="margin-left: 14px;"> UNIT - II </span>     
-    </div>
-    
-    
-    <div class="box" onclick="location.href=' ';">       
-       <img src="https://i.ibb.co/6NS4c8J/backup-1.png" height="90" width="90" />
-       <span style="margin-left: 20px;"> UNIT - III </span>
-    </div> 
-    
-    
-    <div class="box" onclick="location.href='https://drive.google.com/file/d/1VvqCVF_0zWl6bSN2JXrZYpImy25imo2Q/view?usp=sharing';"> 
-         <img src="https://i.ibb.co/k6J43Pc/ram-memory.png" height="90" width="90"/>
-        <span > UNIT - IV </span>
-    </div> 
-    </div>
- 
-
-   <br/><br/>
-   <h3 class="MH"> OOP Using Java </h3>
-   
-   <div class="rec-container">      
-       
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/wBsv0rN/file.png" height="90" width="90"/>
-         <span> UNIT - I </span>     
-    </div>
-  
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/pjBR6PD/specialization.png" height="90" width="90" />
-         <span > UNIT - II </span>
-      </a>
-    </div>
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/Dk6Qkng/layout.png" height="90" width="90"/>
-        <span> UNIT - III </span>
-    </div> 
-    
-    <div class="box" onclick="location.href=' ';">       
-         <img src="https://i.ibb.co/mbDKK9y/synchronization-1.png" height="90" width="90"/>
-        <span style="margin-left: 16px;"> UNIT - IV </span>
-    </div> 
-     
-  
-   </div>
- 
-   <br/><br/>
-   <h3 class="MH"> Data Base Management System </h3>
-   
-   <div class="rec-container">      
-       
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/wQKwMF6/database-storage.png" height="90" width="90" />
-         <span> UNIT - I </span>
-    </div>
-    
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/TLdn5Y1/erd.png" height="90" width="90">
-        <span style="margin-left: 12px;"> UNIT - II </span>
-    </div>
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/4FMJvM9/sql.png" height="90" width="90">
-        <span> UNIT - III </span>
-    </div> 
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/WgB5jm3/backup.png" height="90" width="90" >
-        <span style="margin-left: 18px;"> UNIT - IV </span>
-    </div> 
-       
-     
-   </div>
-   
-   
-   <br/><br/>
-   <h3 class="MH"> Java &nbsp; & &nbsp;D B M S &nbsp; LAB Manual</h3> 
-
-    <div class="rec-container">      
-       
-    <div class="box" onclick="location.href='i-year=ii-sem/java-lab.html';">
-        <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
-        <span style="margin-left: 41px;"> Java </span>
-       
-    </div>
-    
-    
-    <div class="box " onclick="location.href='i-year=ii-sem/dbms-lab.html';">
-        <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
-        <span style="margin-left: 30px;"> D B M S </span>
-    </div>
-    
-    <div class="box none" style="border: none; cursor: none;"> 
-        
-    </div> 
-    
-    <div class="box none" style="border: none; cursor: none;"> 
-         
-    </div> 
-       
-     
-   </div>
-
-  
-
- 
-   <br/><br/>
-   <h3 class="MH"> Assignments </h3> 
-   <table>
-<tbody>
-    <tr>
-    <td style="font-weight: bold;"> TOPIC NAME </td>
-    <td style="font-weight: bold;">PREV
-    </td>
-  </tr>  
-  
-  <tr>
-    <td >ASNO - 03 : DBMS QNA</td>
-    <td ><a href="https://drive.google.com/file/d/1fw-d_6JLWjsGlLLEluJbhjE9LAZBDXut/view?usp=sharing">Prev</a></td>
-  </tr> 
-  
-  <tr>
-    <td>ASNO - 04 : Java QNA</td> 
-    <td ><a href="https://drive.google.com/file/d/1DeDk0eGIVfiSGrSk9tI4XiSh6g8PDXw6/view?usp=sharing">Prev</a></td>
-  </tr> 
-    
-  <tr>
-    <td>ASNO - 06 : Java QNA</td> 
-    <td ><a href="https://drive.google.com/file/d/1BV6IfttRQaxURAkD51hFchXTh38WLx7I/view?usp=drive_link">Prev</a></td>
-  </tr>
-
-    <tr>
-    <td>ASNO - 07 : OE - Photojournalism</td> 
-    <td ><a href="https://drive.google.com/file/d/1Fb156ABLAo3AmpDrf6NwPzS-LnHdffJY/view?usp=drive_link">Prev</a></td>
-  </tr>
-  
-      
-</tbody>
-</table>
-    
-  <!-- FOOTER  -->
-  <div class="footer">
-    <P> Website BY : <a href="https://www.instagram.com/astro_8900/">Astro</a> <br>
-    Bengaluru City University <br>
-    ( Dept. Bachelor of Computer Applications )</P> 
-  </div>
-  <!-- FOOTER ENDS HERE  --> 
-    
-  </div>  
-</div>    
+    <!-- CONTAINER CONTENT ENDS HERE -->  
+</div>
+<!-- CONTAINER ENDS HERE -->  
 </body>
-
-
-<script>
-  //MODAL 
-var modal =  document.getElementById("modal");
-var x = document.getElementById("x");
-var cls = document.getElementById("close");
-
-
-cls.onclick = function() {
-  modal.style.display = "none";
-}
-
-x.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}   
-    
-
-</script>
-
-
 </html>
-
