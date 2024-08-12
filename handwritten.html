@@ -26,192 +26,213 @@
         gtag('config', 'G-F5X4M59SCT');
     </script>
 
-
-
-
 <!--- STYLE TAG STARTS HERE -->    
 <style>
 * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: 'Lexend', sans-serif;
-    }
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
 
-    /* NAV - BAR */
-    .back-arrow {
-        background  : #ffff;
-        position    : fixed;
-        z-index     : 100;
-        height      : 2.9em;
-        width       : 100%;
-        display     : flex;
-        padding     : 0.5em 0 0.2em 0.4em;
-        border-bottom   : 1px solid rgba(0, 0, 0, 0.2);
-        color       : #000;
+/* NAV - BAR */
+.back-arrow {
+    background  : #ffff;
+    position    : fixed;
+    z-index     : 100;
+    height      : 2.9em;
+    width       : 100%;
+    display     : flex;
+    padding     : 0.5em 0 0.2em 0.4em;
+    border-bottom   : 1px solid rgba(0, 0, 0, 0.2);
+    color       : #000;
 
-    }.material-symbols-outlined {
-        color       : #000;
-        font-weight : normal;
-        font-size   : 1.8em;
+}.material-symbols-outlined {
+    color       : #000;
+    font-weight : normal;
+    font-size   : 1.8em;
 
-    }.nav-heading {
-        width       : 100%;
-        display     : flex;
-        justify-content : space-between;
+}.nav-heading {
+    width       : 100%;
+    display     : flex;
+    justify-content : space-between;
 
-    }.nav-heading p {
-        font-size   : 0.98em;
-        margin      : 0.3em 0 0 1em;
-        font-weight : 600;
-        letter-spacing  : 0.8px;
+}.nav-heading p {
+    font-size   : 0.98em;
+    margin      : 0.3em 0 0 1em;
+    font-weight : 600;
+    letter-spacing  : 0.8px;
 
-    }.publish-text {
-        font-weight     : normal;
-    }
+}.publish-text {
+    font-weight     : normal;
+}
 
 
-    /* CONTAINER & CONTENT */
-    .container {
-        width        : 100%;
-        height       : auto;
-        display      : flex ;
-        justify-content : center;
-        align-item   : center;
-        background   : #fff;
+/* CONTAINER & CONTENT */
+.container {
+    width        : 100%;
+    height       : auto;
+    display      : flex ;
+    justify-content : center;
+    align-items   : center;
+    background   : #fff;
+}
+.container-content{
+    margin       : 1.5em 0 0 0;
+    padding      : 5em;
+    width        : 60%;
+    height       : auto;
+    background   : #fff;
+    font-family  : 'Lexend', sans-serif; 
+}
 
-    .container-content{
-        margin       : 1.5em 0 0 0;
-        padding      : 5em;
-        width        : 60%;
-        height       : auto;
-        background   : #fff;
-        font-family  : 'Lexend', sans-serif; 
-     }
-  
+
+table {
+    margin-top     : 0.9em;
+    margin-bottom  : 30px;
+    border-collapse: collapse;
+    border         : 1px solid black;
+    width          : 100%;
+
+}
+td {
+    width         : auto;
+    font-size     : 0.9em;
+    height        : 2em;
+    border        : 1px solid #000;
+    padding-left  : 1em;
+    padding-right : 1em;
+    justify-content:center ;
+
+}
+a{
+    text-decoration : none;  
+}
+
+h4{
+    display        : flex;     
+    font-size      : 1.2em;
+    font-weight    : 700;   
+    padding-bottom : 4px;    
+    width          : 98%;
+    border-bottom  : 2px solid orange ;   
+}
     
-     table {
-        margin-top     : 0.9em;
-        margin-bottom  : 30px;
-        border-collapse: collapse;
-        border         : 1px solid black;
-        width          : 100%;
+.footer p{
+    font-size : 0.9em;
+}
+.th{
+    font-weight : 700;
+}
+.year{
+    padding : 0 0 0 1.5em;
+    color : #C04000;
+    font-size : 1em;       
+}
+
+
+@media only screen and (max-width : 680px){
     
-     }
-     td {
-        width         : auto;
-        font-size     : 0.9em;
-        height        : 2em;
-        border        : 1px solid #000;
-        padding-left  : 1em;
-        padding-right : 1em;
-        justify-content:center ;
-    
-     }
-     a{
-       text-decoration : none;  
-     }
-     
-     h4{
-      display        : flex;     
-      font-size      : 1.2em;
-      font-weight    : 700;   
-      padding-bottom : 4px;    
-      width          : 98%;
-      border-bottom  : 2px solid orange ;   
-    }
-        
-   .footer p{
-       font-size : 0.9em;
-   }
-   .th{
-       font-weight : 700;
-   }
-   .year{
-       padding : 0 0 0 1.5em;
-       color : #C04000;
-       font-size : 1em;       
-   }
-    
-   
-    @media only screen and (max-width : 680px){
-        
     .container-content {
-       width       : 100%;
-       padding     : 0.95em;
-       padding-top : 3em;
-       
+        width       : 100%;
+        padding     : 0.95em;
+        padding-top : 3em;
     }
-        
-       
-      
-    }
+    
+}
 </style>
 
-    
 
 </head>
 <!-- BODY TAG STARTS HERE -->
 <body>
-    <!-- NAV START -->
-    <div class="back-arrow">
-        <a href="index.html">
-            <span class="material-symbols-outlined">first_page</span>
-        </a>
-        <div class="nav-heading">
-            <p> STUDY ( BCA ) </p>
-        </div>
-    </div>
-    <!-- NAV END -->
 
-    <!-- CONTAINER -->
-    <div class="container">        
-<!-- CONTAINER CONTENT -->
-        <div class="container-content">
-   <br/>         
-   <h4 class="qps">HANDWRITTEN NOTES </h3> </h4>     
-   <br/><br/>
-   <table> <tbody>
-      <!-- I - SEM  --> 
-      <h3> I - SEM </h3>
-    <tr>
-      <td class="th">TITLE</td>
-      <td class="th">AUTHOR</td>
-      <td class="thb">PREV </td> 
-    </tr> 
-     
-    <tr>
-        <td>I - SEM  Data Structures</td>
-        <td> - </td>
-        <td><a href="https://drive.google.com/file/d/1jdE15VaEefgiuf6OM0RVqsh8EYL0vazc/view?usp=drivesdk">Prev</a></td>
-    </tr>
-    
-    <tr>
-        <td>I - SEM  Set Theory</td>
-        <td> - </td>
-        <td><a href="https://drive.google.com/file/d/1onDB6oo_F-NTqjt0BVSHJCHnK-SUhm08/view?usp=drivesdk">Prev</a></td>
-    </tr>
-    
-    
-      
-       
-    </tbody> </table>     
-   
-   <!-- FOOTER  -->
-   <br/><br/>
-   <div class="footer">
-     <P> Website BY : <a href="https://www.instagram.com/astro_8900/ ">Astro</a> <br/>Bengaluru City University <br> ( Dept. Bachelor of Computer Applications )</P> 
-   </div>
-   <!-- FOOTER ENDS HERE  -->  
-   
-   
-   
-        
-        </div>
-        <!--END OF CONTAINER CONTENT-->
+
+<!-- NAV START -->
+<div class="back-arrow">
+    <a href="index.html">
+        <span class="material-symbols-outlined">first_page</span>
+    </a>
+    <div class="nav-heading">
+        <p> STUDY ( BCA ) </p>
     </div>
-    <!--END OF CONTAINER -->
+</div>
+<!-- NAV END -->
+
+<!-- CONTAINER -->
+<div class="container">        
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <br/> <h4>HANDWRITTEN NOTES </h3> </h4> <br/><br/>    
+
+        <!-- I - SEM  --> 
+        <table> <tbody>
+            <h3> I - SEM : SEP</h3>
+            <tr>
+                <td class="th">TITLE</td>
+                <td class="th">AUTHOR</td>
+                <td class="thb">PREV </td> 
+            </tr>
+            
+            <tr>
+                <td>Data Structures</td>
+                <td> - </td>
+                <td><a href="https://drive.google.com/file/d/1jdE15VaEefgiuf6OM0RVqsh8EYL0vazc/view?usp=drivesdk">Prev</a></td>
+            </tr>
+            
+            <tr>
+                <td>Set Theory</td>
+                <td> - </td>
+                <td><a href="https://drive.google.com/file/d/1onDB6oo_F-NTqjt0BVSHJCHnK-SUhm08/view?usp=drivesdk">Prev</a></td>
+            </tr>
+
+            <!-- <tr>
+                <td> </td>
+                <td> </td>
+                <td><a href="">Prev</a></td>
+            </tr> -->
+        </tbody> </table> 
+        
+        <!-- III - SEM : NEP  --> 
+        <!-- <table> <tbody>
+            <h3> I - SEM : SEP</h3>
+            <tr>
+                <td class="th">TITLE</td>
+                <td class="th">AUTHOR</td>
+                <td class="thb">PREV </td> 
+            </tr>
+            
+            <tr>
+                <td> </td>
+                <td>  </td>
+                <td><a href=" ">Prev</a></td>
+            </tr>
+            
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td><a href=" ">Prev</a></td>
+            </tr>
+
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td><a href="">Prev</a></td>
+            </tr> 
+        </tbody> </table> -->
+
+        <!-- FOOTER  -->
+        <br/><br/>
+        <div class="footer">
+            <P> Website BY : <a href="https://www.instagram.com/astro_8900/ ">Astro</a> <br/>Bengaluru City University <br> ( Dept. Bachelor of Computer Applications )</P> 
+        </div>
+        <!-- FOOTER ENDS HERE  -->  
+    
+    </div>
+    <!--END OF CONTAINER CONTENT-->
+</div>
+<!--END OF CONTAINER -->
 
 </body>
-    </html>
+</html>
     
