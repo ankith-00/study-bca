@@ -1,10 +1,12 @@
-<!-- I-YEAR | I-SEM -->
+<!-- STUDY ( BCA )-->
+<!-- I-YEAR | I-SEM  [ SEP ]-->
+<!-- Author : Ankith Kumar -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>I - YEAR | I - SEM </title>
+    <title>I - YEAR | I - SEM : SEP</title>
     
 <!--- GOOGLE ICON LINK -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -14,8 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">    
     
-    
-    
+       
 <!-- STYLE TAG START -->    
 <style>
 *{
@@ -26,6 +27,7 @@
   
 }
 
+/* NAV BAR */
 .back{
   background     : #ffff;  
   position       : fixed ;
@@ -49,7 +51,7 @@
     
 }.heading p{
   font-size      : 0.98em; 
-  margin         : 0.3em 0 0 1.5em;  
+  margin         : 0.3em 0 0 1em;  
   font-weight    : 600;
   letter-spacing : 0.8px; 
   
@@ -57,12 +59,13 @@
    padding-right : 3em;
 }    
 
+/* CONTAINER */
 .container {
     width        : 100%;
     height       : auto;
     display      : flex ;
     justify-content : center;
-    align-items   : center;
+    align-items  : center;
     background   : #fff;
     
     
@@ -75,6 +78,7 @@
     
 }
 
+/* UNIT BOXES */
 .rec-container{  
   display        : flex;
   flex-wrap      : wrap;
@@ -84,13 +88,14 @@
   margin-top     : 1.3em;
     
 }.box{
-  width          : 10.5em; 
+  width          : 10.6em; 
   height         : 12.5em;
   border         : 1px solid #000;
   margin-bottom  : 1.5em;
   cursor: pointer;
   display        : grid;
   justify-content : center ; 
+  align-items : center;  
   margin-bottom  : 1em;
   
 }.box img{
@@ -101,15 +106,16 @@
     
 }.box a{
   text-decoration : none;
-    color         : #000;
+  color           : #000;
     
 }
 
+/* ASSIGNMENT TABLE */
 table {
     border-collapse : collapse;
-    border        : 1px solid black;
-    width         : 100%;
-    margin-top    : 1em;
+    border          : 1px solid black;
+    width           : 100%;
+    margin-top      : 1em;
     
 }td {
     width         : auto;
@@ -118,37 +124,34 @@ table {
     border        : 1px solid #000;
     padding-left  : 1em;
     padding-right : 1em;
-  justify-content : center ;
+    justify-content : center ;
   
  }
+
+
+/* BASIC */ 
 .MH{
-    font-size : 1.1em;
+    font-size   : 1.08em;
     font-weight : 500;
 }
-
 
 a{
     text-decoration : none;
 }
 
-
-.rec-01{
-    justify-content : space-around;
-}
-
+/* FOOTER */
 .footer{
     width: auto;
     margin: 2.8em 0 1em 0;
 
+}.footer p{
+    font-size: 0.9em;
 }.footer a{
     text-decoration: none;
 }
-.footer p{
-  font-size: 0.85em;
-}
 
 
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 680px){
    .container-content{
         width    : 100%;
         padding  : 0.95em;
@@ -157,193 +160,163 @@ a{
     .sem{
       padding-right : 1em;
     } 
-    .rec-01{
-      justify-content : space-between;
-      
-}  
+    .none{
+        display: none;
+    } 
+
    
 }     
     
 </style>    
 <!-- STYLE TAG END HERE  -->    
+
+
 </head>
 <body>
+
 <!-- NAV START -->
 <div class="back">    
-   <a href="index.html">
-     <span class="material-symbols-outlined">
-first_page </span>
-   </a>
-  <div class="heading">
-    <p> STUDY ( BCA ) </p> 
-    <p class="sem">I - SEM </p> 
-  </div> 
+    <a href="index.html">
+        <span class="material-symbols-outlined"> first_page </span>
+    </a>
+    <div class="heading">
+        <p> STUDY ( BCA ) </p> 
+        <p class="sem">I - SEM  </p> 
+    </div> 
 </div>
 <!-- NAV END -->    
     
     
 <!-- CONTAINER -->    
 <div class="container">
-  <div class="container-content">
-   <h3> I - YEAR &nbsp;|&nbsp; I - SEM </h3> <br/><br/>
-   
-   
-   
-   
-   <h3 class="MH"> Discrete Mathematics </h3>
-   
-   <div class="rec-container">      
-      
-    <div class="box" onclick="location.href=' ';" >       
-       <img src="https://i.ibb.co/bBrYJds/venn-diagram.png" height="90" width="90"/>
-       <span style="margin-left: 8px;"> Set Theory </span>      
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <h3> I - YEAR &nbsp;|&nbsp; I - SEM : SEP</h3> <br/><br/>
+
+        <!-- SUB - 01 -->
+        <h3 class="MH">Discrete Mathmetics</h3>
+        <div class="rec-container">
+            <!-- UNIT - I -->           
+            <div class="box" onclick="location.href='i-sem-sep/set_theory.html';" >       
+                <img src="https://i.ibb.co/bBrYJds/venn-diagram.png" height="90" width="90"/>
+                <span style="margin-left: 8px;">UNIT - I </span>      
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/wg62zL4/diversify.png" height="80" width="80"/>
+                <span style="margin-left: 14px;"> UNIT - II </span>     
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href=' ';">       
+                <img src="https://i.ibb.co/9HjHyzB/matrix.png" height="90" width="90" />
+                <span style="margin-left: 20px;"> UNIT - III </span>
+            </div> 
+            <!-- UNIT - Iv -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/2PxKWNZ/graphs.png" height="90" width="90"/>
+                <span > UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
+        <!-- SUB - 02 -->
+        <h3 class="MH"> Problem Solving Technique </h3>
+        <div class="rec-container">      
+            <!-- UNIT - I -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/qpNY98T/data-science.png" height="100" width="100"/>
+                <span> UNIT - I </span>     
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/BVkYcw0/letter-c.png" height="70" width="70" />
+                <span > UNIT - II </span>
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/zSTSs9d/structure.png" height="90" width="90"/>
+                <span> UNIT - III </span>
+            </div> 
+            <!-- UNIT - IV -->
+            <div class="box" onclick="location.href=' ';">       
+                <img src="https://i.ibb.co/N29g6MY/sort.png" height="90" width="90"/>
+                <span style="margin-left: 16px;"> UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
+        <!-- SUB - 03 -->
+        <h3 class="MH"> Computer Architecture </h3>
+        <div class="rec-container">      
+            <!-- UNIT - I -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/K9DDJ94/numbers.png" height="90" width="90" />
+                <span> UNIT - I </span>
+            </div>
+            <!-- UNIT - II -->  
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/ynQxbhV/nand.png" height="90" width="90">
+                <span style="margin-left: 12px;"> UNIT - II </span>
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/27jtXT6/processor.png" height="90" width="90">
+                <span> UNIT - III </span>
+            </div> 
+            <!-- UNIT - IV -->
+            <div class="box" onclick="location.href=' ';"> 
+                <img src="https://i.ibb.co/DzDqwZW/technical-support.png" height="90" width="90" >
+                <span style="margin-left: 18px;"> UNIT - IV </span>
+            </div> 
+        </div> <br/><br/> <br>
+
+        <!-- LAB MANUAL -->
+        <h3 class="MH"> CA &nbsp; & &nbsp;PST&nbsp; Lab Manual</h3> 
+        <div class="rec-container">
+            <!-- UNIT - JAVA -->
+            <div class="box" onclick="location.href=' ';">
+                <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
+                <span style="margin-left: 41px;"> CA </span>   
+            </div>
+            <!-- UNIT - DBMS -->
+            <div class="box " onclick="location.href=' ';">
+                <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
+                <span style="margin-left: 45px;"> PST </span>
+            </div>
+            <div class="box none" style="visibility: hidden;"></div>
+            <div class="box none" style="visibility: hidden;"></div>
+        </div> <br/><br/>
+
+        <!-- ASSIGNMENT -->
+        <h3 class="MH"> Assignments </h3> 
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;"> TOPIC NAME  </td>
+                    <td style="font-weight: bold;"> PREV        </td>
+                </tr>  
+
+                <tr>
+                    <td >Lab Manual : O A T</td>
+                    <td ><a href=" ">Prev</a></td>
+                </tr> 
+
+                <tr>
+                    <td> </td>
+                    <td ><a href=" ">Prev</a></td>
+                </tr>      
+            </tbody>
+        </table>
+
+        <!-- FOOTER  -->
+        <div class="footer">
+            <P> Website BY : <a href="">Astro</a> 
+                <br>Bengaluru City University 
+                <br>( Dept. Bachalores of Computer Application )
+            </P> 
+        </div>
+        <!-- FOOTER ENDS HERE  -->   
     </div>
-    
-    
-    <div class="box" onclick="location.href=' ';"> 
-       <img src="https://i.ibb.co/wg62zL4/diversify.png" height="90" width="90"/>
-       <span style="margin-left: 14px;"> Counting </span>     
-    </div>
-    
-    
-    <div class="box" onclick="location.href=' ';">       
-       <img src="https://i.ibb.co/9HjHyzB/matrix.png" height="90" width="90" />
-       <span style="margin-left: 20px;"> Matrix </span>
-    </div> 
-    
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/2PxKWNZ/graphs.png" height="90" width="90"/>
-        <span > Graph Theory </span>
-    </div> 
-     
-    
-    
-    
-    
-     
-   </div>
- 
-   <br/><br/>
-   <h3 class="MH"> Problem Solving Technique </h3>
-   
-   <div class="rec-container">      
-       
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/5Kw72f9/algorithm.png" height="90" width="90"/>
-         <span> Introduction </span>     
-    </div>
-  
-    
-    <div class="box" onclick="location.href='i-year=i-sem/c.html';"> 
-         <img src="https://i.ibb.co/b1h3rGz/11510766-letter-c-alphabet-letter-c-icon.png" height="90" width="90" />
-         <span > C programming </span>
-      </a>
-    </div>
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/Vp2zW5r/innovation.png" height="90" width="90"/>
-        <span> Factoring Method</span>
-    </div> 
-    
-    <div class="box" onclick="location.href=' ';">       
-         <img src="https://i.ibb.co/Wy0NNB5/merge-1.png" height="90" width="90"/>
-        <span style="margin-left: 16px;"> Merging</span>
-    </div> 
-     
-    
-    
-    
-    
-     
-   </div>
- 
-   <br/><br/>
-   <h3 class="MH"> Data Structures </h3>
-   
-   <div class="rec-container">      
-       
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/zSTSs9d/structure.png" height="90" width="90" />
-         <span> Introduction </span>
-    </div>
-    
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/rcVPwCZ/loop.png" height="90" width="90">
-        <span style="margin-left: 12px;"> Linkedlist</span>
-    </div>
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/0rQsqhk/2764894.png" height="90" width="90">
-        <span> Binary Tree </span>
-    </div> 
-    
-    <div class="box" onclick="location.href=' ';"> 
-         <img src="https://i.ibb.co/N29g6MY/sort.png" height="90" width="90" >
-        <span style="margin-left: 18px;"> Sorting</span>
-    </div> 
-       
-     
-   </div>
-   
-   
-   <br/><br/>
-   <h3 class="MH"> P S T &nbsp; & &nbsp;D S &nbsp; LAB Manual</h3> 
-   <div class="rec-container rec-01">
-       
-    <div class="box" onclick="location.href='i-year=i-sem/pst_lab.html';">
-        <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
-        <span style="margin-left: 41px;"> P S T </span>
-       
-    </div>
-    
-    <div class="box " onclick="location.href='i-year=i-sem/ds_lab.html';">
-        <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
-        <span style="margin-left: 43px;"> D S </span>
-    </div>
-   
-   </div>
-   
-   
- 
-   <br/><br/>
-   <h3 class="MH"> Assignments </h3> 
-   <table>
-<tbody>
-    <tr>
-    <td style="font-weight: bold;"> TOPIC NAME </td>
-    <td style="font-weight: bold;">PREV
-    </td>
-  </tr>  
-  
-  <tr>
-    <td > ASNO - 01 : EVS Questions & Answers </td>
-    <td ><a href="https://drive.google.com/file/d/1xCr2PSnuod516GrSKEtMPEJT2IPY44wk/view">Prev</a></td>
-  </tr> 
-  
-  <tr>
-    <td >ASNO - 02 : Hindi all chapters summery </td>
-    <td ><a href="">Prev</a></td>
-  </tr>  
-   
-  
-      
-</tbody>
-</table>
-   
-  <!-- FOOTER  -->
-  <div class="footer">
-    <P> Website BY : <a href="https://www.instagram.com/astro_8900/">Astro</a> <br>
-    Bengaluru City University <br>
-    ( Dept. Bachelor of Computer Applications )</P> 
-  </div>
-  <!-- FOOTER ENDS HERE  -->
- 
- 
-      
-  </div>  
+    <!-- CONTAINER CONTENT ENDS HERE -->  
 </div>
-    
+<!-- CONTAINER ENDS HERE -->  
 </body>
 </html>
