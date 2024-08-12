@@ -44,7 +44,7 @@ html{
      
 }.menu_content{   
    height : 65vh;
-   width : 93.1%;
+   width : 93.2%;
    border-radius : 1em; 
    padding-top : 4em;
    background : #28282B;   
@@ -530,7 +530,7 @@ header h2 {
 @media only screen and (max-width : 680px){
     /* NAV BAR */
     .menu_content {
-        width : 93.6%; 
+        width : 93.4%; 
         height : 59.5vh;
     }
     .menu_content  a {
