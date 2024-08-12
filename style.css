@@ -530,7 +530,7 @@ header h2 {
 @media only screen and (max-width : 680px){
     /* NAV BAR */
     .menu_content {
-       width : 93.4%; 
+       width : 80%; 
     }
     .menu_content  a {
        margin-left: 2.5em;
