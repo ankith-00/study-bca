@@ -92,7 +92,7 @@
             </header>
             <ul class="chatbox">
                 <li class="chat incoming">
-                    <span class="material-symbols-outlined">radio_button_unchecked</span>
+                    <span class="material-symbols-outlined">device_hub</span>
                     <p>Hi I am Astro !</p>
                 </li>
             </ul>
@@ -297,7 +297,7 @@ function check_box(){
     const createChatLi = (message, className) => {
         const chatLi = document.createElement("li");
         chatLi.classList.add("chat", `${className}`);
-        let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">radio_button_unchecked </span><p></p>`;
+        let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">device_hub</span><p></p>`;
         chatLi.innerHTML = chatContent;
         chatLi.querySelector("p").textContent = message;
         return chatLi;
