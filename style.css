@@ -49,7 +49,15 @@ html{
    padding-top : 4em;
    background : #28282B;   
     
-}.menu_content  a  { 
+}.menu_content .details{ 
+    float: left;
+    color : #fff;
+    font-size: 0.9em;
+    
+}
+
+
+.menu_content  a  { 
     display : flex;
     margin-left : 6em;
     
@@ -70,7 +78,7 @@ html{
 }.menu_content a {
     text-decoration : none;
     font-size : 0.95em;
-    padding-top : 0.7em;
+    padding-top : 0.5em;
     color : #fff;
     
 }.material-symbols-outlined{
@@ -407,7 +415,7 @@ body.show-chatbot .chatbot {
 .chatbot header span {
     position: absolute;
     right: 1em;
-    top: 50%;
+    top: 25%;
     cursor: pointer;
     font-size: 1.2em;
     transform: translateY(-50%);
