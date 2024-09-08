@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lab Manual</title>
+
+    <!--- GOOGLE ICON LINK -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- GOOGLE FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+    <!-- CDN FOR HIGHLIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
+
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-size: 0.98em;
+    margin: 0.3em 0 0 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}.publish-text {
+    font-weight: normal;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 70%;
+    height: auto;
+    background: #fff;
+
+}
+
+
+/* CHAPTER OR UNIT NAME & SUB HEADING */
+.m-h{
+    font-size: 1em;
+    /* margin-top: 1em; */
+    font-weight: bold;
+}.def{
+    font-size: 1em;
+    font-weight: normal;
+}
+.subject{
+    font-size: 0.9em;
+    padding-bottom: 1.5px;
+    border-bottom: 2px solid orange;
+
+}.author{
+    font-size: 0.9em;
+    color: gray;
+}
+
+table {
+    margin-top     : 0.5em;
+    border-collapse: collapse;
+    border         : 1px solid black;
+    width          : auto;
+    
+}td {
+    width          : auto;
+    font-size      : 0.88em;
+    height         : 2em;
+    border         : 1px solid #000;
+    padding: 0 1em 0 1em;
+
+ }a{
+    text-decoration: none;
+    font-size: 0.9em;
+
+}
+
+.subject , .m-h , .def, h3 ,p{
+    font-family: 'Lexend', sans-serif;
+}
+
+code{
+    margin-top: 0.4em;
+    line-height: 1.4;
+    font-size: 0.9em;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: 100;
+}
+
+button{
+    margin-left: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 40%;
+    background: #292828;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width : 680px) {
+
+    .container-content {
+        width: 100%;
+        padding: 0.95em;
+        padding-top: 3em;
+
+    }
+
+    button{
+        width: 90%;
+    }
+}
+
+
+
+
+</style>  
+</head>
+<body>
+    <!-- NAV START -->
+    <div class="back-arrow">
+        <a href=" ">
+            <span class="material-symbols-outlined">first_page </span>
+        </a>
+        <div class="nav-heading">
+            <p> STUDY ( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+        </div>
+    </div>
+    <!-- NAV END -->
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- CONTAINER CONTENT -->
+        <div class="container-content">
+            <h3>PYTHON</h3>
+            <p class="subject">Lab Manual</p>
+            <br> <br>
+
+<!-- PROGRAM : 01-->
+<p class="m-h">PROGRAM - 01 : <span class="def">&nbsp;WAP to demonstrate basic data type in python.</span></p>
+<pre><code class="language-py">a = 10
+print("Type of a  : ", type(a))
+print("Value of a : ", a)
+
+b = 20.5
+print("Type of b  : ", type(b))
+print("Value of b : ", b)
+
+C = "Python"
+print("Type of c  : ", type(c))
+print("Value of c : ", c)
+
+d = True
+print("Type of d   : ", type(d))
+print ("Value of d : ", d)
+
+e = [1, 2, 3, 4]
+print("Type of e   : ", type(e))
+print("Value of e  : ", e)
+
+f = (1, 2, 3, 4)
+print("Type of f   : ", type(f))
+print("Value of f  : ", f)
+
+g = {1, 2, 3, 4}
+print("Type of g   : ", type(g))
+print("Value of g  : ", g)
+
+h = {
+    "name": "Srikanth",
+    "age" : 30
+}
+
+print("Type of h   : ", type(h))
+print("Value of h  : ", h)
+
+
+i = None
+print("Type of i   : ", type(i))
+print("Value of i  : ", i)</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">type of a   : &lt; class 'int' >
+Value of a  : 10
+
+Type of b   : &lt; class 'float' >
+Value of b  : 20.5
+
+Type of c   : &lt; class 'str' >
+Value of c  : Python
+
+Type of d   : &lt; class 'bool' >
+Value of d  : True
+
+Type of e   : &lt; class 'list' >
+Value of e  : [ 1, 2, 3, 4 ]
+
+Type of f   : &lt; class 'tuple' > 
+Value of f  : ( 1, 2, 3, 4 )
+
+Type of g   : { 1, 2, 3, 4 }
+Value of g  : &lt; class 'set' >
+
+Type of h   : &lt; class 'dict' >
+Value of h  : { 'name': 'Srikanth', 'age': 30 }
+
+Type of i   : &lt; class 'NoneType' >
+Value of i  : None</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 02-->
+<p class="m-h">PROGRAM - 02 : <span class="def">&nbsp;Create a list and perform the following methods. <br>1. insert() <br> 2. remove() <br> 3. append() <br> 4. len() <br> 5. pop() <br> 6. clear()</span></p>
+<pre><code class="language-python">my_list = [1, 2, 3, 4, 5]
+print("Original List : ", my_list)
+
+my_list.insert(2, 10)
+print("List after inserting 10 at index 2 : ", my_list)
+
+my_list.remove(5)
+print("List after removing 5   : ", my_list)
+
+my_list.append(20)
+print("List after appending 20 : ", my_list)
+
+list_length = len(my_list)
+print("Length of the list  : ", list_length)
+
+last_element = my_list.pop()
+print("Last element removed from the list   : ", last_element)
+print("List after removing the last element : ", my_list)
+
+my_list.clear()
+print("List after clearing all elements : ", my_list)</code></pre>
+
+<pre> <code class="language-plaintext">Original List : [1, 2, 3, 4, 5]
+List after inserting 10 at index 2 : [1, 2, 10, 3, 4, 5]
+List after removing 5   : [1, 2, 10, 3, 4]
+List after appending 20 : [1, 2, 10, 3, 4, 20]
+Length of the list : 6
+Last element removed from the list   : 20
+List after removing the last element : [1, 2, 10, 3, 4]
+List after clearing all elements : []</pre></code> <br> <br> <br>
+
+
+<!-- PROGRAM : 03-->
+<p class="m-h">PROGRAM - 03 : <span class="def">&nbsp;Create a tuple and perform the folloeing methods. <br>1. Add items <br>2. len() <br> 3. Check for itemin tuple <br> 4. Access items </span> 
+<pre><code class="language-python">my_tuple = (1, 2, 3, 4, 5)
+print("Original Tuple     : ", my_tuple)
+
+tuple_length = len(my_tuple)
+print("Length of the Tuple : ", tuple_length)
+
+# Check if an item exists in the tuple
+check = 2 in my_tuple
+print("Is 2 in the Tuple ?  : ", check)
+
+# Access items in the tuple
+print("Item at index 2       : ", my_tuple[2])
+
+# Convert the tuple to a list as tuples are immutable
+my_list = list(my_tuple)
+
+# Insert an element at a specific index in the list
+my_list.insert(2, 20)
+
+# Append an element to the end of the list
+my_list.append(6)
+
+# Convert the list back to a tuple
+my_tuple = tuple(my_list)
+
+# Print the updated tuple
+print("Elements in Tuple     : ", my_tuple)</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Original Tuple      : (1, 2, 3, 4, 5)
+Length of the Tuple : 5
+Is 2 in the Tuple ? : True
+Item at index 2     : 3
+Elements in Tuple   : (1, 2, 20, 3, 4, 5, 6) </code></pre> <br> <br> <br>
+
+
+<!-- PROGRAM : 04-->
+<p class="m-h">PROGRAM - 04 : <span class="def">&nbsp;Create a dictionary and apply following methods. <br>1. Print the dictionary <br>2. Access items <br> 3. Use get() <br> 4. Change values <br> 5. Use len()</span> 
+<pre><code class="language-python"># Create a dictionary
+student = {
+    "name"  : "Mary", 
+    "age"   : 20, 
+    "grade" : "A"
+}
+
+print("Dictionary items using items() : \n", student.items())
+
+# Print the dictionary items by traversing it
+print("Dictionary items by traversing :")
+for key, value in student.items():
+    print(key, ":", value)
+
+# Access items in the dictionary using keys
+print("Age of student       : ", student["age"])
+
+# Use the get() method to access items
+print("Grade of student     : ", student.get("grade"))
+
+# Change values in the dictionary
+student["grade"] = "B"
+print("Updated dictionary   : ", student)
+
+# Get the length of the dictionary
+dict_length = len(student)
+print ("Length of the dictionary : ", dict_length)</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Dictionary items using items() : dict_items([('name', 'Mary'), ('age', 20), ('grade', 'A')])
+Dictionary items by traversing :
+name  : Mary
+age   : 20
+grade : A
+Age of student     : 20
+Grade of student   : A
+Updated dictionary : {'name': 'Mary', 'age': 20, 'grade': 'B'}
+Length of the dictionary : 3 </code></pre> <br> <br> <br>
+
+
+
+<!-- PROGRAM : 05-->
+<p class="m-h">PROGRAM - 05 : <span class="def">&nbsp;Write a program to create a menu with the following options. <br>1.To perform addition <br> 2. To perform subtraction <br>3. To perform Multiplication <br> 4. To perform division </span> 
+<pre><code class="language-python">def add(a,b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    return a / b
+
+while True:
+    print("ARITHMETIC OPERATIONS")
+    print("******************************")
+    print("1. TO PERFORM ADDITION")
+    print("2. TO PERFORM SUBTRACTION")
+    print("3. TO PERFORM MULTIPLICATION")
+    print("4. TO PERFORM DIVISION")
+    print("5. EXIT")
+
+    choice = int(input("Enter your choice   : "))
+    if choice == 5:
+        print("Exiting the program")
+        break
+
+    num1 = int(input("Enter first number  : "))
+    num2 = int(input("Enter second number : "))
+
+    if choice == 1:
+        result = add(num1, num2)
+        print("Result: ", result)
+
+    elif choice == 2:
+        result = subtract(num1, num2)
+        print("Result: ", result)
+
+    elif choice == 3:
+        result = multiply(num1, num2)
+        print("Result: ", result)
+
+    elif choice == 4:
+        result = divide(num1, num2)
+        print("Result: ", result)
+    else:
+        print("Invalid option, please try again")</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">ARITHMETIC OPERATIONS
+******************************
+1. TO PERFORM ADDITION
+2. TO PERFORM SUBTRACTION
+3. TO PERFORM MULTIPLICATION
+4. TO PERFORM DIVISION
+5. EXIT
+Enter your choice   : 1
+Enter first number  : 10
+Enter second number : 20
+Result : 30
+
+
+ARITHMETIC OPERATIONS
+******************************
+1. TO PERFORM ADDITION
+2. TO PERFORM SUBTRACTION
+3. TO PERFORM MULTIPLICATION
+4. TO PERFORM DIVISION
+5. EXIT
+Enter your choice   : 2
+Enter first number  : 10
+Enter second number : 20
+Result : -10
+
+
+ARITHMETIC OPERATIONS
+******************************
+1. TO PERFORM ADDITION
+2. TO PERFORM SUBTRACTION
+3. TO PERFORM MULTIPLICATION
+4. TO PERFORM DIVISION
+5. EXIT
+Enter your choice   : 3
+Enter first number  : 10
+Enter second number : 20
+Result : 200
+
+
+ARITHMETIC OPERATIONS
+******************************"
+1. TO PERFORM ADDITION
+2. TO PERFORM SUBTRACTION
+3. TO PERFORM MULTIPLICATION
+4. TO PERFORM DIVISION
+5. EXIT
+Enter your choice   : 4
+Enter first number  : 10
+Enter second number : 20
+Result : 0.5
+
+
+ARITHMETIC OPERATIONS
+******************************"
+1. TO PERFORM ADDITION
+2. TO PERFORM SUBTRACTION
+3. TO PERFORM MULTIPLICATION
+4. TO PERFORM DIVISION
+5. EXIT
+Enter your choice   : 5
+Exiting the program</code></pre> <br> <br> <br>
+
+
+
+<!-- PROGRAM : 06-->
+<p class="m-h">PROGRAM - 06 : <span class="def">&nbsp; wAP to print a number is positive or negative using if-else.</span> 
+<pre><code class="language-python">num = int(input("Enter a number : "))
+
+if num >= 0:
+    print(num, "is a positive number")
+else:
+    print(num, "is a negative number")
+</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Enter a number : 8
+8 is a positive number
+
+Enter a number : -10
+-10 is a negative number</code></pre> <br> <br> <br>
+
+
+
+<!-- PROGRAM : 07-->
+<p class="m-h">PROGRAM - 07 : <span class="def">&nbsp;WAP for filter only even numbers from a given list.</span> 
+<pre><code class="language-python">numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+def is_even(num):
+    return num % 2 == 0
+
+even_numbers = list(filter(is_even, numbers))
+
+print("The even numbers are : ", even_numbers)
+</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">The even numbers are : [ 2, 4, 6, 8, 10 ]</code></pre> <br> <br> <br>
+
+
+<!-- PROGRAM : 08-->
+<p class="m-h">PROGRAM - 08 : <span class="def">&nbsp;WAP to print date, time for  today and now. </span> 
+<pre><code class="language-python">import datetime
+
+now = datetime.datetime.now()
+ 
+print("Todays date and time : " , now)
+</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Todays date and time :  2024-09-08 11:43:48.254330</code></pre> <br> <br> <br>
+
+
+<!-- PROGRAM : 09-->
+<p class="m-h">PROGRAM - 09 : <span class="def">&nbsp;WAP to add some days to your present date and print the date added.</span> 
+<pre><code class="language-python">import datetime
+
+today = datetime.datetime.now().date()
+print("Current Date is :", today)
+
+days_to_add = int(input("Enter the number of days to add : "))
+
+new_date = today + datetime.timedelta(days=days_to_add)
+
+print("Date after adding", days_to_add, "days is :", new_date)
+</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Current Date is : 2024-09-08
+Enter the number of days to add : 4
+Date after adding 4 days is     : 2024-09-12
+</code></pre> <br> <br> <br>
+
+
+<!-- PROGRAM : 10-->
+<p class="m-h">PROGRAM - 10 : <span class="def">&nbsp;WAP to count the number of occurence of each character in a string and store the result in a dictionary data structure. </span> 
+<pre><code class="language-python">def count_charecters(string):
+    char_count = {}
+
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    return char_count
+
+string = input("Enter a string : ")
+
+result = count_charecters(string)
+
+print("Charecter count in '"+ String +"' is : " + str(result))
+</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Enter a string : karnataka
+Charecter count in 'Karnataka' is : {'k': 2, 'a': 4, 'r': 1, 'n': 1, 't': 1}
+</code></pre> <br> <br> <br>
+
+
+
+<!-- PROGRAM : 11-->
+<p class="m-h">PROGRAM - 11 : <span class="def">&nbsp;WAP to count frequency of charecter in a given file. </span> 
+<pre><code class="language-python">def count_characters(filename):
+    with open(filename, "r") as file:
+        contents = file.read()
+        char_count = {}
+        for char in contents:
+            if char in char_count:
+                char_count[char] += 1
+            else:
+                char_count[char] = 1
+        return char_count
+
+data = input("Enter the data : ")
+fileName = input("Enter the file name to save the data : ")
+
+with open(fileName, "w") as file:
+    file.write(data)
+
+
+print("Opening the file '"+ fileName +"' for reading..")
+result = count_characters(fileName)
+
+print("Charecter frequncy in '"+ fileName + "' is : " + str(result))
+</code></pre> <br> 
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Enter the data : Kannada
+Enter the file name to save the data : main
+Opening the file 'main' for reading..
+Charecter frequncy in 'main' is : {'K': 1, 'a': 3, 'n': 2, 'd': 1}
+</code></pre> <br> <br> <br>
+
+
+
+<!-- PROGRAM : 12-->
+<p class="m-h">PROGRAM - 12 : <span class="def">&nbsp;Using a numpy module create an array and check the following : <br> 1. Type of array <br> 2. Axes of array <br> 3. Shape of array <br> 4. Type of element in array </span> 
+<pre><code class="language-python">import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+print("Type of array  : ", type(arr))
+print("Axes of array  : ", np.ndim(arr))
+print("Shape of array : ", arr.shape)
+print("Type of elements in array : ", arr.dtype)</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Type of array  : &lt; class 'numpy.ndarray' >
+Axes of array  : 1
+Shape of array : (5, )
+Type of elements in array : int32 </code></pre> <br> <br> <br>
+
+
+<!-- PROGRAM : 13-->
+<p class="m-h">PROGRAM - 13 : <span class="def">&nbsp;WAP to concatenate the dataframes with teo different objects.   </span> 
+<pre><code class="language-python">import pandas as pd
+
+df1 = pd.DataFrame({'Name':['Snigdha','Smayan', 'Satvik'], 'Age' : [20,19,18], 'Grade': ['A', 'C', 'A']}, index=[1,2,3])
+
+df2 = pd.DataFrame({'Name':['Mary', 'Nirmala', 'Shantala' ], 'Age': [23,30,28], 'Grade':['B', 'C', 'A']}, index=[4,5,6])
+
+result = pd.concat([df1, df2])
+print(result)
+</code></pre> <br>
+
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">        Name       Age     Grade
+1    Snigdha       20       A
+2     Smayan       19       C
+3     Satvik       18       A
+4       Mary       23       B
+5    Nirmala       30       C
+6   Shantala       28       A
+</code></pre> <br> <br> <br> 
+
+
+<p class="def">Preview : <a href="">Python Lab Manul</a></p> <br> <br> 
+
+<!-- <p class="def"></p>
+<pre><code class="language-plaintext" style="background-color: #fff; color : #000;">Document details : 
+
+DOC NAME       : Python Lab Manual
+TOTAL PROGRAMS : 18 Programs
+PAGES          : 36 Pages 
+PRICE          : 25rs only 
+</code></pre>
+<button>Order</button>
+
+            <br><br> <br> <br> <br>  -->
+            <p class="author"><i>Last updated on 10 SEP 2024 BY : <a href="https://www.instagram.com/ankith_8900">ANKITH KUMAR </a>( Bengaluru City University )</i></p>
+        </div>
+        <!-- END OF CONTAINER CONTENT -->
+    </div>
+    <!-- END OF CONTAINER -->
+<script>hljs.highlightAll();</script>
+</body>
+</html>
