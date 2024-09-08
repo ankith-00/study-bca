@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to PST</title>
+
+    <!--- GOOGLE ICON LINK -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- GOOGLE FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!--  GOOGLE TAG [ GTAG.JS]  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F5X4M59SCT');
+    </script>
+  
+    <!-- CDN FOR HIGHLIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
+
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-size: 0.98em;
+    margin: 0.3em 0 0 1em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}.publish-text {
+    font-weight: normal;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 65%;
+    height: auto;
+    background: #fff;
+
+}
+.container-content h3{
+    font-size: 1.28em;
+    font-weight: 600;
+}
+
+
+/* CHAPTER OR UNIT NAME & SUB HEADING */
+.m-h{
+    font-size: 1em;
+    margin-top: 1em;
+    font-weight: 600;
+
+}.def{
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Nunito Sans", sans-serif;
+}
+.subject{
+    font-size: 1.1em;
+    padding-bottom: 1.8px;
+    border-bottom: 2px solid orange;
+
+}.author{
+    font-size: 0.97em;
+    color: gray;
+}
+
+a{
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.subject , .m-h , .def, h3 ,p{
+    font-family: 'Lexend', sans-serif;
+}
+
+ul{
+    margin-left: 2em;
+    list-style: number;
+}
+
+.fw-300{
+    font-size: 1.1em;
+    font-weight: 550;
+}
+.fs-12{
+    font-size: 1.2em;
+    color: #012e4b;
+}
+
+.row{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+.col{
+    display: flex;
+    height: auto;
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+
+code{
+    line-height: 1.7em;
+    font-weight: 200;
+    font-family: "Lucida Console", Monaco, monospace;
+    margin-top: 0.5em;
+}
+
+
+@media only screen and (max-width : 680px) {
+
+    .container-content {
+        width: 100%;
+        padding: 0.95em;
+        padding-top: 3em;
+
+    }
+    .row{
+        flex-direction: column-reverse;
+    }
+    .subject{
+        font-size: 0.9em;
+    }
+}
+
+
+
+</style>  
+</head>
+<body>
+<!-- NAV START -->
+<div class="back-arrow">
+    <a href=" "> <span class="material-symbols-outlined">first_page </span> </a>
+        <div class="nav-heading">
+            <p> STUDY( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+        </div>
+</div>
+<!-- NAV END -->
+
+<!-- CONTAINER -->
+<div class="container">
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <h3>UNIT - I : INTRO TO PST</h3>
+        <p class="subject">Problem Solving Technique</p>
+        <br>
+
+        <p class="m-h fs-12">ALGORITHM</p> <p class="def">An algorithm can be defined as a step-by-step procedure for accomplishing a task. <br><br> Example :  Following a recipe for cooking a food dish.</p>
+        <br><br>
+
+        <p class="m-h fs-12">TERMINOLOGY</p>
+        <ul>
+            <li class="m-h fw-300">Space complexity </li> <p class="def">The space complexity of an algorithm refers to the amount of memory required by the algorithm to store the variables and get the result.       </p>
+            <li class="m-h fw-300">Time complexity  </li> <p class="def">The time complexity of an algorithm refers to the amount of time required by the algorithm to execute and get the result.                      </p>
+            <li class="m-h fw-300">Worst-case       </li> <p class="def">The maximum number of steps taken on any instance of size a. </p>
+            <li class="m-h fw-300">Best-case        </li> <p class="def">The minimum number of steps taken on any instance of size a. </p>
+            <li class="m-h fw-300">Average case     </li> <p class="def">An average number of steps taken on any instance of size a.  </p>
+        </ul>
+        <br> <br>
+
+        <p class="m-h fs-12">ALGORITHMIC NOTATIONS</p>
+        <ul>
+            <li class="m-h fw-300">Start/ End              </li> <p class="def">Algorithms begin with a "start" symbol and end with an "end" symbol, indicating the beginning and conclusion of the algorithm.    </p>
+            <li class="m-h fw-300">Pseudocode              </li> <p class="def">A simplified programming language that combines elements of natural language and programming syntax. Pseudocode is commonly used to represent algorithms in a way that is easy for humans to understand.  </p>
+            <li class="m-h fw-300">Inputs / Outputs        </li> <p class="def">Inputs to the algorithm are typically represented as variables or symbols. Outputs are also represented similarly. </p>
+            <li class="m-h fw-300">Variables               </li> <p class="def">Variables are used to store and manipulate data within the algorithm. They are usually represented with letters or names, such as "x" or "result.” </p>
+            <li class="m-h fw-300">Arithmetic Operations   </li> <p class="def">Common mathematical symbols like "+," "-", "*", and "/" are used to represent addition, subtraction, multiplication, and division operations, respectively.  </p>
+            <li class="m-h fw-300">Conditional Statements  </li> <p class="def">Conditional statements like "if," "else if," and "else" are used to create branches in the algorithm based on certain conditions. These statements help in decision-making within the algorithm.   </p>
+            <li class="m-h fw-300">Loops                   </li> <p class="def">Loops are used for repetitive tasks. Common loop structures include "for," "while," and "do-while" loops. </p>
+            <li class="m-h fw-300">Comments                </li> <p class="def">Comments are used to provide explanations or clarifications within the algorithm. They are typically preceded by symbols like "//" (for single-line comments) or enclosed in /* */ (for multi-line comments).  </p>
+            <li class="m-h fw-300">Indentation             </li> <p class="def">Indentation is used to visually represent the structure and nesting of code blocks. It helps in understanding the hierarchy of statements. </p>
+            <li class="m-h fw-300">Assignment operator     </li> <p class="def"> The assignment operator (usually denoted as "=") is used to assign a value to a variable. <br> For example, "x = 5" means that the variable "x" is assigned the value of 5.    </p>
+        </ul>
+        <br> <br>
+
+        <p class="m-h fs-12">STEPS FOR ANALYSING & SOLVING PROBLEM</p>
+        <ul>
+            <li class="m-h fw-300">Analyzing the Problem       </li> <p class="def">To clearly understand a problem before we begin to find the solution for it. If we are not clear as to what is to be solved, we may end up developing a program which may not solve our purpose. Thus, we need to read and analyze the problem statement carefully in order to list the principal components of the problem and decide the core functionalities that our solution should have.     </p>
+            <li class="m-h fw-300">Designing Algorithm         </li> <p class="def">The design of an algorithm depends mainly on the problem and chosen design technique. There can be more than one algorithm to solve the same problem, and the choice between them will be decided by their effectiveness.  </p>
+            <li class="m-h fw-300">Analysis of Algorithm       </li> <p class="def">An algorithm analysis is a technique that's used to measure the performance of the algorithms. Speed is one of the key parameters in determining the potential of an algorithm. There are some other factors, like user-friendliness, security, maintainability, and usage space, that determine the quality of an algorithm. Space and time complexity are metrics used to measure parameters.    </p>
+            <li class="m-h fw-300">Implementation or Coding    </li> <p class="def">After finalizing the algorithm, we need to convert the algorithm into the Format which can be understood by the computer to generate the desired solution. Different programming languages can be used for writing a program. We must convert each Step of the algorithm into one or more statements in a programming language such as C, C++, and Java etc.   </p>
+            <li class="m-h fw-300">Testing and Debugging       </li> <p class="def">The program created should be tested on various parameters. The program should meet the requirements of the user. It must respond within the expected time. It should generate correct output for all possible inputs. Debugging is the process of identifying and correcting or removing the Bugs (errors).   </p>
+        </ul>
+        <br> <br>
+
+        <p class="m-h fs-12">CHARACTERISTICS OF ALGORITHM</p>
+        <ul>
+            <li class="m-h fw-300">Well-described steps        </li> <p class="def">Algorithms are composed of a specific and unambiguous set of instructions or steps that can be observed to perform a selected task or solve a problem. Each step ought to be well-defined, leaving no room for ambiguity or confusion. </p>
+            <li class="m-h fw-300">Input and output            </li> <p class="def">Algorithms take inputs, which might be the preliminary records or facts furnished to the algorithm, and produce outputs, which are the results or solutions generated by using the set of rules after processing the inputs. The relation among the inputs and outputs is decided by means of the algorithm's good judgment.   </p>
+            <li class="m-h fw-300">Finitenes                   </li> <p class="def">Algorithms must have a well-defined termination condition. This method means that they finally attain an endpoint or change after a finite quantity of steps. If a set of rules runs indefinitely without termination, it's far taken into consideration wrong or incomplete.  </p>
+            <li class="m-h fw-300">Determinism                 </li> <p class="def">Algorithms are deterministic, that means that given the same inputs and achieved below the same conditions, they may continually produce the identical outputs. The conduct of a set of rules ought to be predictable and regular.     </p>
+            <li class="m-h fw-300">Efficiency                  </li> <p class="def">Algorithms attempt to be efficient in phrases of time and sources. They goal to clear up issues or perform obligations in an inexpensive quantity of time and with ultimate use of computational sources like memory, processing power, or garage. </p>
+            <li class="m-h fw-300">Correctness                 </li> <p class="def">Algorithms must be designed to produce correct results for all legitimate inputs inside their domain. They must accurately solve the problem they may be designed for, and their outputs must match the anticipated consequences.  </p>
+            <li class="m-h fw-300">Modularity and reusability  </li> <p class="def">Algorithms may be modular, meaning they may be divided into smaller subproblems or features that may be reused in unique parts of the algorithm or in other algorithms. This promotes code agency, maintainability, and code reuse.   </p>
+            <li class="m-h fw-300">Understandability           </li> <p class="def">Algorithms need to be designed with clarity and ease in mind, making them easy to apprehend and implement. Well-documented and readable code can enhance the understandability of an algorithm.    </p>
+        </ul>
+        <br> <br> 
+
+        <p class="m-h fs-12">ASYMPTOTIC NOTATION</p>
+        <p class="m-h fw-300">1. Big Oh notation</p>
+        <div class="row">
+            <div class="col"><p class="def">This notation is known as the upper bound of the algorithm, or a Worst Case of an algorithm. It tells us that a certain function will never exceed a specified time for any value of input n. <br> <br>Big Oh notation gives an upper bound on function f(n). The upper bound of f(n) indicates that the function f(n) will be the worst-case that it does not consume more than this computing time.</p></div> <br>
+            <div class="col col2"><img src="https://i.ibb.co/yNt4rxP/unnamed-2.jpg" alt=""></div>
+        </div> <br> <br>
+
+        <p class="m-h fw-300">2. Big Omega notation</p>
+        <div class="row">
+            <div class="col"><p class="def">Big Omega notation is used to define the lower bound of any algorithm or we can say the best case of any algorithm. This always indicates the minimum time required for any algorithm for all input values, therefore the best case of any algorithm.</p></div>
+            <div class="col col2"><img src="https://i.ibb.co/fYZb6C2/unnamed.jpg" alt=""></div>
+        </div><br> 
+
+        <p class="m-h fw-300">3. Theta notation</p>
+        <div class="row">
+            <div class="col"><p class="def">The theta notation can be used when the function f(n) can be bounded both from above and below by the same function g(n). For some functions, the lower bound and upper bound may be the same. In finding the maximum or minimum element in an array, the computing time is 0(n) and 2(n). </p></div>
+            <div class="col col2"><img src="https://i.ibb.co/QC4q5Cj/unnamed-1.jpg" alt=""></div>
+        </div><br> <br>
+
+<p class="m-h fs-12">BASIC FUNDAMENTAL ALGORITHMS</p>
+<!-- Algorrithm : 01 -->
+<p class="m-h">Algorithm - 01 : <span class="def">Exchange the value ot two numbers using temporary variable.</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare three variables : a , b and c.        
+STEP 3: Input First Number  'a'
+STEP 4: Input Second Number 'b'
+STEP 5: Set t = a
+STEP 6: Set a = b
+STEP 7: Set b = t
+STEP 8: Print a and b
+STEP 9: End</code></pre> <br>
+
+
+<!-- Algorrithm : 02 -->
+<p class="m-h">Algorithm - 02 : <span class="def">Counting the number of student who scored 50 and above marks in examination.</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare variables n , count and i
+STEP 3: Read'n' marks to be processed.
+STEP 4: Initialize counter to zero.
+            Set count = 0
+STEP 5: Initialize i to 1
+            Set i - 1
+STEP 6: while i is less than or equal to n ,do the following steps :    
+            (a) Read ith marks.
+            (b) if marks is greater than or equal to 50 then ,
+            (c) increment i value by 1. 
+STEP 7: Print count
+STEP 8: End</code></pre> <br>
+
+
+<!-- Algorrithm : 03 -->
+<p class="m-h">Algorithm - 03 : <span class="def">Summation of 'n' numbers</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare variables n, sum, i
+STEP 3: Read 'n' values that need to be summed up.
+STEP 4: Initialize sum to zero.
+        Set sum = 0
+STEP 5: Initialize i to 1 Set i = 1
+STEP 6: while i is less than or equal to n, do the following steps : 
+            (a) Read ith number
+            (b) Add ith number to the current value of sum ( sum = Sum + ith number )
+            (c) increment i value by 1.
+STEP 7: Print the value of sum
+STEP 8: End </code></pre> <br>
+
+
+<!-- Algorrithm : 04 -->
+<p class="m-h">Algorithm - 04: <span class="def">Factorial of a Number</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare variables n, fact.
+STEP 3: Read a number n.
+STEP 4: Initialize fact to one.
+        Set fact=1
+STEP 5: while n is greater than equal to 1, do the following steps :
+            (a) Calculate fact fact * n
+            (b) decrement value by 1.
+STEP 6: Print the value of fact
+STEP 7: End</code></pre> <br>
+
+
+<!-- Algorrithm : 05 -->
+<p class="m-h">Algorithm - 05 : <span class="def">Generating first 'n' terms of Fibonacci Sequence.</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare variables a, b, c, n, i
+STEP 3: Initialize variable a = c, b = 1 and i = 3
+STEP 4: Read a number n.
+STEP 5: Print a and b
+STEP 6: while i is less than or equal to n, do the following steps : 
+            (a) c = a + b
+            (b) print c
+            (c) a = b
+            (d) b = C
+            (e) increment i by 1 (i = i + 1)
+STEP 7: End </code></pre> <br>
+
+
+<!-- Algorrithm : 06 -->
+<p class="m-h">Algorithm - 06 : <span class="def">Reversing the Digits of an Integer.</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare variables number, reverse, lastDigit
+STEP 3: Initialize reverse to 0. 
+        (Set reverse = 0)
+STEP 4: Read a number n.
+STEP 5: while n not equal to 0, do the following steps :
+            (a) lastDigit = number % 10
+            (b) reverse = (reverse * 10) + lastDigit
+            (c) number = number / 10
+STEP 6: Print reverse number
+STEP 7: End
+</code></pre> <br>
+
+
+<!-- Algorrithm : 07 -->
+<p class="m-h">Algorithm - 07 : <span class="def">Converting Character Representation of an Integer it to its equivalent decimal format.</span></p>
+<pre><code class="language-plaintext">STEP 1: Start
+STEP 2: Declare number n, i and value
+STEP 3: Initialize value to 0.    
+        (value = 0)
+STEP 4: Read character representation of an integer number n.
+STEP 5: Loop over the characters in n from left to right, do the following steps :
+            for i = 1 ton 
+            value = value * 10 + (ASCII Value of ith Character - ASCII Value of ' ')
+STEP 6: Print value
+STEP 7: End
+</code></pre> <br>
+
+
+        <br><br>
+        <p class="author"><i>Last updated on 31 MAY 2024 BY : <a href="">ANKITH KUMAR </a>( Bengaluru City University )</i></p>
+    </div>
+    <!-- END OF CONTAINER CONTENT -->
+</div>
+<!-- END OF CONTAINER -->
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+
