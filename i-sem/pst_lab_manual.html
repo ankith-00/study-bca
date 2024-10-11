@@ -1,0 +1,1109 @@
+<!-- STUDY ( BCA ) -->
+<!-- PROBLEM SOLVING TECHNIQUE  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving Technique Lab Manual</title>
+
+    <!--- GOOGLE ICON LINK -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- GOOGLE FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+   <!--  GOOGLE TAG [ GTAG.JS]  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F5X4M59SCT');
+    </script>
+
+    <!-- CDN FOR HIGHLIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
+<!-- STYLE TAG -->
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-size: 0.98em;
+    margin: 0.3em 0 0 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}.publish-text {
+    font-weight: normal;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 75%;
+    height: auto;
+    background: #fff;
+
+}
+
+
+/* CHAPTER OR UNIT NAME & SUB HEADING */
+.m-h{
+    font-size: 1em;
+    margin-top: 1em;
+    font-weight: bold;
+}.def{
+    font-size: 1em;
+    font-weight: normal;
+}
+.subject{
+    font-size: 0.9em;
+    padding-bottom: 1.5px;
+    border-bottom: 2px solid orange;
+
+}.author{
+    font-size: 0.92em;
+    color: gray;
+}
+a{
+    text-decoration: none;
+    font-size: 0.9em;
+
+}
+
+.subject , .m-h , .def, h3 ,p{
+    font-family: 'Lexend', sans-serif;
+}
+
+/* CODE CSS */
+code{
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-top: -0.5em;
+    line-height: 1.5;
+    /* font-family: "Lucida Console", Monaco, monospace; */
+}
+
+
+
+@media only screen and (max-width : 680px) {
+
+    .container-content {
+        width: 100%;
+        padding: 0.95em;
+        padding-top: 3em;
+
+    }
+}
+</style>  
+<!-- HEAD TAG -->
+</head>
+
+<!-- BODY TAG  -->
+<body>
+<!-- NAV START -->
+<div class="back-arrow">
+    <a href=" "> <span class="material-symbols-outlined">first_page </span> </a>
+        <div class="nav-heading">
+            <p> STUDY( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+        </div>
+</div>
+<!-- NAV END -->
+
+<!-- CONTAINER -->
+<div class="container">
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <h3>LAB MANUAL</h3>
+        <p class="subject">Problem Solving Technique</p>
+        <br> <br>
+        
+<!-- PROGRAM : 01 -->
+<p class="m-h">PROGRAM - 01 : <span class="def">&nbsp;WAP to read the radius of the circle and to find the area and circumference.</span></p><br>
+<pre><code class="language-c">#include &lt;stdio.h>
+#define PI 3.14159
+    
+void main() {
+    float radius, area, circumference;
+    
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+    
+    area = PI * radius * radius;
+    circumference = 2 * PI * radius;
+    
+    printf("Area of the circle : %.2f\n", area);
+    printf("Circumference of the circle : %.2f\n", circumference);
+    
+    getch();
+}</code></pre>
+<br><p class="m-h">OUTPUT</p>
+<pre> <code class="language-plaintext">Enter the radius of the circle : 8
+Area of the circle : 201.06
+Circumference of the circle : 50.27</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 02 -->
+<p class="m-h">PROGRAM - 02 : <span class="def">&nbsp;Write and execute a C program to read three numbers and find the biggest of the three.</span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+
+void main() {
+    int num1, num2, num3;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    
+    if (num1 >= num2 && num1 >= num3) {
+        printf("The biggest number is: %d\n", num1);
+    } else if (num2 >= num1 && num2 >= num3) {
+        printf("The biggest number is: %d\n", num2);
+    } else {
+        printf("The biggest number is: %d\n", num3);
+    }
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter three numbers: 50 10 60
+The biggest number is: 60 </code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 03 -->
+<p class="m-h">PROGRAM - 03 : <span class="def">&nbsp;Write a C program to check whether the number is prime or not. </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+#include&lt;conio.h>
+
+void main() {
+    int num, i, isPrime = 1;
+    clscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    if (num &lt;= 1) {
+        isPrime = 0;
+    } 
+    else {
+        for (i = 2; i &lt;= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+    if (isPrime) {
+        printf("%d is a prime number.\n". num);
+    } else {
+        printf("%d is not a prime number.\n", num);
+    }
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter a number: 3
+3 is a prime number.
+
+Enter a number: 4
+4 is not a prime number. </code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 04 -->
+<p class="m-h">PROGRAM - 04 : <span class="def">&nbsp;Write and execute a C program to find the root of a quadratic equation. </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+#include&lt;conio.h>
+#include&lt;math.h>
+
+void main() {
+    float a, b, c, discriminant, root1, root2 , realPart , imgPart;
+
+    clrscr();
+
+    printf("Enter coefficients a, b and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    discriminant = b * b - 4 * a * c;
+
+    // Condition for real and different roots
+    if (discriminant > 0)
+    {
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("Roots are real and different : ");
+        printf("Root 1 = %.2f and Root2 = %.2f\n", root1, root2);
+    }
+
+    // Condition for real and equal roots
+    else if (discriminant == 0) 
+    {
+        root1 = root2 = -b / (2 * a);
+        printf("Roots are real and equal : ")
+        printf("Root1 = Root2 = %.2f;", root1);
+    
+    }
+    // If roots are not real
+     else 
+     {
+        realPart = -b / (2 * a);
+        imgPart = sqrt(-discriminant) / (2 * a);
+        printf("Root1 = %.2f + %.2fi and Root2 = %.2f - %.2fi\n", realPart, imgPart, realPart, imgPart);
+    }
+    
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">RUN - 1
+Enter coefficients a, b and c : 1 -3 2 
+Roots are real and different:
+Root 1 = 2.00 and Root 2 = 1.00 
+
+RUN - 2
+Enter coefficients a, b and c : 1 2 1 
+Roots are real and equal :
+Root 1 = Root 2 = -1.00 
+
+RUN - 3
+Enter coefficients a, b and c : 1 2 3
+Roots are not real :
+Root 1 = -1.00+1.41i and Root 2 = -1000-11.41i</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 05 -->
+<p class="m-h">PROGRAM - 05 : <span class="def">&nbsp;Write and execute a C program to read a number, find the sum of the digits, reverse the number, and check if it is a palindrome. </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+#include&lt;conio.h>
+
+void main() 
+{
+    int num, originalNum, digit, sum = 0, reverse = 0;
+    clrscr()
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    originalNum = num;
+
+    while (num > 0) 
+    {
+        digit = num % 10;
+        sum += digit;
+        reverse = reverse * 10 + digit;
+        num /= 10;
+    }
+
+    printf("Sum of the digits: %d\n", sum);
+    printf("Reversed number: %d\n", reverse);
+
+    if (originalNum == reverse) 
+    {
+        printf("%d is a palindrome.\n", originalNum);
+    }else {
+        printf("%d is not a palindrome.\n", originalNum);
+    }
+    
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">RUN -1 
+Enter a number 121
+Sum of the digits : 4
+Reversed number : 121
+121 is a palindrome.
+
+RUN - 2
+Enter a number : 1234
+Sum of the digits : 10
+Reverse of the number : 4321
+4321 is not a palindrome.</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 06 -->
+<p class="m-h">PROGRAM - 06 : <span class="def">&nbsp;Write and execute a C program to read numbers continuously from the keyboard till the user presses 999, and finds the sum of only positive numbers. </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+#include&lt;conio.h>
+
+void main() 
+{
+    int num, sum = 0;
+    clrscr();
+
+    while (1) 
+    {
+        printf("Enter a number (999 to stop): ");
+        scanf("%d", &num);
+
+        if (num == 999) 
+        {
+            break;
+        }else{
+            if (num > 0) 
+            {
+                sum += num;
+            }
+        }
+    }
+    printf("Sum of positive numbers: %d\n", sum) ;
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter a number (999 to stop): 2
+Enter a number (999 to stop): 4
+Enter a number (999 to stop): 5
+Enter a number (999 to stop): 6
+Enter a number (999 to stop): 999
+Sum of positive numbers : 17</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 07 -->
+<p class="m-h">PROGRAM - 07 : <span class="def">&nbsp;Write and execute a C program to read the percentage of marks and display an appropriate message (Distinction, First Class, Second Class, Pass, Fail ).</span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+#include&lt;conio.h>    
+
+void main() 
+{
+    float percentage;
+    clrscr();
+
+    printf("Enter the percentage of marks: ");
+    scanf("%f", &percentage);
+    
+    if (percentage >= 70) {
+        printf("Distinction\n");
+    } else if (percentage >= 60) {
+        printf("First Class\n");
+    } else if (percentage >= 50) {
+        printf("Second Class\n");
+    } else if (percentage >= 40) {
+        printf("Pass\n");
+    } else {
+        printf("Fail\n");
+    }
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the percentage of marks: 85
+Distinction
+
+Enter the percentage of marks: 65
+First Class
+
+Enter the percentage of marks: 50
+Second Class
+
+Enter the percentage of marks: 45
+Pass
+
+Enter the percentage of marks: 30
+Fail</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 08 -->
+<p class="m-h">PROGRAM - 08 : <span class="def">&nbsp;Write and execute a C program to simulate a simple calculator with addition, subtraction, multiplication, and division. It should display the error message for division by zero using a switch case. </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+
+void main() 
+{
+    int num1, num2;
+    char operator;
+    float result;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);
+
+    switch (operator) 
+    {
+        case '+' :
+            result = num1 + num2;
+            break;
+
+        case '-':
+            result= num1 - num2;
+            break;
+
+        case '*' :
+            result= num1 * num2;
+            break;
+
+        case '/':
+            if (num2 != 0) 
+            {
+                result = (float) num1 / num2;
+            } else {
+                printf("Error! Division by zero.\n");
+                return 1;
+            }
+            break;
+
+        default:
+            printf("Invalid operator\n");
+            return 1;
+    }
+    printf("Result:%.2f\n", result);
+    getch();
+}
+</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter two numbers: 78 12
+Enter an operator (+, -, *, /): +
+Result: 90.00
+
+Enter two numbers: 20 10
+Enter an operator (+, -, *, /): -
+Result: 10.00
+
+Enter two numbers: 20 80
+Enter an operator (+, -, *, /): *
+Result: 1600.00
+
+Enter two numbers: 45 5
+Enter an operator (+, -, *, /): /
+Result: 9.00 </code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 09 -->
+<p class="m-h">PROGRAM - 09 : <span class="def">&nbsp;Write and execute a C program to read marks scored by 'n' students and find the average mark (Demonstration of single-dimensional array).</span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+
+void main() 
+{
+    int n, i;
+    float marks[30], sum=0, avg;
+
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    for (i = 0; i &lt; n; i++) 
+    {
+        printf("Enter marks of student %d: ", i + 1);
+        scanf("%f", &marks[i]);
+        sum += marks[i];
+    }
+
+    avg = sum / n;
+    printf("Average of the entered marks : %.2f", avg);
+    
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the number of students: 2
+Enter marks of student 1: 90 
+Enter marks of student 2: 60
+Average marks: 75.0
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 10 -->
+<p class="m-h">PROGRAM - 10 : <span class="def">&nbsp;Write and execute a C program to remove duplicate elements in a single-dimensional array. </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+
+void main() 
+{
+    int a[50], number, i, j, k;
+
+    printf("Enter the size of the array: ");
+    scanf("%d", &number);
+    
+    printf("Enter the elements of the array: ");
+    
+    for (i = 0; i &lt; number; i++) 
+    {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Entered elements are : \n");
+    for(i=0; i &lt; number; i++)
+    {
+        printf("%d", a[i]);
+    }
+
+    for (i = 0; i &lt; number; i++) 
+    {
+        for (j = i + 1; j &lt; number; j++) 
+        {
+            if (a[i] == a[j]) 
+            {
+                for (k = j; k &lt; number - 1; k++) 
+                {
+                    a[k] = a[k + 1];
+                }   
+                number --;
+                j --:
+            }
+        }
+    }
+
+    printf("Array after removing duplicates: ");
+    for (i = 0; i &lt; number; i++) 
+    {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+    
+    getch();
+}
+</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the size of the array : 8
+Enter the elements of the array : 1 1 2 2 3 4 5 5 
+Array after removing dulpicate : 1 2 3 4 5 </code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 11 -->
+<p class="m-h">PROGRAM - 11 : <span class="def">&nbsp; Write a C program to find Factorial of a number.</span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+
+void main()
+{
+    int num, fact = 1. i;
+
+    printf("Enter a number : ");
+    scanf("%d", &num);
+
+    for(i = 1; i&lt; i++)
+    {
+        fact = fact*i;
+    }
+    printf("Factorial of %d is = %d" , num , fact);
+    
+    getch();
+}
+
+</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter a number : 5
+Factorial of 5 is = 120</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 12 -->
+<p class="m-h">PROGRAM - 12 : <span class="def">&nbsp;Wrire a C program to generate Fibonacci series.</span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+#include&lt;conio.h>
+
+void main()
+{
+    int a=0 , b=1, c, n, i=3;
+    
+    clrscr();
+
+    printf("Enter the number of terms : ");
+    scanf("%d",&n);
+
+    printf("\n* * * * FIBONACCI SERIES * * * *\n");
+    for(i=3; i &lt;= n; ++i)
+    {
+        c = a + b;
+        printf(", %d ", c);
+        a = b; 
+        b = c;
+    }
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the number of terms : 10
+
+* * * * FIBONACCI SERIES * * * *
+0 , 1, 1, 2, 3, 5, 8, 13, 21, 34</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 13 -->
+<p class="m-h">PROGRAM - 13 : <span class="def">&nbsp;Write a C program to demonstrate string functions. (String Length, String Copy, String Concatenate, String Comparison) </span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+#include&lt;string.h>
+
+void main()
+{
+    char s[20],cpy[20],cmp[20],cat[20];
+    int value;
+
+    printf("\n Enter a String : ");
+    gets(s);
+
+    printf("\n Using strlen() - Length of the given string is : %d",strlen(s));
+    printf("\n Using strcpy() - Oriiginal String is :%s and Copied String is : %s ",s,strcpy(cpy,s));
+    
+    printf("\n Enter the String to be Concatenated with %s : ",s);
+    gets(cat);
+    
+    printf("\n Using strcat() - Concatenation of Two Strings is : %s", strcat(s,cat));
+    
+    printf("\n Enter the String to be Compared with %s : ",cpy);
+    gets(cmp);
+    
+    value = strcmp(cpy, cmp);
+    if (value == 0)
+        printf("\n Using strcmp() - Strings are Same");
+    else
+        printf("\n Using strcmp() - Strings are not Same");
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter a String : Studybca
+Using strlen() - Length of the given string is : 7
+Using strcpy() - Original String is : Skyward and Copied String is : studybca
+Enter the String to be Concatenated with Studybca : notes
+Using strcat() - Concatenation of Two Strings is : studybcanotes
+Enter the String to be Compared with studybca : studybca
+Using strcmp() - Strings are Same </code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 14 -->
+<p class="m-h">PROGRAM - 14 : <span class="def">&nbsp;Write a C program to find the lenght of string without using built in function.</span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+
+void main()
+{
+    char str[100];
+    int len = 0;
+
+    printf("Enter the string : ");
+    gets(str);
+
+    while(str[len]!= '\0')
+        len++;
+
+    printf("Length of string = %d", len);
+    
+    getch();
+}
+</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the string : study bca netlify
+Length of string = 17 </code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 15 -->
+<p class="m-h">PROGRAM - 15 : <span class="def">&nbsp;Write a C program to read, display and add two n x m matrices using function.  </span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+
+/* This function is used to add the two matrices */
+void addMatrices(int m,int n, int a[m][n], int b[m][n])
+{ 
+    int i, j,sum[m][n];
+
+    for(i=0;i&lt;m;i++)
+    {
+        for(j=0;j&lt;;j++){
+            sum[i][j]=a[i][j]+b[i][j];
+        }       
+    }
+        
+    printf("\nSum of the given matrices:\n");
+    for(i=0;i&lt;m;i++)
+    {
+        for(j=0;j&lt;n;j++)
+            printf("%d ",sum[i][j]);
+            printf("\n");
+
+    }        
+}
+
+
+/* This function is used to display the matrices */
+void displayMatrices(int m,int n, int a[m][n],int b[m][n])
+{
+
+    int i,j;
+    printf("\nStored matrices are:\n");
+    for(i=0;i&lt;m;i++)
+    {
+        for(j=0;j&lt;n;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+    for(i=0;i&lt;m;i++)
+    {
+        for(j=0;j&lt;n;j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
+/* This function is to read the elements of the matrices */
+void readElements(int m,int n, int a[m][n],int b[m][n])
+{
+    int i,j;
+    printf("Enter %d elements of the first matrix row-wise:\n",m*n);
+    for(i=0;i&lt;m;i++)
+    {
+        for(j=0;j&lt;n;j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+        
+        printf("Enter %d elements of the second matrix row-wise: \n",m*n);
+        for(i=0;i&lt;`m;i++)
+        {
+            for(j=0;j&lt;n;j++){
+                scanf("%d", &b[i][j]);
+            }
+
+        }
+
+    }
+}
+
+
+void main()
+{
+    int m,n,i, j;
+
+    printf("Enter the order of the matrices : ");
+    scanf("%d %d", &m, &n);
+    
+    int a[m][n], b[m][n];
+    
+    readElements(m,n,a,b);
+    
+    displayMatrices(m,n,a,b);
+    
+    addMatrices(m,n,a,b);
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the order of the matrices : 3 3
+Enter 9 elements of the first matrix row-wise:
+1 2 3 4 5 6 7 89
+Enter 9 elements of the second matrix row-wise:
+9 8 7 6 5 4 3 2 1
+
+Stored matrices are:
+1 2 3
+4 5 6
+
+9 8 7
+6 5 4
+3 2 1
+
+Sum of the given matrices:
+10 10 10
+10 10 10 
+10 10 10</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 16 -->
+<p class="m-h">PROGRAM - 16 : <span class="def">&nbsp;Write a C program to read a string and to find the number of alphabets, digits, vowels, consonants, space and special characters.</span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+
+void main()
+{
+    char ch[100];
+    int i,alpha_count=0, digit_count=0, vowel_count=0, consonant_count=0, space_count=0;
+    int splchar_count=0;
+    
+    printf("Enter a String : ");
+    gets(ch);
+    
+    for (i=0;ch[i] != '\0';i++)
+    {
+        if ( (ch[i] >= 'a' &&ch[i] &lt;= 'z') || (ch[i] >= 'A' &&ch[i] &lt;= 'Z') )
+        {
+            alpha_count++;
+            if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u')
+                vowel_count++;
+            else
+                consonant_count++;
+
+        }else if (ch[i] >= '0' &&ch[i] &lt;= '9')
+            digit_count++;
+        else if(ch[i] == ' ')
+            space_count++;
+        else
+            splchar_count++;    
+    }
+
+    printf("\n No of Alphabets\t\t :%d",alpha_count);
+    printf("\n No of Digits\t\t\t: %d",digit_count);
+    printf("\n No of Vowels\t\t\t:%d",vowel_count);
+    printf("\n No of Consonants\t\t : %d", consonant_count);
+    printf("\n No of Spaces\t\t\t :%d",space_count);
+    printf("\n No of Special Characters\t : %d",splchar_count);
+    
+    getch();
+}
+</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter a String : #157 7th Cross Bangalore-560018
+No of Alphabets             : 16
+No of Digits                : 10
+No of Vowels                : 5
+No of Consonants            : 11  
+No of Spaces                : 3
+No of Special Characters    : 2</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 17 -->
+<p class="m-h">PROGRAM - 17 : <span class="def">&nbsp;Write a C program to swap two numbers using pointers.</span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+#include&lt;conio.h>
+void main()
+{
+    int n1,n2,*ptr1,*ptr2,temp;
+    clrscr();
+
+    printf("\n Enter two numbers : ");
+    scanf("%d %d",&n1, &n2);
+    
+    printf("\nBefore swapping N1 = %d and N2 = %d\n",n1,n2);
+    ptr1=&n1;
+    ptr2=&n2;
+    
+    //swapping
+    temp=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=temp;
+    
+    printf("After swapping N1 = %d and N2 = %d\n",n1,n2);
+    getch();
+}
+</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter two numbers : 10 20
+
+Before swapping N1 = 10 and N2 = 20
+After swapping N1 = 20 and N2 = 10</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 18 -->
+<p class="m-h">PROGRAM - 18 : <span class="def">&nbsp;Write a C program to demonstrate student structure to read &amp; display records of n students.  </span></p> <br>
+<pre><code class="language-c">#include &lt;stdio.h>
+
+struct Student 
+{
+    int roll_no;
+    char name[50];
+    float marks;
+}
+
+
+void main() 
+{
+    int n;
+
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+    
+    struct Student students[n];
+    for (int i = 0; i &lt; n; i++) 
+    {
+        printf("Enter details for student %d:\n", i + 1);
+        printf("Roll No: ");
+        scanf("%d", &students[i].roll_no);
+        printf("Name: ");
+        scanf(" %[^\n]s", students[i].name);
+        printf("Marks: ");
+        scanf("%f", &students[i].marks);
+    }
+    
+    printf("\nStudent Records:\n");
+    for (int i = 0; i &lt; n; i++) 
+    {
+        printf("Student %d: ", i+1);
+        printf("Roll No:%d", students[i].roll_no);
+        printf("Name   :%s", students[i].name);
+        printf("Marks  : %.2f", students[i].marks);
+
+    }
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the number of students: 2
+Enter details for student 1:
+Roll No: 101
+Name: Astro
+Marks: 600
+Enter details for student 2:
+Roll No: 102
+Name: Ankith
+Marks: 550
+
+Student Records:
+Student 1: Roll No: 101Name : AstroMarks : 600.00
+Student 2: Roll No: 102Name : AnkithMarks : 550.00</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 19 -->
+<p class="m-h">PROGRAM - 19 : <span class="def">&nbsp;Write a C program to demonstrate the difference between structure and union for the following  Student name (String), Student roll no(integer), Student mark(float) </span></p> <br>
+<pre><code class="language-c">#include&lt;stdio.h>
+#include&lt;string.h>
+
+struct StudentStruct 
+{
+    char name[50];
+    int roll_no;
+    float marks;
+};
+
+union StudentUnion 
+{
+    char name[50];
+    int roll_no;
+    float marks;
+}
+
+
+void main()
+{
+    struct StudentStruct s_struct;
+    union StudentUnion s_union;
+    
+    strcpy(s_struct.name, "Astro");
+    s_struct.roll_no = 101;
+    s_struct.marks = 88.5;
+
+    printf("Structure:\n");
+    printf("Name:%s\n", s_struct.name);
+    printf("Roll No:%d\n", s_struct.roll_no);
+    printf("Marks: %.2f\n\n", s_struct.marks);
+
+    strcpy(s_union.name, "San");
+    printf("Union:\n");
+    printf("Name: %s\n", s_union.name);
+    s_union.roll_no = 102;
+    printf("Roll No: %d\n", s_union.roll_no);
+    s_union.marks = 92.5;
+    printf("Marks: %.2f\n", s_union.marks);
+    
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Structure :
+Name : Astro
+Roll No : 101
+Marks : 88.50
+
+Union : 
+Name : San
+Roll No : 102
+Marks : 92.50</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 20 -->
+<p class="m-h">PROGRAM - 20 : <span class="def">&nbsp;Write a C program to design the following pattern using nested for loop: <br>
+</span></p> <br>
+<pre><code class="language-c">/* PATTERN :
+        *
+      *   *
+    *   *   *
+  *   *   *   *
+*   *   *   *   *
+
+*/
+
+#include &lt;stdio.h>
+
+void main() 
+
+{
+    int n;
+
+    printf("Enter the number of rows : ");
+    scanf("%d", &n);
+    
+    for (int i = 1; i &lt;= n; i++)
+    {
+        for (int j = i; j &lt; n; j++) 
+        {
+            printf(" "); // Print leading spaces
+        }
+        for (int j = 1; j &lt;= i; j++) 
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    getch();
+}</code></pre> <br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the number of rows : 5
+
+        *
+      *   *
+    *   *   *
+  *   *   *   *
+*   *   *   *   *</code></pre> <br> <br>
+
+
+        <br><br>
+        <p class="author"><i>Last updated on 11 OCT 2024 BY : <a href="">ANKITH KUMAR</a> ( Bengaluru City University )</i></p>
+    </div>
+    <!-- END OF CONTAINER CONTENT -->
+</div>
+<!-- END OF CONTAINER -->
+<script>hljs.highlightAll();</script>
+</body>
+</html>
