@@ -347,12 +347,13 @@ html{
 
 .footer a{
     font-size: 0.9em;
-    padding: 0.2em 0 0.2em 0;
+    padding: 0.4em 0 0.4em 0;
     text-decoration: none;
     color: #000;
 }
 .footer-box h3{
-    font-size: 1.2em;
+    font-size: 1.3em;
+    padding: 0 0 0.5em 0;
     font-weight: 600;
     text-transform: uppercase;
 }
