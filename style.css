@@ -29,7 +29,7 @@ html{
     border : 1px solid #000;
     border-radius : 1em;
     z-index : 100;
-    background : #000;    
+    background : #151414;    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);    
     
 }.menu:after{
@@ -47,7 +47,7 @@ html{
    width : 93.2%;
    border-radius : 1em; 
    padding-top : 4em;
-   background : #000;   
+   background : #151414;   
     
 }.menu_content .details{ 
     float: left;
