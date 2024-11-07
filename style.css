@@ -95,6 +95,12 @@ html{
     
 }
 
+.logo_img{
+    width: 2.1em;
+    height: 2.1em;
+    padding: 0.6em 0 0 1.5em;
+}
+
 
 /* CONTAINER  */
 .container {
@@ -380,6 +386,21 @@ html{
     color: red;
 }
 
+/* FOOTER LOGO */
+.footer_logo{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer_logo , h3{
+    padding-left: 0.4em;
+}
+.footer_slogan{
+    padding: 0.3em 0 0 0.8em;
+}
+
 /* COPYRIGHT */
 .copy{
     padding-top: 2.5em;
@@ -387,7 +408,7 @@ html{
 
 
 /* CHAT BOT LAYOUT */
-.chatbot-toggler {
+/* .chatbot-toggler {
     position: fixed;
     bottom: 30px;
     right: 8em;
@@ -404,7 +425,7 @@ html{
     transition: all 0.2s ease;
     z-index: 100;
 
-}
+} */
 body.show-chatbot .chatbot-toggler {
     transform: rotate(90deg);
 }
@@ -579,6 +600,10 @@ header h2 {
 
 /* MOBILE RESPONSIVE */
 @media only screen and (max-width : 680px){
+    .logo_img{
+        padding-left: 1em;
+    }
+    
     /* NAV BAR */
     .menu_content {
         width : 93.4%; 
