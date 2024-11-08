@@ -695,3 +695,13 @@ header h2 {
     }
      
 }
+
+
+
+/* Styles to prevent zooming */
+@media only screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}  
