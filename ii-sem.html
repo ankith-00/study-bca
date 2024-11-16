@@ -141,11 +141,86 @@ a{
 
 /* FOOTER */
 .footer{
-    width: auto;
-    margin: 2.8em 0 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    padding: 1em;
+    gap: 1.5em;
+    margin-top: 4em;
+    padding-top: 1.8em;
+    margin-bottom: -1em;
+    border-top: 1px solid rgb(222, 215, 215);
+}
 
-}.footer a{
+.footer-box h3{
+    font-size: 1em;
+}
+.footer-box p, .copy p{
+    font-size : 0.9em;
+}
+
+.footer-box .main{
+    font-size: 1.3em;
+}
+
+.footer-box .social-icons{
+    padding-top: 0.5em;
+    width: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-box ul {
+    padding: 0.5em 0 0 1.6em;
+}
+.footer-box ul li{
+    list-style: disc;
+    padding: 0.15em 0 0.15em 0;
+}
+.footer-box ul li a{
     text-decoration: none;
+    color: #000;
+    transition: .2s ease-in;
+}
+.footer-box ul li a:hover{
+    color: red;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 0.8em 0 0.5em 0;
+}
+
+/* FOOTER LOGO */
+.footer_logo{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer_logo , h3{
+    padding-left: 0.4em;
+}
+.footer_slogan{
+    padding: 0.3em 0 0 0.8em;
+}
+.footer-box a{
+    text-decoration: underline;
+}
+
+/* COPYRIGHT */
+.copy{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5em 0 1em 0;
 }
 
 
@@ -161,6 +236,15 @@ a{
     .none{
         display: none;
     } 
+    /* FOOTER */
+    .footer{
+        border: none;
+        gap: 2em;
+        padding: 0em;
+    }
+    .footer-logo{
+        width: 70%;
+    }
 
    
 }     
@@ -305,13 +389,50 @@ a{
         </table>
 
         <!-- FOOTER  -->
-        <div class="footer">
-            <P> Website BY : <a href="">Astro</a> 
-                <br>Bengaluru City University 
-                <br>( Dept. Bachalores of Computer Application )
-            </P> 
+        <div class="footer"> 
+            <!-- PROJECT INFO -->
+            <div class="footer-box ">
+                <!-- footer logo -->
+                <div class="footer_logo">
+                    <img src="https://i.ibb.co/Q8vrrsZ/Arounda-Brand-Identity-3-photoaidcom-cropped-jpeg-1.png" width="40">
+                    <h3 class="main">STUDY ( BCA )</h3>
+                </div>
+                <p class="footer_slogan">A platform by a bca student to study-bca</p> 
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-box">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="handwritten.html">Handwritten notes</a></li>
+                    <li><a href="text-books.html">Text books</a></li>
+                    <!-- <li><a href="">i-semester</a></li>
+                    <li><a href="">iii-semester</a></li>  -->
+<!--                     <li><a href="#">Meet the founders</a></li> -->
+<!--                     <li><a href="">Join team</a></li> -->
+                </ul>
+            </div>
+        
+            <!-- SOCIAL LINKS -->
+            <div class="footer-box">
+                <h3 style="padding-left: 0em;">FOLLOW US</h3>
+                <p>Stay connected with us on social media for the latest updates</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/study_bca"><img src="https://i.ibb.co/yg3BvCJ/social-media.png" width="32"></a>
+                    <a href="#"><img src="https://i.ibb.co/vLSXkLf/facebook.png" width="28"></a>
+                    <a href="#"><img src="https://i.ibb.co/RSTDFgX/threads.png" width="28"></a>
+                    <a href="mailto:project.studybca@gmail.com"><img src="https://i.ibb.co/XXjMyLk/email.png" width="27"></a> 
+                </div> <br> <br>
+                <p>Website design and devloped BY : <a href="https://www.instagram.com/ankith_8900">ANKITH</a></p>
+            </div> <br>
+            <!-- <center></center> -->
         </div>
-        <!-- FOOTER ENDS HERE  -->   
+        <div class="copy">
+            <p>&copy; copyrights 2024 study-bca. All Rights Reserved</p>
+        </div>
+        <!-- FOOTER ENDS HERE  -->
+        
     </div>
     <!-- CONTAINER CONTENT ENDS HERE -->  
 </div>
