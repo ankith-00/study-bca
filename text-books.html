@@ -58,7 +58,7 @@
 
 }.nav-heading p {
     font-size   : 0.98em;
-    margin      : 0.3em 0 0 1em;
+    margin      : 0.3em 0 0 0.2em;
     font-weight : 600;
     letter-spacing  : 0.8px;
 
@@ -108,30 +108,116 @@ td span{
     font-size : 1em;
 }
 a{
-text-decoration : none;  
+    text-decoration : none;  
 }
 
-h4{
-display        : flex;     
-font-size      : 1.2em;
-font-weight    : 700;   
-padding-bottom : 4px;    
-width          : 98%;
-border-bottom  : 2px solid orange ;   
+.h2{
+    font-size: 1.1em;
 }
+
+.main-heading{
+    display        : flex;     
+    font-size      : 1.4em;
+    font-weight    : 600;   
+    padding-bottom : 4px;    
+    width          : 98%;
+    border-bottom  : 2px solid orange ;   
+}
+
 
 .year{
-padding-left  : 3em;
-color         : #C04000;
-font-size     : 0.9em;
+    padding-left  : 3em;
+    color         : #C04000;
+    font-size     : 0.9em;
 }
 
-
-.footer p{
-font-size : 0.9em;
-}
 .th{
     font-weight : 700;
+}
+
+
+.footer-container{
+    width: 75%;
+}
+
+
+
+/* FOOTER */
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    padding: 1em;
+    gap: 1.5em;
+    margin-top: 1em;
+    padding-top: 2em;
+    margin-bottom: -1em;
+    background-color: rgb(252, 252, 252);
+    /* border-top: 1px solid rgb(222, 215, 215); */
+}
+
+.footer-box p{
+    font-size: 1em;
+}
+.footer-box p, .copy p{
+    font-size : 0.9em;
+}
+
+.footer-box .main{
+    font-size: 1.2em;
+    margin: 0em 0 0 0.6em
+}
+
+.footer-box .social-icons{
+    padding-top: 0.5em;
+    width: 12em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-box ul {
+    padding: 0.5em 0 0 1.6em;
+}
+.footer-box ul li{
+    list-style: disc;
+    padding: 0.15em 0 0.15em 0;
+}
+.footer-box ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: .2s ease-in;
+}
+.footer-box ul li a:hover{
+    color: red;
+}
+
+
+/* FOOTER LOGO */
+.footer_logo{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.footer_logo , p{
+    padding-left: 0.4em;
+}
+.footer_slogan{
+    font-size: 0.8em;
+    margin: -1em 0 0 3.4em;
+}
+.footer-box a{
+    text-decoration: underline;
+}
+
+/* COPYRIGHT */
+.copy{
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    justify-content: center;
+    text-align: center;
+    padding: 0.5em 0 1.8em 0;
 }
 
 @media only screen and (max-width : 680px){
@@ -141,6 +227,23 @@ font-size : 0.9em;
         padding     : 0.95em;
         padding-top : 3em;
 
+    }
+    .footer-container{
+        width: 100%;
+    }
+    /* FOOTER */
+    .footer{
+        border: none;
+        gap: 2em;
+        padding: 1em;
+    }
+    .footer-box{
+        padding: 0em;
+    }
+    .footer_logo{
+        margin: 0.5em 0 0 -0.5em;
+    }.footer_slogan{
+        margin: -1em 0 0 3em;
     }
     
 }
@@ -165,10 +268,10 @@ font-size : 0.9em;
 <div class="container">        
     <!-- CONTAINER CONTENT -->
     <div class="container-content">
-        <br/> <h4> TEXT BOOKS</h3> </h4>  <br/><br/>
+        <br/> <p class="main-heading"> TEXT BOOKS</p> </p>  <br/><br/>
         <!-- I - SEM  -->
         <tbody><table>
-            <h3> I - SEM : SEP</h3>
+            <p class="h2"> I - SEM : SEP</p>
             <tr>
                 <td><b>TITLE </b></td>
                 <td style="width: 5em;"><b>PREV </b></td>
@@ -214,7 +317,7 @@ font-size : 0.9em;
 
         <!-- II - SEM  -->
 <!--         <table> <tbody> 
-            <h3> II - SEM : SEP</h3>   
+            <p> II - SEM : SEP</p>   
             <tr>
                 <td class="th">TITLE</td>     
                 <td style="width: 5em;" class="th">PREV </td> 
@@ -241,7 +344,7 @@ font-size : 0.9em;
 
         <!-- III - SEM NEP -->
         <table> <tbody> 
-            <h3> III - SEM : NEP</h3>   
+            <p class="h2"> III - SEM : NEP</p>   
             <tr>
                 <td class="th">TITLE</td>     
                 <td style="width: 5em;" class="th">PREV </td> 
@@ -266,7 +369,7 @@ font-size : 0.9em;
             </tr>
             <tr>
                 <td>Operating System</td>      
-                <td><a href="https://drive.google.com/file/d/1IKA5ZrIph2xIWeauutGi5WeSn4rikGAv/view?usp=sharing">Prev</a></td>
+                <td><a href="https://drive.google.com/file/d/1IKA5ZrIppxIWeauutGi5WeSn4rikGAv/view?usp=sharing">Prev</a></td>
             </tr>
             <tr>
                 <td>Computer Networking</td>      
@@ -281,7 +384,7 @@ font-size : 0.9em;
         </tbody> </table> <br/>
 
         <!-- <table> <tbody> 
-            <h3> III - SEM : SEP</h3>   
+            <p> III - SEM : SEP</p>   
             <tr>
                 <td class="th">TITLE</td>     
                 <td style="width: 5em;" class="th">PREV </td> 
@@ -307,7 +410,7 @@ font-size : 0.9em;
         </tbody> </table> <br/> -->
 
         <!-- <table> <tbody> 
-            <h3> IV - SEM : NEP</h3>   
+            <p> IV - SEM : NEP</p>   
             <tr>
                 <td class="th">TITLE</td>     
                 <td style="width: 5em;" class="th">PREV </td> 
@@ -331,22 +434,61 @@ font-size : 0.9em;
                 <td colspan="2" class="year">Reference books</td>
             </tr>
         </tbody> </table> <br/> -->
-
-
-        <!-- FOOTER  -->
-        <br/><br/>
-        <div class="footer">
-            <P> Website BY : <a href="https://www.instagram.com/astro_8900/ ">Astro</a> <br/>Bengaluru City University <br> ( Dept. Bachelor of Computer Applications )</P> 
-        </div>
-        <!-- FOOTER ENDS HERE  -->  
-
-
-
-    
     </div>
     <!--END OF CONTAINER CONTENT-->
 </div>
 <!--END OF CONTAINER -->
+
+<!-- FOOTER CONTAINER -->
+<div class="container">
+    <div class="footer-container">
+        <!-- FOOTER  -->
+        <div class="footer"> 
+            <!-- PROJECT INFO -->
+            <div class="footer-box ">
+                <!-- footer logo -->
+                <div class="footer_logo">
+                    <img src="https://i.ibb.co/Q8vrrsZ/Arounda-Brand-Identity-3-photoaidcom-cropped-jpeg-1.png" width="38">
+                    <h3 class="main">STUDY ( BCA )</h3>
+                </div>
+                <p class="footer_slogan">A platform by a bca student to study-bca</p> 
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-box">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="handwritten.html">Handwritten notes</a></li>
+                    <li><a href="text-books.html">Text books</a></li>
+                    <!-- <li><a href="">i-semester</a></li>
+                    <li><a href="">iii-semester</a></li>  -->
+<!--                     <li><a href="#">Meet the founders</a></li> -->
+<!--                     <li><a href="">Join team</a></li> -->
+                </ul>
+            </div>
+        
+            <!-- SOCIAL LINKS -->
+            <div class="footer-box">
+                <h3 style="padding-left: 0em;">FOLLOW US</h3>
+                <p style="padding-left: 0;">Stay connected with us on social media for the latest updates</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/study_bca"><img src="https://i.ibb.co/yg3BvCJ/social-media.png" width="34"></a>
+                    <a href="#"><img src="https://i.ibb.co/vLSXkLf/facebook.png" width="28"></a>
+                    <a href="#"><img src="https://i.ibb.co/RSTDFgX/threads.png" width="28"></a>
+                    <a href="mailto:project.studybca@gmail.com"><img src="https://i.ibb.co/XXjMyLk/email.png" width="28"></a> 
+                </div> <br> <br>
+                <p>Website design and devloped BY : <a href="https://www.instagram.com/ankith_8900">ANKITH</a></p>
+            </div> <br>
+            <!-- <center></center> -->
+        </div>
+        <div class="copy">
+            <p>&copy; copyrights 2024 study-bca. All Rights Reserved</p>
+        </div>
+        <!-- FOOTER ENDS HERE  -->
+    </div>
+</div>
+
 
 </body>
 </html>
