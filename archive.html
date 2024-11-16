@@ -109,43 +109,39 @@ a{
     text-decoration : none;  
 }
 
-h4{
+.container-content span{
     display        : flex;     
-    font-size      : 1.2em;
-    font-weight    : 700;   
+    font-size      : 1.4em;
+    font-weight    : 600;   
     padding-bottom : 4px;    
     width          : 98%;
     border-bottom  : 2px solid orange ;   
 }
-h3{
-    font-size: 0.98em;
-    margin-bottom: -0.5em;
-    font-weight: 100;
+
+.container-content p{
+    font-size: 1.1em;
+    margin: 0 0 -0.4em -0.5em;
 }
 
-.year{
-    padding-left  : 3em;
-    color         : #C04000;
-    font-size     : 0.9em;
-}
-
-
-.footer p{
-    font-size : 0.9em;
-}
 .th{
     font-weight : 700;
 }
-td span{
-    font-size: 1em;
-    font-weight: 600;
-    
+
+td ul{
+    margin: 0.8em 0 0 1.5em;
 }
+
 td p{
     font-size: 0.89em;
 }.pro{
     padding: 1em 1em;
 }
+
+.footer-container{
+    width: 75%;
+}
+
+
 
 /* FOOTER */
 .footer{
@@ -154,13 +150,14 @@ td p{
     max-width: 1250px;
     padding: 1em;
     gap: 1.5em;
-    margin-top: 4em;
+    margin-top: 1em;
     padding-top: 1.8em;
     margin-bottom: -1em;
-    border-top: 1px solid rgb(222, 215, 215);
+    background-color: rgb(252, 252, 252);
+    /* border-top: 1px solid rgb(222, 215, 215); */
 }
 
-.footer-box h3{
+.footer-box p{
     font-size: 1em;
 }
 .footer-box p, .copy p{
@@ -168,7 +165,8 @@ td p{
 }
 
 .footer-box .main{
-    font-size: 1.3em;
+    font-size: 1.2em;
+    margin: -0.7em 0 0 0.5em
 }
 
 .footer-box .social-icons{
@@ -202,7 +200,7 @@ td p{
     justify-content: center;
     align-items: center;
     width: 80%;
-    padding: 0.8em 0 0.5em 0;
+    padding: 0em 0 0.5em 0;
 }
 
 /* FOOTER LOGO */
@@ -213,11 +211,12 @@ td p{
     justify-content: space-evenly;
     align-items: center;
 }
-.footer_logo , h3{
+.footer_logo , p{
     padding-left: 0.4em;
 }
 .footer_slogan{
-    padding: 0.3em 0 0 0.8em;
+    font-size: 0.8em;
+    margin: -1em 0 0 3.4em;
 }
 .footer-box a{
     text-decoration: underline;
@@ -228,7 +227,8 @@ td p{
     width: 100%;
     justify-content: center;
     text-align: center;
-    padding: 0.5em 0 1em 0;
+    padding: 0.5em 0 1.8em 0;
+    background-color: rgb(252, 252, 252);
 }
 
 @media only screen and (max-width : 680px){
@@ -239,15 +239,24 @@ td p{
         padding-top : 3em;
 
     }
-        /* FOOTER */
+    .footer-container{
+        width: 100%;
+    }
+    /* FOOTER */
     .footer{
         border: none;
         gap: 2em;
+        padding: 1em;
+    }
+    .footer-box{
         padding: 0em;
     }
-    .footer-logo{
-        width: 70%;
+    .footer_logo{
+        margin: 0.5em 0 0 -0.5em;
+    }.footer_slogan{
+        margin: -1em 0 0 3em;
     }
+    
     
 }
 </style>
@@ -271,39 +280,10 @@ td p{
 <div class="container">        
     <!-- CONTAINER CONTENT -->
     <div class="container-content">
-        <br/> <h4> ARCHIVE </h3> </h4>  <br/><br/>
-       <!-- STUDY ( BCA ) ORIGINAL DOCS -->
-        <table> <tbody> 
-            <h3>ORIGINAL DOCS </h3>   
-            <tr>
-                <td class="th">SERIES</td> 
-                <td class="th">TITLE</td>     
-                <td style="width:5em;" class="th">PREV</td> 
-            </tr>
-            <!---
-            <tr>
-                <td> ASNO </td>
-                <td> Photojournalism </td>
-                <td> <a href="https://drive.google.com/file/d/1Fb156ABLAo3AmpDrf6NwPzS-LnHdffJY/view?usp=drivesdk">Prev</a> </td>
-            </tr>
-            --->
-            
-            <tr>
-                <td> ASNO </td>
-                <td> Environment Science</td>
-                <td> <a href="https://drive.google.com/file/d/1xCr2PSnuod516GrSKEtMPEJT2IPY44wk/view?usp=drivesdk">Prev</a> </td>
-            </tr>
-            <tr>
-                <td> PNO </td>
-                <td> DBMS Lab Manual </td>
-                <td> <a href="https://drive.google.com/file/d/1T4-Nr6-nVR5p6ADInPmKycXrQYFNOJ2K/view?usp=drivesdk">Prev</a> </td>
-            </tr>
-            
-        </tbody></table> <br> 
-        
+        <br/> <span> ARCHIVE </span><br/><br/>
         <!--Text-Books-->
         <tbody><table>
-            <h3>TEXT BOOKS </h3>
+            <p>TEXT BOOKS </p>
             <tr>
                 <td style="width: 5em;" ><b>SEM </b></td>
                 <td><b>TITLE </b></td>
@@ -331,12 +311,12 @@ td p{
             </tr>
             <tr>
                 <td>I </td>
-                <td>Eng Lingua Franca - I</td>
+                <td>English Lingua Franca - I</td>
                 <td><a href="https://drive.google.com/file/d/1IkaWTiPzkweCZ_K_EDZ2eRSHViUPgc4b/view?usp=drivesdk">Prev</a></td>
             </tr>
             <tr>
                 <td>II </td>
-                <td>Eng Lingua Franca - II </td>
+                <td>English Lingua Franca - II </td>
                 <td><a href="https://drive.google.com/file/d/1wxo3WN2XSQh6y4zfYF-L_WpVFxDR2lD7/view?usp=drivesdk">Prev</a></td>
             </tr>
 
@@ -355,7 +335,7 @@ td p{
 
         <!-- QUESTION PAPERS  -->
         <table> <tbody> 
-            <h3>QUESTION PAPERS</h3>   
+            <p>QUESTION PAPERS</p>   
             <tr>
                 <td class="th ty" style="width: 5em;">YEAR</td> 
                 <td class="th">SUBJECT</td>     
@@ -436,34 +416,81 @@ td p{
 
         <!-- PROJECTS  -->
         <table> <tbody> 
-            <h3>PROJECTS</h3>   
+            <p>PROJECTS</p>   
             <tr>
                 <td class="th">TITLE</td> 
                 <td class="th">AUTHOR</td>     
                 <td style="width:5em;" class="th">DOCS</td> 
             </tr> 
-           
-<!--             <tr>
-                <td class="pro"><span>AI Chatbot</span> <br><p>Using Gemini API : Google </p></td>
-                <td style="font-style: italic; font-size: 0.8em;"><a href="">ANKITH</a></td>
-                <td><a href="">VIEW</a></td>
-            </tr> -->
 
             <tr>
-                <td class="pro"><span> </span> <br><p>  </p></td>
-                <td style="font-style: italic; font-size: 0.8em;"><a href=""> </a></td>
-                <td><a href=""> </a></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
+
+            <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
             
         </tbody> </table> <br/>
-
-        
-<!--  -->
-        
     </div>
     <!--END OF CONTAINER CONTENT-->
 </div>
 <!--END OF CONTAINER -->
+
+
+<!-- FOOTER CONTAINER -->
+<div class="container">
+    <div class="footer-container">
+        <!-- FOOTER  -->
+        <div class="footer"> 
+            <!-- PROJECT INFO -->
+            <div class="footer-box ">
+                <!-- footer logo -->
+                <div class="footer_logo">
+                    <img src="https://i.ibb.co/Q8vrrsZ/Arounda-Brand-Identity-3-photoaidcom-cropped-jpeg-1.png" width="38">
+                    <h3 class="main">STUDY ( BCA )</h3>
+                </div>
+                <p class="footer_slogan">A platform by a bca student to study-bca</p> 
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-box">
+                <h3>QUICK LINKS</h3>
+                <ul>
+<!--                     <li><a href="archive.html">Archive</a></li> -->
+                    <li><a href="handwritten.html">Handwritten notes</a></li>
+                    <li><a href="text-books.html">Text books</a></li>
+                    <!-- <li><a href="">i-semester</a></li>
+                    <li><a href="">iii-semester</a></li>  -->
+<!--                     <li><a href="#">Meet the founders</a></li> -->
+<!--                     <li><a href="">Join team</a></li> -->
+                </ul>
+            </div>
+        
+            <!-- SOCIAL LINKS -->
+            <div class="footer-box">
+                <h3 style="padding-left: 0em;">FOLLOW US</h3>
+                <p style="padding-left: 0;">Stay connected with us on social media for the latest updates</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/study_bca"><img src="https://i.ibb.co/yg3BvCJ/social-media.png" width="34"></a>
+                    <a href="#"><img src="https://i.ibb.co/vLSXkLf/facebook.png" width="28"></a>
+                    <a href="#"><img src="https://i.ibb.co/RSTDFgX/threads.png" width="28"></a>
+                    <a href="mailto:project.studybca@gmail.com"><img src="https://i.ibb.co/XXjMyLk/email.png" width="27"></a> 
+                </div> <br> <br>
+                <p>Website design and devloped BY : <a href="https://www.instagram.com/ankith_8900">ANKITH</a></p>
+            </div> <br>
+            <!-- <center></center> -->
+        </div>
+        <div class="copy">
+            <p>&copy; copyrights 2024 study-bca. All Rights Reserved</p>
+        </div>
+        <!-- FOOTER ENDS HERE  -->
+    </div>
+</div>
 
 </body>
 </html>
