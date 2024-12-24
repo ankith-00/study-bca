@@ -214,7 +214,7 @@ html{
     font-size: 1.42rem;
     margin-top: 28px;
     font-weight: 600;
-    
+    padding-left: 0px
 }.card-list p {
     font-size : 0.85em;
     color : #000;
@@ -226,6 +226,8 @@ html{
     width: auto;
     padding: 0 0.5em 0 1.5em;
     
+}.upload h3{
+    padding-left: 0em;
 }.upload p, .footer p{
     font-size: 0.9em;
 
@@ -364,7 +366,7 @@ html{
 }
 .footer-box .social-icons{
     padding-top: 0.5em;
-    width: 12em;
+    width: 7em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -372,7 +374,7 @@ html{
 }
 
 .footer-box ul {
-    padding: 0.5em 0 0 1.6em;
+    padding: 0.5em 0 0 2.4em;
 }
 .footer-box ul li{
     list-style: disc;
@@ -392,16 +394,20 @@ html{
     width: fit-content;
     height: fit-content;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-left: -0.5em;
     align-items: center;
 }
 .footer_logo , h3{
-    padding-left: 0.4em;
+    padding-left: 0.3em;
 }
 .footer_slogan{
-    font-size: 0.8em;
-    margin: -0.8em 0 0 4em;
+    font-size: 0.5em;
+    margin: -0.8em 0 0 3.5em;
 }
+
+
+
 
 /* COPYRIGHT */
 .copy{
