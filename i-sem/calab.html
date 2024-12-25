@@ -1,0 +1,746 @@
+<!-- AUTHOR     : ANKITH KUMAR   -->
+<!-- TITLE      : CA LAB MANUAL  -->
+<!-- YEAR | SEM : 1-YEAR | 1-SEM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Lab Manual</title>
+
+    <!--  GOOGLE TAG [ GTAG.JS]  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F5X4M59SCT');
+    </script>
+
+    <!--- GOOGLE ICON LINK -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- GOOGLE FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+    <!-- CDN FOR HIGHLIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+  
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-size: 0.98em;
+    margin: 0.1em 0 0 0.5em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}.publish-text {
+    font-weight: normal;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 75%;
+    height: auto;
+    background: #fff;
+
+}
+
+
+/* CHAPTER OR UNIT NAME & SUB HEADING */
+.m-h{
+    font-size: 1em;
+    margin-top: 1em;
+    font-weight: bold;
+}.def{
+    font-size: 1em;
+    font-weight: normal;
+}
+.subject{
+    font-size: 0.9em;
+    padding-bottom: 1.5px;
+    border-bottom: 2px solid orange;
+
+}.author{
+    font-size: 0.95em;
+    color: gray;
+}
+
+table {
+    margin-top     : 0.5em;
+    border-collapse: collapse;
+    border         : 1px solid black;
+    width          : auto;
+    
+}td {
+    width          : auto;
+    font-size      : 0.88em;
+    height         : 2em;
+    border         : 1px solid #000;
+    padding: 0 1em 0 1em;
+
+ }a{
+    text-decoration: none;
+    font-size: 0.9em;
+
+}
+
+.subject , .m-h , .def, p ,p{
+    font-family: 'Lexend', sans-serif;
+}
+
+
+code{
+    margin-top: -0.8em;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    font-size: 1.2em;
+}
+
+
+@media only screen and (max-width : 680px) {
+
+    .container-content {
+        width: 100%;
+        padding: 0.95em;
+        padding-top: 3em;
+
+    }
+}
+</style>  
+</head
+  
+<body>
+<!-- NAV START -->
+<div class="back-arrow">
+    <a href=" "> <span class="material-symbols-outlined">first_page </span> </a>
+        <div class="nav-heading">
+            <p> STUDY( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+        </div>
+</div>
+<!-- NAV END -->
+
+<!-- CONTAINER -->
+<div class="container">
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <p><b>LAB MANUAL</b></p>
+        <p class="subject">Computer Architecture </p>
+        <br> 
+        
+
+<!-- PROGRAM : 01 -->
+<p class="m-h">PROGRAM - 01 : <span class="def">&nbsp;Write an 8085 program to swap two 8-bit numbers.</span></p><br>
+<pre><code class="language-plaintext">LDA 0000H
+MOV B,A
+LDA 0001H
+STA 0000H
+MOV A,B
+STA 0001H
+    HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">BEFORE SWAPING
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               2
+0001                        1               4
+0002                        2               0   
+    
+AFTER SWAPING
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0             4
+0001                        1             2
+0002                        2             0
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 02A -->
+<p class="m-h">PROGRAM - 02A : <span class="def">&nbsp;Write a program to find the smallest of two numbers.</span></p><br>
+<pre><code class="language-plaintext">LDA 0000H
+MOV B,A
+LDA 0001H
+CMP B
+JNC SMALLER
+MOV A,B
+SMALLER : STA 0002H
+    HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               55
+0001                        1               66
+0002                        2               0
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 02B -->
+<p class="m-h">PROGRAM - 02B : <span class="def">&nbsp;Write an 8085 program to find largest of two numbers. </span></p><br>
+<pre><code class="language-plaintext">LDA 0000H
+MOV B,A
+LDA 0001H
+CMP B
+JC  LARGEST
+MOV A,B
+LARGEST : SAT 0002H
+    HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               88
+0001                        1               33
+0002                        2               0
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 03 -->
+<p class="m-h">PROGRAM - 03 : <span class="def">&nbsp; Write a 8085 program to find whether a 8bit number is positive or negative or zero.</span></p><br>
+<pre><code class="language-plaintext">LDA 0000H
+ORI 00
+JZ  Zero
+JM  Nega 
+JP  Posi
+zero : MVI A, 0DDH
+JMP SKIP
+Nega : MVI A, OFFH
+JMP SKIP
+Posi : MVI A, 0EEH
+SKIP : STA 0001H
+    HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">OUTPUT - 01 : POSITIVE
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               7
+0001                        1               238
+
+
+OUTPUT - 02 : NEGATIVE
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               150
+0001                        1               255
+
+
+OUTPUT - 03 : ZERO
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               0
+0001                        1               221
+</code></pre> <br> <br>
+
+
+
+
+<!-- PROGRAM : 04 -->
+<p class="m-h">PROGRAM - 04 : <span class="def">&nbsp; Write a 8085 program to check whether 4th bit of a number G 0 or 1. If the 4th bit is 1 display FF, if 4th bit is 0 display DD.</span></p><br>
+<pre><code class="language-plaintext">LDA 00000H
+ANI 08H
+JZ Zero
+Zero : MVI A,0DDH
+STA 0001H
+End : HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               5       
+0001                        1               221                     
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 05 -->
+<p class="m-h">PROGRAM - 05 : <span class="def">&nbsp; Write a 8085 program to calculate the sum of first 10 natural numbers.</span></p><br>
+<pre><code class="language-plaintext">MVI A, 0000H
+MVI B, 0AH
+LOOP : ADDB
+DCR B 
+JNZ LOOP
+STA 00000H
+HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0              55
+0001                        1               0
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 06 -->
+<p class="m-h">PROGRAM - 06 : <span class="def">&nbsp; Write a 8085 program to find the sum of digits of an 8bit number</span></p><br>
+<pre><code class="language-plaintext">LDA 0000H
+MOV B,A 
+ANI 0FH
+MOV C,A
+MOV A,B 
+RLC
+RLC
+RLC
+RLC
+ANI 0FH
+ADD C 
+STA 0001H 
+HLT</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               45
+0000                        1               15
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 07 -->
+<p class="m-h">PROGRAM - 07 : <span class="def">&nbsp; Write an 8085 Program to find the reverse of an 8-bit number. </span></p><br>
+<pre><code class="language-plaintext">LDA 0000H
+RLC 
+RLC
+RLC
+RLC
+STA 0001H
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               25
+0001                        1               145
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 08 -->
+<p class="m-h">PROGRAM - 08 : <span class="def">&nbsp; Write an 8085 Program to check whether 1-byte number is a palindrome or not. If it is a palindrome display FF otherwise display DD. </span></p><br>
+<pre><code class="language-plaintext">LDA 0000H 
+MOV 
+RRC
+RRC
+RRC
+RRC
+CMP B
+J2 LOOP1
+MVI A, 000H 
+JMP LOOP2
+LOOP1 : MVI A,OFFH
+LOOP2 : STA 0002 
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               7
+0001                        1               0
+0002                        2             221
+</code></pre> <br> <br>
+
+
+<!-- PROGRAM : 0 -->
+<p class="m-h">PROGRAM - 09 : <span class="def">&nbsp; Write an 8085 Program to check whether a number is ODD or EVEN. If Even no. display DD, if odd no. display FF. </span></p><br>
+<pre><code class="language-plaintext">LDA 0000H 
+RAR 
+JC LOOP
+MVI A, 0DDH 
+STA 0001H
+HLT 
+LOOP : MVI A, 0FFH
+STA 0002H
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">OUTPUT - 1  : ODD NUMBER  
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               13
+0001                        1                0
+0002                        2              255
+
+
+OUTPUT - 2  : EVEN NUMBER  
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               14
+0001                        1              221
+0002                        2                0
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 10 -->
+<p class="m-h">PROGRAM - 10 : <span class="def">&nbsp; Write an 8085 program to count a number of ones in the given 8-bit number. </span></p><br>
+<pre><code class="language-plaintext">MIV B,00
+MVI C, 08
+LDA 0000H
+AC : RAR
+JNC DC
+INR B
+DC : DCRC 
+JNZ AC 
+MOV A,B
+STA 0001H
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               170
+0001                        1                 4
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 11 -->
+<p class="m-h">PROGRAM - 11 : <span class="def">&nbsp; Write an 8085 program to find Addition & Subtraction of two 8 –bit HEX numbers.</span></p><br>
+<pre><code class="language-plaintext">LDA 0000H 
+MOV H,A
+LDA 0001H 
+MOV L,A
+MOV A,H 
+ADD L 
+JMC SkiP
+MVI C01H
+JMP STORE 1
+Skip : MVI C,00H
+STORE 1 : STA 0002H 
+MOV A,C 
+STA 000HH 
+MOV AH 
+SUB L 
+STA 0003H 
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               124
+0001                        1                46 
+0002                        2               170
+0003                        3                27
+0004                        4                 0
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 12 -->
+<p class="m-h">PROGRAM - 12 : <span class="def">&nbsp; Write an 8085 program to find Addition of two 16 –bit numbers. </span></p><br>
+<pre><code class="language-plaintext">LHLD  0000H 
+XCHG
+LHLD 0002H
+DAD D
+MVI C,00H 
+JNC LOOP 
+INR C 
+LOOP : SHILD 000H 
+MOV A,C 
+STA 0006H 
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0              162 
+0001                        1              168
+0002                        2               88
+0003                        3              138
+0004                        4              250
+0005                        5               50
+0006                        6                1
+0007                        7                0   
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 13 -->
+<p class="m-h">PROGRAM - 13 : <span class="def">&nbsp; Write an 8085 program to find Subtraction of two 16 –bit numbers. </span></p><br>
+<pre><code class="language-plaintext">LHLD 000H 
+XCHG 
+LHLD 0002H 
+LDA 0000H 
+SUB L
+MOV L,A
+LDA 0001H 
+SBB H 
+MOV H,A 
+SHLD 0004H 
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               11 
+0001                        1               22
+0002                        2                3
+0003                        3                4
+0004                        4                8
+0005                        5               18
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 14 -->
+<p class="m-h">PROGRAM - 14 <span class="def">&nbsp; Write an 8085 program for Swapping of two 16-bit numbers. </span></p><br>
+<pre><code class="language-plaintext">LHLD 000H 
+XCHG 
+LHLD 0002H 
+SHLD 0000H 
+XCHG
+SHLD 0002H 
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">OUTPUT - 1 : BEFORE SWAPING 
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               10
+0000                        0               20 
+0001                        1               30
+0002                        2               40
+
+
+
+OUTPUT - 2 : AFTER SWAPING 
+
+Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               30
+0000                        0               40 
+0001                        1               10
+0002                        2               20
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 15 -->
+<p class="m-h">PROGRAM - 15 : <span class="def">&nbsp; Write an 8085 program to implement 2 out of 5 codes display FF for valid code and DD for Invalid code. </span></p><br>
+<pre><code class="language-plaintext">LDA 0000H 
+ANI 1FH 
+MVI C, 05H 
+MVI D, 00H 
+LOOP : RRC 
+JNC SkiP
+INR D 
+SkiP : DCR, C
+JNR LOOP 
+MVI A, 02H 
+CMP D 
+JN2  INVALID 
+MVI A, 0FFH 
+IMP STORE 
+INVALID : MVI A,0DDH 
+STORE : STA 0001H 
+HLT </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               16
+0001                        1              221
+0002                        2                0
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 16 -->
+<p class="m-h">PROGRAM - 16 : <span class="def">&nbsp; Write an 8085 program to generate Fibonacci series. </span></p><br>
+<pre><code class="language-plaintext">MVI D,0AH
+LXI H, 0000H 
+MVI B, 00H
+MVI C, 01H 
+MOV M,B 
+IMX H 
+MOV M,C 
+INX H 
+DCR D 
+LOOP : MOV A,B 
+ADD C 
+MOV M,A 
+INX H 
+MOV B,C 
+MOV C,A 
+DCR D 
+JNZ LOOP 
+HLT  </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0                0
+0001                        1                1
+0002                        2                2 
+0003                        3                3 
+0004                        4                5 
+0005                        5                8
+0006                        6               13
+0007                        7               21 
+0008                        8               34 
+0009                        9               55 
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 17 -->
+<p class="m-h">PROGRAM - 17 : <span class="def">&nbsp; Write an 8085 program to find the first ten terms of odd and even numbers. </span></p><br>
+<pre><code class="language-plaintext">MVI C, 0AH 
+MVI A, 00
+MVI B, 01
+LOOP : ADD B 
+INR B
+INR B 
+DCR C 
+JNZ LOOP 
+STA 0001H 
+ADI 0AH 
+STA 0002H 
+HLT  </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0                0
+0001                        1              100
+0002                        2              110  
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 18 -->
+<p class="m-h">PROGRAM - 18 : <span class="def">&nbsp; Write an 8085 program to find 4-Digit BCD addition. </span></p><br>
+<pre><code class="language-plaintext">MVI C, 00H 
+LHLD 0000H 
+XCHG 
+LHLD 0002H 
+MOV A,F 
+ADD L 
+DAA 
+JNZ LOOP1 
+INR D 
+MVI C,01H 
+JMP LOOP2 
+LOOP1 : MVI C,00H
+LOOP2 : STA 004H
+MOV A,D 
+ADI 00H 
+ADC H 
+DAA 
+STA 0006H 
+HLT  </code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               35
+0001                        1               12 
+0002                        2               24
+0003                        3               43
+0004                        4              115
+0005                        5               61
+0006                        6                0
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 19 -->
+<p class="m-h">PROGRAM - 19 : <span class="def">&nbsp; Write an 8085 program to find Multiplication of 2-digit BCD numbers. </span></p><br>
+<pre><code class="language-plaintext">LDA 0000H 
+MOV B,A 
+LDA 001H 
+MOV C,A 
+MVI A, 00H 
+MOV D,A 
+AGAIN : ADD B 
+JNC SkiP
+INR D 
+Skip : DCRC 
+JNZ AGAIN 
+STA 0002H 
+MOV A,D 
+STA 0003H 
+HLT 
+</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0                4
+0001                        1                6
+0002                        2               24
+0003                        3                0
+</code></pre> <br> <br>
+
+
+
+<!-- PROGRAM : 20 -->
+<p class="m-h">PROGRAM - 20 : <span class="def">&nbsp; Write an 8085 program to find division of two 8-bit umbers. </span></p><br>
+<pre><code class="language-plaintext">LXI H, 0000H 
+MOV B,M 
+INX H 
+MOV C,M 
+MVI D, 00H 
+MOV A,B 
+LOOP : SUB C 
+INR D 
+CMP C 
+JNC LOOP 
+STA 0003H 
+MOV A,D 
+STA 0004H 
+HLT 
+</code></pre>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Address [ Hex ]         Address           Data
+------------------------------------------------
+0000                        0               20
+0001                        1                4
+0002                        2                0
+0003                        3                0
+0004                        4                5
+</code></pre> <br> <br>
+
+
+        <br><br>
+        <p class="author"><i>Last updated on 31 MAY 2024 BY : <a href="https://www.instagram.com/ankith_8900">ANKITH KUMAR</a> ( Bengaluru City University )</i></p>
+    </div>
+    <!-- END OF CONTAINER CONTENT -->
+</div>
+<!-- END OF CONTAINER -->
+<script>hljs.highlightAll();</script>
+<script>
+// BLOCKING DOUBLE CLICK    
+document.addEventListener('contextmenu', function(event){
+  event.preventDefault();
+}) 
+</script>
+</body>
+</html>
