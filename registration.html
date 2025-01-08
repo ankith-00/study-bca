@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Subscription</title>
 
     <!--- GOOGLE ICON LINK -->
     <link rel="stylesheet"
@@ -175,14 +175,14 @@ img{
             <label for="Section">Course</label>
             <input type="text" name="Course" placeholder="Course" required>
 
-            <label for="university">University name</label>
+            <label for="university">University or Collage name</label>
             <input type="text" name="University"  placeholder="University"  required>
 
             <label for="semester">Semester</label>
-            <input type="number" name="SEM"  placeholder="SEM" required >
+            <input type="number" name="SEM"  placeholder="Semester" required >
 
             <label for="Section">Section</label>
-            <input type="text" name="SEC" placeholder="SEC" required>
+            <input type="text" name="SEC" placeholder="Section" required>
 
             <label for="semester">Phone Number</label>
             <input type="number" name="Phone Number"  placeholder="Phone Number" required >
@@ -192,7 +192,7 @@ img{
 
 
             
-            <center><br> <img src="https://i.ibb.co/Gk6sFmR/Screenshot-2024-0632-211518.png" alt="" width="200" height="200"><p>Pay using above QR and enter UTR NO</p> <br> <br></center>
+            <center><br> <img src="https://i.ibb.co/7bwHy8m/QR.jpg" alt="" width="200" height="200"><p>Pay using above QR and enter UTR NO</p> <br> <br></center>
             
             <label for="utr no">UTR NO</label>
             <input type="number" placeholder="UTR NO" name="UTR NO" required>
@@ -233,13 +233,10 @@ img{
     document.addEventListener('contextmenu', function(event){
     event.preventDefault();
 })
+
+    window.onload = ()=>{
+        alert('Looks like you exhausted free preview limit. Subscribe to continue using the service.')
+    }
 </script>
 
 </html>
-
-
-
-
-
-
-
