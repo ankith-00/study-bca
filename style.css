@@ -58,7 +58,7 @@ html{
 
 
 .menu_content  a  { 
-    display : flex;
+    display : none;
     margin-left : 6em;
     
 }.menu_content p{
