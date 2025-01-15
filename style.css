@@ -8,7 +8,7 @@ html{
 
 }*{
     margin : 0;
-    padding :0;
+    padding : 0;
     font-family : "Lexend", sans-serif; 
 }
  
@@ -58,7 +58,7 @@ html{
 
 
 .menu_content  a  { 
-    display : none;
+    display : flex;
     margin-left : 6em;
     
 }.menu_content p{
@@ -76,7 +76,6 @@ html{
     margin-top : 1em;
     
 }.menu_content a {
-    display : none;
     text-decoration : none;
     font-size : 0.95em;
     padding-top : 0.5em;
