@@ -1,0 +1,690 @@
+<!-- AUTHOR : ANKITH KUMAR          --->
+<!-- TITLE  : FACTORING METHOD      --->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TITLE OF THE PAGE  -->
+  <title>I : Factoring Method</title>
+
+  <!--- GOOGLE ICON LINK  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- GOOGLE FONT LINK  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- CDN FOR HIGHLIGHT -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
+   <!-- GOOGLE TAG [ GTAG.JS]  --> 
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-F5X4M59SCT');
+  </script> -->
+
+</head>
+<style>  
+/* ROOT */
+:root{
+  --primary-font : 'Lexend', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-family: var(--primary-font);
+    font-size: 0.98em;
+    margin: 0.2em 0 0 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}.publish-text {
+  font-family: var(--primary-font);
+    font-weight: normal;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 70%;
+    height: auto;
+    background: #fff;
+
+}
+
+
+/* UNIT TITLE */
+.container-content h3{
+  font-family: var(--primary-font);
+
+}.subject{
+    font-family: var(--primary-font);
+    font-size: 0.95em;
+    padding-bottom: 2px;
+    border-bottom: 2px solid orange;
+
+}
+
+/* UNIT CONTENT */
+.m-h{
+  font-family: var(--primary-font);
+  font-size: 1.1em;
+  font-weight: 550;
+
+}.def{
+  font-family: var(--primary-font);
+  font-size: 1em;
+  margin-top: 0.2em; 
+
+}.author {
+    font-family: var(--primary-font);
+    font-size: 0.95em;
+    color: gray;
+}
+
+
+/* UTILITY */
+a{
+  text-decoration: none;
+}
+
+code{
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-top: -0.5em;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width : 780px){
+  .container-content{
+        width : 100%;
+        padding : 4em 1em 4em 1em ;
+    } 
+} 
+    
+</style>
+<body>
+<!-- NAV START -->
+<div class="back-arrow">
+  <a href="../i-sem.html"> <span class="material-symbols-outlined">first_page </span> </a>
+      <div class="nav-heading">
+          <p> STUDY( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+      </div>
+</div>
+<!-- NAV END -->
+
+<!-- PAGE CONTENT  -->
+<div class="container"> 
+<!-- PAGE CONTAINER  -->
+  <div class="container-content">
+    <h3>UNIT - III : FACTORING METHOD</h3>
+    <p class="subject">Problem Solving Technique</p>
+    <br><br>
+    
+    
+<!-- CHAPTER CONTENET STARTS FROM HERE -->
+<p class="m-h">FACTOR</p>
+<p class="def">The factor is a number or algebraic expression that divides another number or expression evenly i.e its remainder is 0. (or) factors are small numbers when multiplied gives other numbers <br> Example :  3 and 6 are factors of 12 because 12 / 3 = 4 </p>
+<br> <br> <br>
+
+<p class="m-h">FACTORING</p>
+<p class="def">Factoring or Factorization is nothing but writing a number as the product of smaller numbers,It is the decomposition of a number (or) mathematical objects into smaller or simpler numbers/objects. In simple words, factoring is the process of finding the factors.</p>
+<br> <br> <br>
+
+
+<p class="def"><b>PROGRAM : </b>Find the Square Root of a Number using Predefined Function sqrt().</p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+#include &lt; math.h >
+    
+void main() 
+{
+  double number, squareRoot;
+  clrscr();
+
+  printf("Enter a number : ");
+  scanf("%lf", &number);
+  squareRoot = sqrt(number);
+
+  printf("Square root of %.2lf = %.2lf", number, squareRoot);
+
+  getch();
+
+}</code></pre><br>
+<p class="def"><b>OUTPUT</b></p> <br>
+<pre><code class="language-plaintext">Enter a number : 144
+Square root of 144.00 = 12.00</code></pre>
+<br> <br> <br>
+
+
+<p class="def"><b>PROGRAM : </b>Finding GCD [ Greatest Common Divisor ]</span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+int findGCD(int a, int b)
+{
+  while (a != b) {
+    if (a > b) {
+      a -= b; 
+    }
+    else{
+      b -= a;
+    }
+  }
+  return a;
+}
+
+void main() 
+{
+  int num1, num2;
+  clrscr();
+    
+  printf("Enter two numbers   : ");
+  scanf("%d %d", &num1, &num2);
+    
+  printf("GCD of %d and %d is : %d",num1, num2,findGCD(num1, num2));
+    
+  getch();
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p><br>
+<pre><code class="language-plaintext"> Enter two numbers : 20 18
+GCD of 20 and 18 is : 2 </code></pre> <br> <br> <br>
+
+
+
+<p class="def"><b>PROGRAM : </b>To Compute prime factor of an Integer </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+#include <stdio.h>
+
+void main()
+{
+  int i, j, Number, isPrime; 
+
+  printf("\n Please Enter any number to Find Factors:  ");
+  scanf("%d", &Number);
+
+  for (i = 2; i &lt;= Number; i++)
+  {
+    if(Number % i == 0)
+    {
+      isPrime = 1;  
+      for (j = 2; j &lt;= i/2; j++)
+      {
+        if(i % j == 0)
+        {
+          isPrime = 0;
+          break;
+        }
+      }
+      if(isPrime == 1)
+      {
+        printf("\n %d is a Prime Factor ",i);
+      }	          	
+    }
+  }
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Please Enter any number to Find Factors: 45
+3 is a Prime factor
+5 is a Prime Factor</code></pre> <br> <br> <br>
+
+
+<p class="def"><b>PROGRAM : </b>To Generate Pseudo-Random Numbers using Linear Congruential Generator.</span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+#include <math.h>
+
+void generatePseudoRandomNumbers(int n)
+{
+  int a=109, b=853, m=40960, i;
+  long long int X= 3553;
+
+  printf("\n Pseudorandom Numbers are : ");
+
+  for (i = 1; i &lt;= n; i++)
+  {
+    x = (a*x + b) % m;
+    printf("\t %lli \t", x) ;
+  }
+
+}
+
+void main()
+{
+  int n;
+
+  printf("\n Enter Number of Pseudorandom Numbers to be Generated : ");
+
+  scanf( "%d", &n);
+  generatePseudoRandomNumbers (n);
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter Number of Pseudorandom Numbers to be Generated : 3
+Pseudorandom Numbers are : 19490 36303 25720</code></pre> <br> <br> <br>
+
+
+<p class="def"><b>PROGRAM : </b>To find the Power of a number using Exponentiation by Squaring Method. </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+#include<conio.h>
+
+int power (int x, int n)
+{
+  int product = 1;
+  clrscr();
+
+  if(n == 0)    // if power is zero then     
+    return 1;
+
+  while (n > 0)
+  {
+    if (n % 2 == 1)
+      product = product * x;
+      n = n/2;
+      x = x * x;
+      return product;
+  }
+}
+
+void main()
+{
+  int x,n,j;
+
+  printf("\nEnter Base x  : ");
+  scanf(" %d", &x) ;
+  printf("Enter Power n : ");
+  scanf("%d", &n);
+  printf("\npower (%d, %d) = %d", x, n, power (x, n));
+
+  getch();
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter Base x : 20
+Enter Power n : 2
+Power (20, 2) = 400  </code></pre> <br> <br> <br> <br>
+
+
+
+
+
+<p class="m-h">ARRAY METHOD</p>
+<p class="def">An array is a collection of elements of the same data type stored in contiguous memory locations. Arrays are useful for storing and processing large amounts of data efficiently.</p> <br> <br>
+
+<p class="def">Here are few programs on array : </p> <br> <br> 
+
+<p class="def"> <b>PROGRAM : </b>C program to reverse a given Array</span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+void main()
+{
+  int n,i,j, temp;
+  clrscr();
+
+  printf("Enter the size of an array:",n);
+  scanf("%7d", &n);
+  int a[n];
+  printf("\n Enter %d elements: ");
+
+  for(i=0; i&lt;n; i++)
+  {
+    scanf ("%d", &a[i]);
+    i=0;
+    j=n-1;
+
+    while (i&lt;j)
+    {
+      temp = a[i];
+      a[i] = a[j];
+      a[j] = temp;
+      i++;
+      j--;
+    }
+  }
+
+  printf("\n After reversing an array :");
+  for(i=0; i&lt;n; i++)
+    printf(" %d ",a[i]) ;
+
+  getch();
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the size of an array : 5
+Enter elements : 1 2 3 4 5
+After reversing an array : 5 4 3 2 1 </code></pre> <br> <br> <br>
+
+
+<p class="def"><b>PROGRAM :</b>C program to print the frequency count of the number of student obtained each possible mark.</span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+void main()
+{
+  int n,m, i, j, a[101];
+  for (i=0; i&lt;=100; i++)
+  {
+    a[i] = 0;
+    printf("Enter Number of Students : ");
+    scanf ("%d", &n) ;
+  }
+
+  printf("\n Enter %d marks : ",n);
+  for (i=1; i&lt;=n; i++)
+  {
+    scanf ("%d", &m) ;
+    a [m] = a [m] + 1;
+  }
+
+  printf("Marks\tFrequency\n") ;
+  for (i=0; i&lt;=100; i++)
+  {
+    if (a[i] != 0)
+    printf("\n%3d :\t%3d", i, a[i]) ;
+  }
+
+  getch();
+
+}</code></pre><br> 
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter Number of Students : 10
+Enter 10 marks : 10 20 10 20 50 69 70 20 30 69
+
+Marks   Frequency
+10 :      2
+20 :      3
+50 :      1
+69 :      2
+70 :      1
+30 :      1</code></pre> <br> <br> <br>
+
+
+<p class="def"><b>PROGRAM : </b>C program to Find the Maximum Numbers in an array of n elements </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+void main()
+{
+  int i, max, n;
+  clrscr();
+  printf("Enter the number of elements : ");
+  scanf ("%d", &n) ;
+  int a[n];
+  printf("\n Enter %d elements: ",n);
+  for(i=0; i&lt;n; i++)
+    scanf("%d", &a[i]) ;
+
+  max = a [0];
+  for(i=1; i&lt;n; i++)
+    if (max &lt; a[i])
+      max = a[i];
+      printf(" Maximum number in an array is: %d", max);
+
+  getch();
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br>
+<pre><code class="language-plaintext">Enter the number of elements : 4
+Enter 4 elements : 20 90 35 89
+Maximum number in an array is : 90 </code></pre> <br> <br> <br>
+
+
+
+<p class="def"><b>PROGRMA : </b>C program to find kth smallest number  </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+#include &lt;stdlib.h>
+  
+int comp_func(const void *a, const void *b) 
+{
+  return *(int *)a - *(int *)b;
+}
+
+int kth_smallest(int arr[], int a,int b,int k) {
+    qsort(arr + a, b - a + 1,sizeof(int), comp_func);
+    return arr[a + k - 1];
+}
+
+void main() 
+{
+  int arr[] = {12, 3, 5, 7, 19};
+
+  clrscr();
+
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int k = 2;
+  printf("Kth smallest element = %d", kth_smallest(arr, 0, n-1, k));
+
+  getch();
+
+}</code></pre><br> 
+<p class="m-h">OUTPUT</p> <br><pre><code class="language-plaintext">Kth smallest element = 5</code></pre> <br> <br> <br>
+
+
+
+<p class="def"><b>PROGRAM : </b>C program to Remove the Duplicates from an Array. </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+int removeDuplicates(int arr[], int n) 
+{
+  if (n == 0 || n == 1)
+  {
+      return n;
+  }
+
+  int temp[n];
+  int j = 0;
+
+  for (int i = 0; i &lt; n - 1; i++) 
+  {
+      if (arr[i] != arr[i + 1])
+      {
+          temp[j++] = arr[i];
+      }
+  }
+
+  temp[j++] = arr[n - 1];
+
+  for (int i = 0; i &lt; j; i++) 
+  {
+      arr[i] = temp[i];
+  }
+
+  return j;
+}
+
+
+void main() 
+{
+  int arr[] = {1, 2, 2, 3, 4, 4, 4, 5};
+  clrscr();
+
+  printf("\nArray Before removing duplicates : ");
+
+  for (int i = 0; i &lt; sizeof(arr) / sizeof(arr[0]); i++)
+  {
+    printf("%3d ", arr[i]);
+  }
+
+  int n = sizeof(arr) / sizeof(arr[0]);
+  n = removeDuplicates(arr, n);
+      
+  printf("\nArray After removing duplicates : ");
+
+  for (int i = 0; i &lt; n; i++) 
+  {
+    printf("%3d ", arr[i]);
+  }
+    
+  getch();
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br> <pre><code class="language-plaintext">Array Before removing duplicates : 1 2 2 3 4 4 4 5  
+Array After removing duplicates : 1 2 3 4 5 </code></pre> <br> <br> <br>
+
+
+
+
+<p class="def"><b>PROGRAM : </b>C Program to partition an array  </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+#include<conio.h>
+void partition(int arr[], int low, int high) 
+{
+  int pivot = arr[high];
+  int i = low - 1;
+
+  for (int j = low; j &lt; high; j++)     
+  {
+      if (arr[j] &lt;  pivot) 
+      {
+          i++;
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+      }
+  }
+
+  int temp = arr[i + 1];
+  arr[i + 1] = arr[high];
+  arr[high] = temp;
+}
+
+void main() 
+{
+  int arr[] = {4, 7, 2, 5, 1, 8, 3};
+  clrscr();
+  int n = sizeof(arr) / 
+  sizeof(arr[0]);
+  partition(arr, 0, n - 1);
+
+  printf("Partitioned array : ");
+  for (int i = 0; i &lt; n; i++) 
+  {
+    printf("%d ", arr[i]);
+  }
+  getch();
+
+}</code></pre><br> 
+<p class="m-h">OUTPUT</p> <br> <pre><code class="language-plaintext">Partitioned array : 2 1 3 5 7 8 4</code></pre> <br> <br> <br>
+
+
+
+<p class="def"><b>PROGRAM : </b> for multiplication of  2 matrix  </span></p> 
+<pre> <code class="language-c">#include &lt; stdio.h >
+
+void main()
+{
+  int a[10][10], b[10][10];
+  int multi[10][10], r, c, i,j, k;
+  clrscr();
+
+  printf("Enter the numbers of ROWS & COLOUMN : ");
+  scanf("%d %d", &r ,&c);
+
+  printf("\nEnter the elemets of 1 - matrix : ");
+
+  for(i=0; i&lt;r;i++)
+  {
+    for(j=0; j&lt;c;j++)
+    {
+      scanf("%d", &a[i][j]);
+    }   
+  }
+
+  printf("\nEnter the elemets of 2 - matrix : ");
+
+  for(i=0; i&lt;r;i++)
+  {
+    for(j=0; j&lt;c;j++)
+    {
+      scanf("%d", &b[i][j]);
+    }
+  }
+
+
+  printf("\nMultiplication of matrix \n\n");
+
+  for(i=0; ir&lt;;i++)
+  {
+    for(j=0; j&lt;c;j++)
+    {
+      multi[i][j] =0;
+      for(k=0; k&lt;c; k++)
+      {
+        multi[i][j]+=a[i][j]*b[i][j];
+      }
+    }    
+  }
+
+  for(i=0; i&lt;r;i++)
+  {
+    for(j=0; j&lt;c;j++)
+    {
+      printf("%d\t", multi[i][j]);
+    }
+    printf("\n");
+  }
+
+  getch();
+
+}</code></pre><br>
+<p class="m-h">OUTPUT</p> <br> <pre><code class="language-plaintext">Enter the numbers of ROWS & COLOUMN : 2 2
+Enter the elemets of 1 - matrix : 1 2 3 4
+Enter the elemets of 2 - matrix : 5 6 7 8
+
+Multiplication of matrix 
+
+10  24
+42  64</code></pre> <br> <br> br  
+
+    
+
+    <br><br><p class="author"><i>Last updated on 14 JAN 2025 BY : <a href="">ANKITH KUMAR</a> ( Bengaluru City University )</i></p>
+  </div>
+  <!-- CONTAINER CONTENT END -->
+</div>
+<!-- CONTAINER END -->
+
+<script>hljs.highlightAll();</script>
+
+</body>
+</html>      
