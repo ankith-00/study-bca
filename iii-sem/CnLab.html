@@ -1,0 +1,348 @@
+<!-- AUTHOR : ANKITH KUMAR   -->
+<!-- TITLE  : CN Lab Manual  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CN Lab Manual</title>
+
+    <!--- GOOGLE ICON LINK -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- GOOGLE GTAG -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F5X4M59SCT');
+    </script> 
+
+<!-- STYLE CSS -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* NAV - BAR */
+.back-arrow {
+    background: #ffff;
+    position: fixed;
+    z-index: 100;
+    height: 2.9em;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.2em 0.4em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #000;
+
+}.material-symbols-outlined {
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8em;
+
+}.nav-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}.nav-heading p {
+    font-size: 0.98em;    
+    margin: 0.1em 0 0 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}.publish-text {
+    font-weight: normal;
+}
+
+
+/* CONTAINER & CONTENT */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+
+}.container-content {
+    margin: 1.5em 0 0 0;
+    padding: 5em;
+    width: 75%;
+    height: auto;
+    background: #fff;
+
+}
+.container-content h3{
+    font-size: 1.3em;
+    font-family: 'Lexend', sans-serif;
+
+}.subject{
+    font-size: 0.95em;
+    padding-bottom: 2px;
+    border-bottom: 2px solid orange;
+
+}
+
+
+/* CHAPTER OR UNIT NAME & SUB HEADING */
+.m-h{
+    font-size: 1.1em;
+    margin-top: 1em;
+    font-weight: bold;
+
+}.def{
+    font-size: 1.1em;
+    line-height: 0.65cm;
+    font-weight: normal;
+
+}.semi-b{
+    font-size: 0.98em;
+    font-weight: 550;
+}
+.author{
+    font-size: 0.9em;
+    color: gray;
+}
+
+table {
+    margin-top     : 0.5em;
+    border-collapse: collapse;
+    border         : 1px solid black;
+    width          : auto;
+    
+}td {
+    width          : auto;
+    font-size      : 0.88em;
+    height         : 2em;
+    border         : 1px solid #000;
+    padding: 0 1em 0 1em;
+
+ }a{
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Lexend', sans-serif;
+
+}
+
+ul {
+    margin-left:1.5em;
+}
+
+ul li{
+    list-style: number;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 1em;
+}
+
+img{
+    width: 50%;
+}
+
+.subject , .m-h , .def, p ,p{
+    font-family: 'Lexend', sans-serif;
+}
+
+
+table {
+  margin-top     : 0.7em;
+  margin-bottom  : 30px;
+  border-collapse: collapse;
+  border         : 1px solid black;
+  width          : 100%;
+}
+td {
+  width         : auto;
+  font-size     : 0.9em;
+  height        : 2em;
+  border        : 1px solid #000;
+  padding: 0.7em 1em;
+  justify-content:center ;
+  font-family: 'Lexend', sans-serif;;
+
+}.th{
+    font-weight: 550;
+
+}.W12{
+    text-align: center;
+    width: 15%;
+}
+
+code{
+    font-size: 1.1em;
+    line-height: 1.4;
+    padding: 0.1em;
+    background-color: rgb(242, 243, 245);
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+
+@media only screen and (max-width : 680px) {
+
+    .container-content {
+        width: 100%;
+        padding: 0.95em;
+        padding-top: 3em;
+
+    }
+    img{
+        width: 80%;
+    }
+}
+</style>  
+</head>
+<body>
+<!-- NAV START -->
+<div class="back-arrow">
+    <a href="../iii-sem.html"> <span class="material-symbols-outlined">first_page </span> </a>
+        <div class="nav-heading">
+            <p> STUDY( BCA ) <span class="publish-text">द्वारा प्रकाशित </span></p>
+        </div>
+</div>
+<!-- NAV END -->
+
+<!-- CONTAINER -->
+<div class="container">
+    <!-- CONTAINER CONTENT -->
+    <div class="container-content">
+        <h3>LAB MANUAL</h3>
+        <p class="subject">Computer Network Lab Manual</p>
+        <br> <br>
+        
+<!-- EXPERIMENT : 01 -->
+<span class="m-h">EXPERIMENT - 01 : </span><span class="def">Execute the following commands :  arp, ipconfig , host name, netdag, netstat, nslookup, pathping, ping route, tracert</span><br> <br>
+<ul>
+    <li><code>arp    </code><br><p class="def">This command is used to display the arp table for a paticular IP address.</p></li>
+    <ul>
+        <li style="list-style:disc;"><code>arp -a </code><br><p class="def">This command is used to display the current arp entries.</p></li>
+        <li style="list-style:disc;"><code>arp -g </code><br><p class="def">This  command work the same the arp -a command.</p></li>
+        <li style="list-style:disc;"><code>arp -s </code><br><p class="def">This command is used to add the static entry in the arp table, ehich resolves the IP address to the physical address.</p></li> <br>
+    </ul>
+    <li><code>ipconfig </code><br><p class="def">display all current IP network configuration values.</p></li>
+    <ul>
+        <li style="list-style:disc;"><code>ipconfig/All </code><br>display all configuration information for each adapter bound to TCP/IP.</li>
+    </ul>
+    <li><code>hostname   </code><br><p class="def">Display the name of the current host system.</p></li>
+    <li><code>netstat    </code><br><p class="def">It is a networking tool used for troubleshooting and configuration, that can also serve as a monitoring tool for connections over the network.</p></li>
+    <li><code>nslookup   </code><br><p class="def">This command Queries internet domain name serves in two modes. We use exit to come out of the command. <br>&ndash; Interactive mode <br>&ndash; Non-interactive mode.</p></li>
+    <li><code>pathping   </code><br><p class="def">It shows the details of packet travelling.</p></li>
+    <li><code>tracert    </code><br><p class="def">Determine the route of packet that reaches destination.</p></li>
+    <li><code>path route </code><br><p class="def">A route defines a path for sending packets through the internet network to an address on another network.</p></li>
+</ul> <br><hr><br>
+
+<!-- EXPERIMENT - 02  -->
+<span class="m-h">EXPERIMENT - 02 : </span><span class="def">Study different types of network cables. </span></p> <br>
+<p class="def"><span class="semi-b red ">TRANSMISSION MEDIA</span><br>A communication channel that is used to carry the data from one transmitter to the receiver through the electromagnetic signals. The main function of this is to carry the data in the bits form through the Local Area Network(LAN). There are 2 types : <br>&nbsp;&nbsp;&nbsp;&nbsp; &ndash; Guided Transmission media | wired <br>&nbsp;&nbsp;&nbsp;&nbsp; &ndash; Unguided media | Wireless </p> <br> <br>
+<p class="def"><span class="semi-b blue">WIRED     </span> <br>It is also referred to as Wired or Bounded transmission media. Signals being transmitted are directed and confined in a nerrow pathway by using physical links. There are two types : <br>  &nbsp;&nbsp;&nbsp; &ndash; Copper cable <br>  &nbsp;&nbsp;&nbsp; &ndash; Fiber optics <br> <br><span class="semi-b">Features : </span><br>&nbsp;&nbsp;&nbsp; &ndash; High Speed <br>&nbsp;&nbsp;&nbsp; &ndash; Secure <br>&nbsp;&nbsp;&nbsp; &ndash; Used for caparatively shorter distance</p> <br> <br>
+<p class="def"><span class="semi-b blue">WIRELESS  </span> <br>It is also referred to as Wireless or Unbounded transmission media. No physical medium is required for the transmission of electromagnetic signals.<br><br><span class="semi-b">Features : </span><br> &nbsp;&nbsp;&nbsp; &ndash; The signal is broadcasted through air <br>&nbsp;&nbsp;&nbsp; &ndash; Less secure <br> &nbsp;&nbsp;&nbsp; &ndash; Used for larger distance</p> <br> <br>
+<p class="def"><span class="semi-b red">COPPER CABLES</span><br>A copper cable is a group of two or more copper wires bundled together in a single sheath or jacket. Copper wire and cable is used in power generation, power transmission, power distribution, telecommunications, electronics circuitry, and countless types of electrical equipment. There are two types of copper cables : <br> &nbsp;&nbsp;&nbsp; &ndash; Coaxial Cable <br> &nbsp;&nbsp;&nbsp; &ndash; Twisted Pair Cables</p> <br> 
+<ul>
+    <li class="def"><span class="semi-b">COAXIAL CABLE       </span><br><img src="https://i.ibb.co/P41WK5D/Screenshot-2024-12-31-202544.png"><br>A coaxial cable is an electrical cable with a copper conductor and an insulator shielding around it and a braided metal mesh that prevents signal interference and cross talk. Coaxial cable is also known as coax.</li>
+    <li class="def"><span class="semi-b">TWISTED PAIR CABLES </span><br><img src="https://i.ibb.co/sQLsFJV/Screenshot-2024-12-31-203208.png"><br>One of the earliest guided transmission media is twisted pair cables. A twisted pair cable comprises of two separate insulated copper wires, which are twisted together and run in parallel. The copper wires are typically 1mm in diameter. One of the wires is used to transmit data and the other is the ground reference. There are two types of twised pair cables :<br> &nbsp;&nbsp;&nbsp; &ndash; Unshielded Twisted Pair ( UTP ) <br>&nbsp;&nbsp;&nbsp; &ndash; Shielded Twisted Pair ( STP )</li>
+    <ul>
+        <li class="def"><span class="semi-b">Unshielded Twisted Pair ( UTP ) </span><br>A twisted pair includes two insulated conductors twisted together in the spiral form, as shown in the figure. It can be shielded with a plastic cover. The UTP cables are very low-cost and simple to install.</li>
+        <li class="def"><span class="semi-b">Shielded Twisted Pair ( STP )   </span><br>In this, each insulated twisted pair are shielded by a metal foil or braided mesh. This mesh is also known as a metal shield. It decreases the interference of the disturbance caused by the surrounding. This property makes the cable bulky and expensive.</li>
+    </ul>
+</ul><br>
+<p class="def"><span class="semi-b blue">FIBER OPTICS </span><br><br><img src="https://i.ibb.co/9hWF5XY/Screenshot-2024-12-31-203901.png"><br><br>An Optical Fiber is a cylindrical fiber of glass which is hair thin size or any transparent dielectric medium. The fiber which is used for optical communication is waveguides made of transparent dielectrics. There are two types of fiber optic cables : <br> &nbsp;&nbsp;&nbsp; &ndash; Single mode <br>  &nbsp;&nbsp;&nbsp; &ndash; Multi-mode</p><br> <br> <br>
+<hr> <br> <br>
+
+
+<!-- EXPERIMENT - 03 -->
+<span class="m-h">EXPERIMENT - 03 : </span><span class="def">Practically implement the cross-wire cable and and straight wired cable using crimping tool.</span> <br> <br>
+<p class="def">Required meterials : <ul><p class="def">- RJ-45 connectors (at least two per cable) <br>- or Cat6 Ethernet cable <br>- Crimping tool <br> - Cable stripper or cutter</p></ul></p><br>
+<figure><img src="https://i.ibb.co/FLqBvKcX/61hqp-AC-Ge-L.jpg" alt=""><figcaption><center><p class="def">Crimping tool</p></center></figcaption></figure> <br><br>
+<p class="def">STEP - 1 : Understand Wiring Standards. There are two common wiring standards for Ethernet cables :  <ul><li> T568A wire arrangement order : <br><p class="def">1.White/Green <br>2. Green <br>3. White/Orange <br>4. Blue <br>5. White/Blue <br>6. Orange <br>7. White/Brown <br>8. Brown</p></li> <li>T568B wire arrangement order : <br><p class="def">1. White/Orange <br>2. Orange <br>3. White/Green <br>4. Blue <br>5. White/Blue <br>6. Green <br>7. White/Brown <br>8. Brown</p></li> </ul> <p class="def">Straight-wire Cable Implementation : <br> Both ends use the same wiring standard (T568A-T568A or T568B-T568B). <br> <br> Crossover Cable Implementation : <br> One end follows T568A, and the other end follows T568B. Wires can arranged in desire sequence based on wire being used.</p> <br>
+<p class="def">STEP - 2 : Cut the cable to the required length. Strip the outer jacket (about 1-1.5 inches) using a cable stripper.</p> <br>
+<p class="def">STEP - 3 : Insert Wires into the RJ-45 Connector. Hold the RJ-45 connector with the clip facing down. Insert the wires fully into the connector, ensuring each reaches the end.</p> <br>
+<p class="def">STEP - 4 : Place the RJ-45 connector inside the crimping tool. Squeeze firmly to crimp the metal pins onto the wires. Repeat the process for the other end.</p> <br>
+<p class="def">STEP - 5 : Verify the Connection. Use a cable tester to check if the cable is working correctly.</p>
+<br> <br> <hr> <br> <br>
+
+
+<!-- EXPERIMENT - 04  -->
+<span class="m-h">EXPERIMENT - 04 : </span><span class="def">Study the network IP address configuration ( Classification of Address, Static and Dynamic address ). </span> <br> <br>
+<p class="def"><span class="semi-b red"> IP ADDRESS : </span><br>An Internet Protocol Address/IP Address is a unique identifier assigned to every device on TCP/IP network. The Internet Protocol is the set of rules that outlines how data should be transported across the Internet or local networks. IP Addresses help to identify devices and allow them to communicate with each other. <br><span class="semi-b">Classification of IP Address : </span><br>  &nbsp;&nbsp;&nbsp; &ndash; Static IP Address <br> &nbsp;&nbsp;&nbsp; &ndash; Dynamic IP Adress</p> <br><br>
+<p class="def"><span class="semi-b blue">STATIC IP ADDRRESS</span> <br>Static IP Address is the one that you configure yourself by editing your computer's network settings. In simple words it is an Address that does not change once your device is assigned to a static IP address, that number typically stays the same until the device is decommissioned or your network architecture changes.</p> <br> 
+<p class="def"><span class="semi-b blue">DYNAMIC IP ADDRESS</span> <br>Dynamic IP Address: It is a temporary address for devices connected to a network that continually change over a time. They're assigned by the dynamic host configuration(DHCP), a service running on the network. Dynamic IP address are issued using leasing system, meaning that the IP address is only active for limited time. If the lease expires, the computer will automatically request a new lease.</p> <br> <br>
+<p class="def"><span class="semi-b red"> GENERATING DYNAMIC IP ADDRESS </span></p> <br> 
+<p class="def">STEP - 1 : Start option <br>STEP - 2 : Open control panel<br><br>STEP - 3 : Click on <code>Network and Internet</code>, connect to network. <br><br> STEP - 4 : On the left pane, Click the <code>Change adapter settings</code> link. <br> <br>STEP - 5 : Right-Click the network adapter and select the <code>Properties</code> option. <br><br>STEP - 6 : Select the <code>Internet Protocol Version 4</code> (TCP/IP4) option. <br><br> STEP - 7 : Click the <code>Properties</code> button <br><br> STEP - 8 : Select the obtain an IP Address automatically option. <br><br> STEP - 9 : Select the obtain the following <code>DNS Server address automatically</code> option. <br><br> <a href="">Watch tutorial</a></p>  <br> <br> 
+<hr> <br> <br>
+
+<!-- EXPERIMENT - 05  -->
+<span class="m-h">EXPERIMENT - 05 : </span><span class="def">Study of network IP Address Configuration ( IPV4 , IPV6 , Subnet and Supernet )</span> <br> <br>
+<ul>
+    <li class="def"><span class="semi-b">IPV4     </span><br>Internet protocol version 4(IPv4) is a connectionless protocol, and operates on a best-effort delivery model. IPv4 address is a 32-bit number that uniquely identifies a network interface on a machine. <br><br> &ndash; An IPv4 address is typically written in decimal digits, formatted as four 8-bit fields that are separated by periods. Each 8-bit field represents a byte of the IPv4 address. This form of representing the bytes of an IPv4 address is often referred to as the dotted-decimal format. <br><br> &ndash; The bytes of the IPv4 address are further classified into two parts : the network part and the host part. <br> Example : <img src=""></li> <br>
+    <li class="def"><span class="semi-b">IPV6     </span><br>An IPv6 address is a 128-bit alphanumeric value that identifies an endpoint device in an Internet Protocol Version 6 (IPv6) network. <br><br> &ndash; IPv6 is the successor to a previous addressing infrastructure, IPv4, which had limitations IPv6 was designed to overcome. IPv6 has a vastly enlarged address space. <br> Example:</li> <br>
+    <li class="def"><sapn class="semi-b">SUBNET   </sapn><br>A subnetwork or subnet is a logical subdivision of an IP network. The practice of dividing a network into two or more networks is called subnetting. <br>Example : <br>IP : <code>198.51.100.0/24 </code> would have the <br>Subnet mask : <code>255.255.255.0.</code>  </li><br> 
+    <li class="def"><span class="semi-b">SUPERNET </span><br>A supernet network, or supernet, is an Internet Protocol (IP) network that is formed by aggregation of multiple networks (or subnets) into a larger network. The new routing prefix for the aggregate network represents the constituent networks in a single routing table entry. The process of forming a supernet is called supernetting, prefix aggregation, route aggregation, or route summarization. <br>Example : <code>192.168.1.248</code></li> 
+</ul><br> <br>
+<hr> <br> <br>
+
+<!-- EXPERIMENT - 06 -->
+<span class="m-h">EXPERIMENT - 06 : </span><span class="def">Study of network devices ( Switch, Router and Brigde )</span> <br> <br>
+<p class="def">Network devices help in data communication and management in a network.</p>
+<ul>
+    <li class="def"><span class="semi-b">SWITCH</span> <br> <img src="https://i.ibb.co/zVSPVtg2/hub.png" alt=""> <p class="def">A switch is a networking device that connects multiple devices within a LAN and forwards data only to the intended recipient. <br> Example : <br>Connecting computers, printers, and other devices in a local network. <br> - Operates at the Data Link Layer of the OSI model. <br> - Uses MAC addresses to forward data. <br> - Supports multiple simultaneous data transmissions. <br> - Reduces network congestion by providing dedicated bandwidth to devices.</p><br></li>
+    <li class="def"><span class="semi-b">ROUTER</span> <br> <img src="https://i.ibb.co/TMSDdRvN/wifi-router.png" alt=""><p class="def">A router is a networking device that connects different networks and directs data between them. <br> Example : <br> Connecting a home or office network to the internet. <br> - Operates at the Network Layer of the OSI model. <br> - Uses IP addresses to forward data between networks. <br> - Supports Network Address Translation (NAT) for internet access. <br> - Can provide firewall and security features.</p><br></li>
+    <li class="def"><span class="semi-b">BRIDGE</span> <br><br> <img src="https://i.ibb.co/d06c8WQk/what-is-bridge-in-computer-network.png" alt=""> <br> <br><p class="def">A bridge is a device that connects and filters traffic between two or more network segments. <br> Example : <br> Connecting two LAN segments while keeping them as a single network. <br> - Operates at the Data Link Layer of the OSI model. <br> - Uses MAC addresses to filter and forward data. <br> - Reduces collision domains by dividing a large network into smaller segments. <br>- Improves network performance by managing traffic.</p><br></li>
+</ul> <br> <br>
+<hr> <br> <br>
+
+
+<!-- EXPERIMENT - 07 -->
+<!-- <span class="m-h">EXPERIMENT - 08: </span> <span class="def">Blocking the website using 'windows defender firewall' in windows 11</span> <br> <br>
+<br> <br>
+<hr> <br> <br> -->
+
+<!-- EXPERIMENT - 08 -->
+<!-- <span class="m-h">EXPERIMENT - 09 : </span> <span class="def">Share the folder in a system, and access the file of that folder fro another system using IP address.</span>
+<br> <br> 
+<hr> <br> <br> -->
+
+<!-- EXPERIMENT - 09 -->
+<!-- <span class="m-h">EXPERIMENT - 10 : </span> <span class="def">Share the printer in a Network, and take print from other PC.</span>
+<br> <br> 
+<hr> <br> <br> -->
+
+<!-- EXPERIMENT - 10 -->
+<!-- <span class="m-h">EXPERIMENT - 11 : </span> <span class="def">Configuration of wi-fi hotspot, and connect other device(mobile/laptop).</span>
+<br> <br> 
+<hr> <br> <br> -->
+
+<!-- EXPERIMENT - 11 -->
+<!-- <span class="m-h">EXPERIMENT - 15 : </span> <span class="def">Configuration of VLAN using Packet Tracer/ GNS3.</span>
+<br> <br> 
+<hr> <br> <br> -->
+
+
+<!-- IMPORTANT DOCUMENT LIST -->
+<p class="m-h">IMPORTANT &nbsp;DOC'S</p>
+<tbody><table>
+    <tr>
+        <td class="th">TITLE</td>
+        <td class="th W12">PREV</td>
+    </tr>
+    <tr>
+        <td>CN remaining experiments</td>
+        <td><a href="">Prev</a></td>
+    </tr>
+    <tr>
+        <td>CN viva QNA</td>
+        <td><a href="">Prev</a></td>
+    </tr>
+</table></tbody>
+
+        <br><br><br>
+        <p class="author"><i>Last updated on 3 FEB 2025 BY : <a href="">ANKITH KUMAR</a>( Bengaluru City University )</i></p>
+    </div>
+    <!-- END OF CONTAINER CONTENT -->
+</div>
+<!-- END OF CONTAINER -->
+<script>hljs.highlightAll();</script>
+</body>
+</html>
