@@ -7,8 +7,7 @@
     <title>Python Lab Manual</title>
 
     <!--- GOOGLE ICON LINK -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- GOOGLE FONT LINK -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js">    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"> </script>
+
 
     <!--  GOOGLE TAG [ GTAG.JS]  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
@@ -90,16 +90,16 @@
 
 /* CHAPTER OR UNIT NAME & SUB HEADING */
 .m-h{
-    font-size: 1em;
+    font-size: 1.1em;
     /* margin-top: 1em; */
-    font-weight: bold;
+    font-weight: 600;
 }.def{
     font-size: 1em;
     font-weight: normal;
 }
 .subject{
-    font-size: 0.9em;
-    padding-bottom: 1.5px;
+    font-size: 0.95em;
+    padding-bottom: 2px;
     border-bottom: 2px solid orange;
 
 }.author{
@@ -112,6 +112,7 @@ table {
     border-collapse: collapse;
     border         : 1px solid black;
     width          : auto;
+    font-family: 'Lexend', sans-serif;
     
 }td {
     width          : auto;
@@ -126,16 +127,14 @@ table {
 
 }
 
-.subject , .m-h , .def, h3 ,p{
+.subject , .m-h , .def, p ,p{
     font-family: 'Lexend', sans-serif;
 }
 
 code{
+    font-size: 1.3em;
+    line-height: 1.4em;
     margin-top: 0.4em;
-    line-height: 1.4;
-    font-size: 1.2em;
-    /* font-family: "Lucida Console", Monaco, monospace; */
-    font-weight: 100;
 }
 
 button{
@@ -147,6 +146,13 @@ button{
     color: #fff;
     cursor: pointer;
 
+}
+.th{
+    font-weight: 550;
+
+}.W12{
+    text-align: center;
+    width: 15%;
 }
 
 @media only screen and (max-width : 680px) {
@@ -160,6 +166,9 @@ button{
 
     button{
         width: 90%;
+    }
+    table{
+        width: 100%;
     }
 }
 
@@ -184,13 +193,13 @@ button{
     <div class="container">
         <!-- CONTAINER CONTENT -->
         <div class="container-content">
-            <h3>PYTHON</h3>
-            <p class="subject">Lab Manual</p>
+            <p class="m-h">LAB MANUAL</p>
+            <p class="subject">Python Programming</p>
             <br> <br>
 
 <!-- PROGRAM : 01-->
 <p class="m-h">PROGRAM - 01 : <span class="def">&nbsp;WAP to demonstrate basic data type in python.</span></p>
-<pre><code class="language-py">a = 10
+<pre><code class="language-python">a = 10
 print("Type of a  : ", type(a))
 print("Value of a : ", a)
 
@@ -206,28 +215,7 @@ d = True
 print("Type of d   : ", type(d))
 print ("Value of d : ", d)
 
-e = [1, 2, 3, 4]
-print("Type of e   : ", type(e))
-print("Value of e  : ", e)
-
-f = (1, 2, 3, 4)
-print("Type of f   : ", type(f))
-print("Value of f  : ", f)
-
-g = {1, 2, 3, 4}
-print("Type of g   : ", type(g))
-print("Value of g  : ", g)
-
-h = {
-    "name": "Srikanth",
-    "age" : 30
-}
-
-print("Type of h   : ", type(h))
-print("Value of h  : ", h)
-
-
-i = None
+e = None
 print("Type of i   : ", type(i))
 print("Value of i  : ", i)</code></pre> <br>
 
@@ -295,7 +283,7 @@ List after clearing all elements : []</pre></code> <br> <br> <br>
 
 
 <!-- PROGRAM : 03-->
-<p class="m-h">PROGRAM - 03 : <span class="def">&nbsp;Create a tuple and perform the following methods. <br>1. Add items <br>2. len() <br> 3. Check for itemin tuple <br> 4. Access items </span> 
+<p class="m-h">PROGRAM - 03 : <span class="def">&nbsp;Create a tuple and perform the folloeing methods. <br>1. Add items <br>2. len() <br> 3. Check for itemin tuple <br> 4. Access items </span> 
 <pre><code class="language-python">my_tuple = (1, 2, 3, 4, 5)
 print("Original Tuple     : ", my_tuple)
 
@@ -640,7 +628,7 @@ Type of elements in array : int32 </code></pre> <br> <br> <br>
 
 <!-- PROGRAM : 13-->
 <p class="m-h">PROGRAM - 13 : <span class="def">&nbsp;WAP to concatenate the dataframes with teo different objects.   </span> 
-<pre><code class="language-python">import pandas as pd
+<pre><code class="language-Python">import pandas as pd
 
 df1 = pd.DataFrame({'Name':['Snigdha','Smayan', 'Satvik'], 'Age' : [20,19,18], 'Grade': ['A', 'C', 'A']}, index=[1,2,3])
 
@@ -661,24 +649,198 @@ print(result)
 </code></pre> <br> <br> <br> 
 
 
-<p class="def">Preview : <a href="">Python Lab Manul</a></p> <br> <br> 
+<!-- PROGRAM : 14-->
+<p class="m-h">PROGRAM - 14 : <span class="def">&nbsp;Write a python code to read a csv file using the pandas module and print the first and last five lines of a file.</span> <br>
+<p class="def">&nbsp; - Download CSV File : <a href="Data.csv" download="Data.csv">'Data.csv'</a></p><br>
+<pre><code class="language-Python">import pandas as pd
 
-<!-- <p class="def"></p>
-<pre><code class="language-plaintext" style="background-color: #fff; color : #000;">Document details : 
+file_path = r'Data.csv'
+data = pd.read_csv(file_path)
 
+print('Printing fist 5 rows : ')
+print(data.head())
+
+print('Printing last 5 rows : ')
+print(data.tail())   
+</code></pre> <br>
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">First five lines of the file:
+    Name  Age            City
+0  Radha   19        New York
+1   Alex   22     California
+2   John   21  San Francisco
+3  Seeta   18       Bengaluru
+4    Ram   23          Mysore
+
+Last five lines of the file:
+     Name  Age       City
+6   Vinay   24      Hubli
+7   Vinod   25    Dharwad
+8   Vijay   20    Bellary
+9    Asha   22    Chennai
+10   Usha   25  Hyderabad</code></pre> <br> <br> <br> 
+
+
+<!-- PROGRAM : 15-->
+<p class="m-h">PROGRAM - 15 : <span class="def">&nbsp;Write a python program which accepts the radius of a circle from user and computes the area (use math module)</span> 
+<pre><code class="language-Python">import math
+
+radius = float(input("Enter the radius of the circle: "))
+area = math.pi * (radius ** 2)
+print(f"The area of the circle with radius {radius} is: {area}")
+</code></pre> <br>
+         
+<p class="m-h">OUTPUT</p>
+<pre><code class="language-plaintext">Enter the radius of the circle: 7
+The area of the circle with radius 7.0 is: 153.93           
+</code></pre> <br> <br> <br> 
+
+
+<!-- PROGRAM : 16-->
+<p class="m-h">PROGRAM - 16 : <span class="def">&nbsp;Use the following data (load it as CSV file) for this exercise. Read this file using Pandas or NumPy or using the in-built matplotlib function. </span>  <br>
+<p class="def">&nbsp; - Download CSV File : <a href="Sales_data.csv" download="Sales_data.csv">''Sales_data.csv</a></p> <br>
+
+<pre><code class="language-Python">import pandas as pd
+
+data = pd.read_csv(‘r'Sales_data.csv')
+print(data.head())</code></pre> <br> <br> <br>
+            
+
+<!-- PROGRAM : 16A-->
+<p class="m-h">PROGRAM - 16A : <span class="def">&nbsp;Get total profit of all months and show line plot with the following Style properties : <br> 
+    - Generated line plot must include following Style properties : Months , Pen, Book Marker ,  Chair , Table ,  Pen stand  , Total units  and Total profit. <br>
+    - Line Style dotted and Line-color should be blue <br>
+    - Show legend at the lower right location. <br>
+    - X label name = Months , Y label name = Sold units <br>
+    - Line width should be 4 <br>
+    </span> <br>
+<p class="def">- Download CSV File : <a href="Sales_data.csv" download="Sales_data.csv">''Sales_data.csv</a></p> <br>
+<pre><code class="language-Python">import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv(r'Sales_Data.csv')
+
+plt.plot(data['Months'], data['Sold Units'], marker= 'o', linestyle='dotted', label='Total Profits', linewidth=4)
+
+plt.xlabel('Months')
+plt.ylabel('Total Profit')
+plt.title('Total Profit per Month')
+
+plt.legend()
+plt. show()</code></pre> <br> <br> <br> 
+
+
+<!-- PROGRAM : 16B-->
+<p class="m-h">PROGRAM - 16B : <span class="def">&nbsp; Display the number of units sold per month for each product using multi line plots. (i.e., Separate Plotline for each product. )  </span> 
+<pre><code class="language-Python">import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv('Sales_data.csv')
+
+plt.plot(data['Months'], data['Pen'], label='Pen')
+plt. plot(data['Months'], data['Book' ], label='Book')
+plt.plot(data['Months'], data['Marker'], label='Marker')
+plt.plot(data['Months'], data['Chair'], label='Chair')
+plt.plot(data['Months'], data['Table'], label='Table')
+plt. plot(data['Months'], data['Pen Stand' ], label='Pen Stand')
+
+plt.xlabel ('Months')
+plt.ylabel('Sold Units')
+plt.title('Units Sold per Month for Each Product')
+
+plt. legend()
+
+plt. show()</code></pre> <br> <br> <br>          
+        
+
+
+
+<!-- PROGRAM : 16C-->
+<p class="m-h">PROGRAM - 16C : <span class="def">&nbsp;Read chair and table product sales data and show it using the bar chart. <br> - The bar chart should display the number of units sold per month for each product. <br> - Add a separate bar for each product in the same chart.</span> <br>
+<p class="def">- Download CSV File : <a href="Sales_data.csv" download="Sales_data.csv">''Sales_data.csv</a></p> <br>
+<pre><code class="language-Python">import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv('sales_data.csv')
+
+width = 0.35 # Width of the bars
+months = data[ 'Months']
+
+plt. bar(months - width/2, data['Chair'], width=width, label='Chair')
+plt. bar(months + width/2, data['Table'], width=width, label='Table')
+
+plt.xlabel('Months')
+plt.ylabel('Sold Units')
+plt. title('Chair and Table Units Sold per Month')
+
+plt. legend()
+plt. show()    
+</code></pre> <br> <br> <br>
+        
+
+
+
+<!-- PROGRAM : 16D-->
+<p class="m-h">PROGRAM - 16D : <span class="def">&nbsp;Read all product sales data and show it using the stack plot.   </span> 
+<p class="def">- Download CSV File : <a href="Sales_data.csv" download="Sales_data.csv">''Sales_data.csv</a></p> <br>
+<pre><code class="language-Python">import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv('sales_data.csv')
+
+products = ['Pen', 'Book', 'Marker', 'Chair', 'Table', 'Pen Stand']
+units = [data[product] for product in products]
+
+plt. stackplot(data['Months'], units, labels=products)
+plt.xlabel ('Months')
+plt.ylabel('Sold Units')
+plt. title('Stack Plot of Units Sold per Product')
+
+plt. legend(loc='upper left')
+plt. show()</code></pre> <br>
+<br> <br><br>            
+
+
+<!-- IMPORTANT DOCUMENT LIST -->
+<p class="m-h">IMPORTANT &nbsp;DOC'S</p>
+<tbody><table>
+    <tr>
+        <td class="th">TITLE</td>
+        <td class="th W12">PREV</td>
+    </tr>
+    <tr>
+        <td>Python All Programs Folder</td>
+        <td><a href="https://drive.google.com/drive/folders/12KsQpYv4ZIYdc4NdGOlhbFUKbfF7ywuJ?usp=sharing">Download</a></td>
+    </tr>
+    <tr>
+        <td>Python viva QNA</td>
+        <td><a href="">Prev</a></td>
+    </tr>
+</table></tbody>
+
+
+<!-- <pre><code class="language-plaintext" style="background-color: #fff; color : #000;">Document details : 
 DOC NAME       : Python Lab Manual
 TOTAL PROGRAMS : 18 Programs
 PAGES          : 36 Pages 
 PRICE          : 25rs only 
 </code></pre>
-<button>Order</button>
+<button>Order</button> -->
 
-            <br><br> <br> <br> <br>  -->
-            <p class="author"><i>Last updated on 10 SEP 2024 BY : <a href="https://www.instagram.com/ankith_8900">ANKITH KUMAR </a>( Bengaluru City University )</i></p>
+            <br> <br> <br> 
+            <p class="author"><i>Last updated on 05 FEB 2025 BY : <a href="https://www.instagram.com/ankith_8900">ANKITH KUMAR </a> ( Bengaluru City University )</i></p>
         </div>
         <!-- END OF CONTAINER CONTENT -->
     </div>
     <!-- END OF CONTAINER -->
-<script>hljs.highlightAll();</script>
+
+
+    <script>hljs.highlightAll();</script>
+<script>
+    // BLOCKING DOUBLE CLICK    
+    document.addEventListener('contextmenu', function(event){
+      event.preventDefault();
+    }) 
+</script>
 </body>
 </html>
