@@ -1,6 +1,5 @@
-<!-- STUDY ( BCA )-->
-<!-- I-YEAR | II-SEM  [ SEP ]-->
-<!-- Author : Ankith Kumar -->
+<!-- STUDY ( BCA )            -->
+<!-- I-YEAR | II-SEM  [ SEP ] -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,16 @@
 <!-- GOOGLE FONT LINK -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">  
+
+<!--  GOOGLE TAG [ GTAG.JS]  -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5X4M59SCT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-F5X4M59SCT');
+</script>
     
        
 <!-- STYLE TAG START -->    
@@ -93,7 +101,9 @@
   border         : 1px solid #000;
   margin-bottom  : 1.5em;
   cursor: pointer;
-  display        : grid;
+  display        : flex;
+  flex-direction: column;
+  gap: 1.2em;
   justify-content : center ; 
   align-items : center;  
   margin-bottom  : 1em;
@@ -128,102 +138,16 @@ table {
   
  }
 
-
 /* BASIC */ 
 .MH{
     font-size   : 1.08em;
     font-weight : 500;
 }
-
 a{
     text-decoration : none;
 }
 
-/* FOOTER */
-.footer{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    max-width: 1250px;
-    padding: 1em;
-    gap: 1.5em;
-    margin-top: 4em;
-    padding-top: 1.8em;
-    margin-bottom: -1em;
-    border-top: 1px solid rgb(222, 215, 215);
-}
-
-.footer-box h3{
-    font-size: 1em;
-}
-.footer-box p, .copy p{
-    font-size : 0.9em;
-}
-
-.footer-box .main{
-    font-size: 1.3em;
-}
-
-.footer-box .social-icons{
-    padding-top: 0.5em;
-    width: 12em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-box ul {
-    padding: 0.5em 0 0 1.6em;
-}
-.footer-box ul li{
-    list-style: disc;
-    padding: 0.15em 0 0.15em 0;
-}
-.footer-box ul li a{
-    text-decoration: none;
-    color: #000;
-    transition: .2s ease-in;
-}
-.footer-box ul li a:hover{
-    color: red;
-}
-
-.footer-logo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    padding: 0.8em 0 0.5em 0;
-}
-
-/* FOOTER LOGO */
-.footer_logo{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.footer_logo , h3{
-    padding-left: 0.4em;
-}
-.footer_slogan{
-    padding: 0.3em 0 0 0.8em;
-}
-.footer-box a{
-    text-decoration: underline;
-}
-
-/* COPYRIGHT */
-.copy{
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    padding: 0.5em 0 1em 0;
-}
-
-
+/* RESPONSIVE CSS { MOBILE VIEW }  */
 @media only screen and (max-width : 680px){
    .container-content{
         width    : 100%;
@@ -236,26 +160,11 @@ a{
     .none{
         display: none;
     } 
-    /* FOOTER */
-    .footer{
-        border: none;
-        gap: 2em;
-        padding: 0em;
-    }
-    .footer-logo{
-        width: 70%;
-    }
-
-   
-}     
-    
+}        
 </style>    
 <!-- STYLE TAG END HERE  -->    
-
-
 </head>
 <body>
-
 <!-- NAV START -->
 <div class="back">    
     <a href="../index.html">
@@ -280,28 +189,28 @@ a{
         <div class="rec-container">
             <!-- UNIT - I -->           
             <div class="box" onclick="location.href=' ';" >       
-                <img src="https://i.ibb.co/gSD7Wqk/structure.png" height="90" width="90"/>
-                <span style="margin-left: 8px;">UNIT - I </span>      
+                <img src="https://i.ibb.co/gSD7Wqk/structure.png" height="95" width="95"/>
+                <span>UNIT - I </span>      
             </div>
             <!-- UNIT - II -->
             <div class="box" onclick="location.href=' ';"> 
-                <img src="https://i.ibb.co/KjVg3f5R/arrange.png" height="110" width="110"/>
-                <span style="margin-left: 14px;"> UNIT - II </span>     
+                <img src="https://i.ibb.co/C3cSsJzS/arrange-1.png" height="90" width="90"/>
+                <span> UNIT - II </span>     
             </div>
             <!-- UNIT - III -->
             <div class="box" onclick="location.href=' ';">       
-                <img src="https://i.ibb.co/6DYx0dL/list.png" height="85" width="85" />
-                <span style="margin-left: 20px;"> UNIT - III </span>
+                <img src="https://i.ibb.co/6DYx0dL/list.png" height="90" width="90" />
+                <span> UNIT - III </span>
             </div> 
             <!-- UNIT - Iv -->
             <div class="box" onclick="location.href=' ';"> 
-                <img src="https://i.ibb.co/0rQsqhk/2764894.png" height="100" width="100"/>
-                <span > UNIT - IV </span>
+                <img src="https://i.ibb.co/0rQsqhk/2764894.png" height="110" width="110"/>
+                <span>UNIT - IV </span>
             </div> 
         </div> <br/><br/>
 
         <!-- SUB - 02 -->
-        <h3 class="MH"> OOS using java</h3>
+        <h3 class="MH"> OOP using java</h3>
         <div class="rec-container">      
             <!-- UNIT - I -->
             <div class="box" onclick="location.href=' ';"> 
@@ -320,7 +229,7 @@ a{
             </div> 
             <!-- UNIT - IV -->
             <div class="box" onclick="location.href=' ';">       
-                <img src="https://i.ibb.co/ThYx4Wj/problem.png" height="90" width="90"/>
+                <img src="https://i.ibb.co/ThYx4Wj/problem.png" height="88" width="88"/>
                 <span style="margin-left: 16px;"> UNIT - IV </span>
             </div> 
         </div> <br/><br/>
@@ -330,7 +239,7 @@ a{
         <div class="rec-container">      
             <!-- UNIT - I -->
             <div class="box" onclick="location.href=' ';"> 
-                <img src="https://i.ibb.co/7t9rbjdg/window.png" height="83" width="81" />
+                <img src="https://i.ibb.co/7t9rbjdg/window.png" height="75" width="75" />
                 <span> UNIT - I </span>
             </div>
             <!-- UNIT - II -->  
@@ -340,12 +249,12 @@ a{
             </div>
             <!-- UNIT - III -->
             <div class="box" onclick="location.href=' ';"> 
-                <img src="https://i.ibb.co/DDSP9zqv/cpu.png" height="100" width="100">
+                <img src="https://i.ibb.co/DDSP9zqv/cpu.png" height="90" width="90">
                 <span> UNIT - III </span>
             </div> 
             <!-- UNIT - IV -->
             <div class="box" onclick="location.href=' ';"> 
-                <img src="https://i.ibb.co/7SS9nmR/linux.png" height="90" width="90" >
+                <img src="https://i.ibb.co/7SS9nmR/linux.png" height="100" width="100" >
                 <span style="margin-left: 18px;"> UNIT - IV </span>
             </div> 
         </div> <br/><br/> <br>
@@ -353,15 +262,15 @@ a{
         <!-- LAB MANUAL -->
         <h3 class="MH"> DS &nbsp; & &nbsp;OS&nbsp; Lab Manual</h3> 
         <div class="rec-container">
-            <!-- UNIT - JAVA -->
+            <!-- UNIT - DATA STRUCTURE -->
             <div class="box" onclick="location.href=' ';">
                 <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
-                <span style="margin-left: 41px;"> DS</span>   
+                <span> Data Structure</span>   
             </div>
-            <!-- UNIT - DBMS -->
+            <!-- UNIT - OPERATING SYSTEM -->
             <div class="box " onclick="location.href=' ';">
                 <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
-                <span style="margin-left: 45px;"> OS </span>
+                <span> Operating System </span>
             </div>
             <div class="box none" style="visibility: hidden;"></div>
             <div class="box none" style="visibility: hidden;"></div>
@@ -377,7 +286,7 @@ a{
                 </tr>  
 
                 <tr>
-                    <td >Lab Manual : Linux & shell programming</td>
+                    <td >Linux & shell programming Lab</td>
                     <td ><a href=" ">Prev</a></td>
                 </tr> 
 
