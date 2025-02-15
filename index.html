@@ -47,7 +47,7 @@
     <span class="material-symbols-outlined hamburger"> drag_handle </span>
   </div>
 
-    <!-- NAV-BAR MENU --->
+    <!-- NAV-BAR MENU -->
     <div class="menu">
         <div class="menu_content">       
             <p> Resources  </p>
@@ -79,30 +79,6 @@
 <div class="container"> 
     <!-- CONATINER CONTENT-BOX -->
     <div class="container-content">
-
-        <!-- CHATBOT STARTS HERE -->
-        <button class="chatbot-toggler">
-            <span class="material-symbols-outlined">radio_button_unchecked</span>
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <div class="chatbot">
-            <header>
-                <h2>ASTRO</h2>
-                <span class="close-btn">_</span>
-            </header>
-            <ul class="chatbox">
-                <li class="chat incoming">
-                    <span class="material-symbols-outlined">device_hub</span>
-                    <p>Hi I am Astro !</p>
-                </li>
-            </ul>
-            <div class="chat-input">
-                <textarea placeholder="Ask any question..." spellcheck="false" required></textarea>
-                <span id="send-btn" class="material-symbols-rounded">GO</span>
-            </div>
-        </div>
-        <!-- CHATBOT ENDS HERE -->
-     
         <!-- LANDING PAGE -->
         <div class="landing_page">
             <!-- BOX - 01-->
@@ -124,32 +100,42 @@
         <h3 class="h3">NOTES</h3>
 
         <div class="card-list"> 
-            <!-- -01  -->
+            <!-- -01 SEM : SEP -->
             <a href="i-sem.html" class="card-item">
-            <center>
-                <img src="https://i.ibb.co/sHMbHQB/Doc-Scanner-Jan-14-2024-11-18-PM.jpg">  
-            </center> 
-            <h3> I - SEM : SEP</h3> 
-            <p>1. Discrete Mathematics<br/>2. Problem Solving Technique<br/>3. Computer Architecture</p>
+                <center>
+                    <img src="https://i.ibb.co/sHMbHQB/Doc-Scanner-Jan-14-2024-11-18-PM.jpg">  
+                </center> 
+                <h3> I - SEM : SEP</h3> 
+                <p>1. Discrete Mathematics<br/>2. Problem Solving Technique<br/>3. Computer Architecture</p>
             </a>
             
-            <!-- -02  -->
-<!--             <a href="ii-sem.html" class="card-item">
-            <center>
-                <img src="https://i.ibb.co/PNZtmJj/java-logo.png">  
-            </center> 
-            <h3> II - SEM : SEP</h3>
-            <p>1. Data Structure <br/>2. OOP Using Java <br/>3. Operating System </p> 
+            <!-- -02 SEM : SEP -->
+            <a href="ii-sem.html" class="card-item">
+                <center>
+                    <img src="https://i.ibb.co/PNZtmJj/java-logo.png">  
+                </center> 
+                <h3> II - SEM : SEP</h3>
+                <p>1. Data Structure <br/>2. OOP Using Java <br/>3. Operating System </p> 
+            </a>
+            
+            <!-- -03 SEM : NEP -->
+            <!-- <a href="iii-sem.html" class="card-item">
+                <center>
+                    <img src="https://i.ibb.co/rdCR9rQ/images-27.png">  
+                </center> 
+                <h3> III - SEM  : NEP </h3> 
+                <p>1. Operating System <br/>2. Computer Network <br/>3. Python Programming </p> 
             </a> -->
-            
-            <!-- -03  -->
-            <a href="iii-sem.html" class="card-item">
-            <center>
-                <img src="https://i.ibb.co/rdCR9rQ/images-27.png">  
-            </center> 
-            <h3> III - SEM  : NEP </h3> 
-            <p>1. Operating System <br/>2. Computer Network <br/>3. Python Programming </p> 
+
+            <!-- -04 SEM : NEP -->
+            <a href="iv-sem.html" class="card-item">
+                <center>
+                    <img src="https://i.ibb.co/ThYx4Wj/problem.png">  
+                </center> 
+                <h3> IV - SEM  : NEP </h3> 
+                <p>1. Software Engineering <br/>2. Design & Analysis of Algorithm <br/>3. Internet Technologies </p> 
             </a>
+
                       
         </div> <br/>
         <!-- NOTES SECTION ENDS HERE  -->
@@ -259,7 +245,7 @@ nav_bar.forEach(nav_bar => {
 });
  
   
-//MODAL 
+//NOTES UPLOAD MODAL 
 var modal =  document.getElementById("modal");
 var open_btn = document.getElementById("open_btn");
 var x = document.getElementById("x");
@@ -278,7 +264,7 @@ window.onclick = function(event) {
   }
 }
 
-//MODAL CHECK BOX
+//NOTES UPLOAD MODAL CHECK BOX
 function check_box(){
   let btn = document.getElementById("proceed_btn");
   let ch_box = document.getElementById("check-box");
@@ -290,115 +276,6 @@ function check_box(){
   }
     
 } 
-// AI CHAT BOT USING GEMINI API 
 </script>
-
-<script type="importmap">
-  {
-    "imports": {
-      "@google/generative-ai": "https://esm.run/@google/generative-ai"
-    }
-  }
-</script>
-
-<!-- CHATBOT SCRIPT --->
-<script type="module">
-    import { GoogleGenerativeAI } from "@google/generative-ai";
-    const genAI = new GoogleGenerativeAI('AIzaSyD8dR34oqXgvC452llh8Swmay6UYogXwdE');
-
-    const chatbotToggler = document.querySelector(".chatbot-toggler");
-    const closeBtn = document.querySelector(".close-btn");
-    const chatbox = document.querySelector(".chatbox");
-    const chatInput = document.querySelector(".chat-input textarea");
-    const sendChatBtn = document.querySelector(".chat-input span");
-
-    let userMessage = null;
-    const inputInitHeight = chatInput.scrollHeight;
-
-    async function runModel(prompt){
-        const model = genAI.getGenerativeModel({model : "gemini-1.5-flash"});
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text  = await response.text();
-        return text;
-    }
-
-
-    const createChatLi = (message, className) => {
-        const chatLi = document.createElement("li");
-        chatLi.classList.add("chat", `${className}`);
-        let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">device_hub</span><p></p>`;
-        chatLi.innerHTML = chatContent;
-        chatLi.querySelector("p").textContent = message;
-        return chatLi;
-    }
-
-    const generateResponse = async (chatElement, userMessage) => {
-        const messageElement = chatElement.querySelector("p");
-        try{
-            const answer  = await runModel(userMessage);
-            let answer2 = answer.split("**");
-            let answer3 =" ";
-
-            for(let i=0; i < answer2.length; i++){
-                if(i==0 || i%2 !==1){
-                    answer3 += answer2[i];
-                }
-                else{
-                    answer3 += "# " + answer2[i] ;
-                }
-            }
-            let answer4 = answer3.split("*").join("•");
-            let answer5 = answer4.split("• #").join("\n•");
-            messageElement.textContent = answer5;
-        }catch(error){
-            console.error("Failed to fetch response", error);
-            messageElement.textContent = "Sorry, somthing went wrong.";
-        }
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-
-    }
-
-    const handleChat = () => {
-        userMessage = chatInput.value.trim();
-        if(!userMessage) return;
-
-        // Clear the input textarea and set its height to default
-        chatInput.value = "";
-        chatInput.style.height = `${inputInitHeight}px`;
-
-        // Append the user's message to the chatbox
-        chatbox.appendChild(createChatLi(userMessage, "outgoing"));
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-
-        setTimeout(() => {
-            // Display "Thinking..." message while waiting for the response
-            const incomingChatLi = createChatLi("Constructing answer, wait ", "incoming");
-            chatbox.appendChild(incomingChatLi);
-            chatbox.scrollTo(0, chatbox.scrollHeight);
-            generateResponse(incomingChatLi, userMessage);
-        }, 600);
-    }
-
-    chatInput.addEventListener("input", () => {
-        // Adjust the height of the input textarea based on its content
-        chatInput.style.height = `${inputInitHeight}px`;
-        chatInput.style.height = `${chatInput.scrollHeight}px`;
-    });
-
-    chatInput.addEventListener("keydown", (e) => {
-        // If Enter key is pressed without Shift key and the window
-        // width is greater than 800px, handle the chat
-        if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-            e.preventDefault();
-            handleChat();
-        }
-    });
-
-    sendChatBtn.addEventListener("click", handleChat);
-    closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-</script>
-
 </body>
 </html>
