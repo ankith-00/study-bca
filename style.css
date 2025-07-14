@@ -1,5 +1,5 @@
 /* AUTHOR   : ANKITH KUMAR          */
-/* PROJECT  : STUDY ( BCA )         */
+/* PROJECT  : study-bca             */
 /* BENGALURU CITY UNIVERSITY        */
 
 
@@ -74,9 +74,10 @@ html{
     
 }.menu_content a {
     text-decoration : none;
-    font-size : 0.95em;
+    font-size : 1em;
     padding-top : 0.5em;
     color : #fff;
+    font-weight: 300;
     
 }.material-symbols-outlined{
     font-size : 2.5em;
@@ -213,7 +214,7 @@ html{
     font-weight: 600;
     padding-left: 0px
 }.card-list p {
-    font-size : 0.9em;
+    font-size : 0.95em;
     color : #000;
 }
 
@@ -226,7 +227,7 @@ html{
 }.upload h3{
     padding-left: 0em;
 }.upload p, .footer p{
-    font-size: 0.9em;
+    font-size: 1.05em;
 
 }.upload button{
     background-color: #28282B;
@@ -316,7 +317,7 @@ html{
     color : #28282B;
 
 }.upload_popup p, label{
-    font-size: 0.9em;
+    font-size: 0.95em;
 
 }.upload_popup input{
     cursor: pointer;
@@ -410,6 +411,83 @@ html{
 
 
 
+/* ADV POPUP */
+.adv-popup-background{
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 8rem; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.5px);
+-webkit-backdrop-filter: blur(1.5px);
+border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.flex-center{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adv-popup{
+    height: fit-content;
+    width: 30%;
+    background-color: #fff;
+    margin-top: -3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8em;
+    padding: 1.3em;
+    
+    /* Box Shadow CSS */
+    -webkit-box-shadow: -3px 9px 20px -8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -3px 9px 20px -8px rgba(0, 0, 0, 0.5);
+    box-shadow: -3px 9px 20px -8px rgba(0, 0, 0, 0.5);
+    /* Box Settings */
+    border-radius: 0.3em;
+    background-color: #ffffff;
+}
+
+.adv-buttons {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+
+}.adv-buttons button{
+    padding: 0.6em 4em;
+    font-size: 1em;
+    background: #000;
+    border: none;
+    border-radius: 0.3em;
+    color: #fff;
+    cursor: pointer;
+}
+.adv-buttons #close{
+    background: #bfbebe;
+    color: #000;
+
+}
+
+
+
+#mark{
+    font-size: 0.95em;
+}
+
 /* Styles to prevent zooming */
 @media only screen and (max-device-width: 480px) {
     html {
@@ -494,6 +572,19 @@ html{
         margin-top: -2em;
         padding: 0 0;
     }
+
+    /* ADV */
+    .adv-popup{
+        width: 82%;
+        margin-top: 1.2em;
+        height: fit-content;
+        padding: 2em 1em 1.5em 1em;
+    }
+    .adv-popup img{
+        width: 90%;
+    }
+    .adv-buttons button{
+        padding: 0.7em 2.8em;
+    }
+
 }
-
-
