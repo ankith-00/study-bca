@@ -530,7 +530,7 @@ border: 1px solid rgba(255, 255, 255, 0.09);
         align-items: center;
     }
     .box img{
-        padding-top: 1em;
+        padding-top: 2.5em;
         padding-left: 0;
         width : 95%;
         object-fit: cover;
