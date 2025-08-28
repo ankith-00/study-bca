@@ -509,7 +509,7 @@ border: 1px solid rgba(255, 255, 255, 0.09);
 
     /* LANDING PAGE  */
     .landing_page{ 
-        padding-top: 0px;
+        padding-top: 2px;
         padding: 1.5em;
         flex-direction: column-reverse;
     }
@@ -530,7 +530,7 @@ border: 1px solid rgba(255, 255, 255, 0.09);
         align-items: center;
     }
     .box img{
-        padding-top: 2.5em;
+        padding-top: 4em;
         padding-left: 0;
         width : 95%;
         object-fit: cover;
