@@ -538,7 +538,10 @@ border: 1px solid rgba(255, 255, 255, 0.09);
     .landing_page .explore{
         transform: translateY(-40px);
        
-    }.landing_page button{
+    }.explore{
+        mmargin-top: 1.5em;
+    }
+    .landing_page button{
         margin-top : 1.5em;
     } 
 
