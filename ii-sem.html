@@ -131,12 +131,18 @@ table {
   
 }
 
+.footer-head{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
 /* FOOTER */
 .footer{
-    position    : absolute;
+    position    : relative;
     width       : auto;
     bottom      : 1.5em;
-    width       : 100%;
+    /* width       : 50%; */
     text-align  : center;
 }
 
@@ -196,12 +202,88 @@ a{
 <div class="container">
     <!-- CONTAINER CONTENT -->
     <div class="container-content">
-    
+        <h3> I - YEAR &nbsp;|&nbsp; II  - SEM : SEP</h3> <br/><br/>
+
+        <!-- SUB - 01 -->
+        <h3 class="MH">Data Structure</h3>
+        <div class="rec-container">
+            <!-- UNIT - I -->           
+            <div class="box" onclick="location.href=' ';" >       
+                <img src="https://i.ibb.co/RG5q8xt6/Data-Structure.png" height="90" width="90"/>
+                <span style="margin-left: 8px;">UNIT - I </span>      
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href='https://drive.google.com/file/d/1qSwuVWvawCOZBLIcKUd3bLzQfI5FpVkv/view';"> 
+                <img src="https://i.ibb.co/qMHFBQSp/Array.png" height="80" width="80"/>
+                <span style="margin-left: 14px;"> UNIT - II </span>     
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href='https://drive.google.com/file/d/1oHZRWsB2YIAyq4Uifr0pZ_s9FS65gjjp/view';">       
+                <img src="https://i.ibb.co/YBJmCDmT/layer.png" height="90" width="90" />
+                <span style="margin-left: 20px;"> UNIT - III </span>
+            </div> 
+            <!-- UNIT - Iv -->
+            <div class="box" onclick="location.href='https://drive.google.com/file/d/1KJHvmV1VxGg1Yq_yPZnr-O7vTXixTLSj/view';"> 
+                <img src="https://i.ibb.co/WvKJk7Sg/Tree.png" height="90" width="90"/>
+                <span > UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
+        <!-- SUB - 02 -->
+        <h3 class="MH">OOP Using Java</h3>
+        <div class="rec-container">
+            <!-- UNIT - I -->           
+            <div class="box" onclick="location.href=' ';" >       
+                <img src="https://i.ibb.co/SX3pSJnh/class.png" height="90" width="90"/>
+                <span style="margin-left: 8px;">UNIT - I </span>      
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href='';"> 
+                <img src="https://i.ibb.co/8Dd0ntwZ/inheritance.png" height="80" width="80"/>
+                <span style="margin-left: 14px;"> UNIT - II </span>     
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href='';">       
+                <img src="https://i.ibb.co/VcgYdtsc/cli.png" height="90" width="90" />
+                <span style="margin-left: 20px;"> UNIT - III </span>
+            </div> 
+            <!-- UNIT - Iv -->
+            <div class="box" onclick="location.href='';"> 
+                <img src="https://i.ibb.co/hx3b5MHj/web-programming.png" height="90" width="90"/>
+                <span > UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
+         <!-- SUB - 03 -->
+        <h3 class="MH">Operating System</h3>
+        <div class="rec-container">
+            <!-- UNIT - I -->           
+            <div class="box" onclick="location.href=' ';" >       
+                <img src="https://i.ibb.co/bBrYJds/venn-diagram.png" height="90" width="90"/>
+                <span style="margin-left: 8px;">UNIT - I </span>      
+            </div>
+            <!-- UNIT - II -->
+            <div class="box" onclick="location.href='';"> 
+                <img src="https://i.ibb.co/wg62zL4/diversify.png" height="80" width="80"/>
+                <span style="margin-left: 14px;"> UNIT - II </span>     
+            </div>
+            <!-- UNIT - III -->
+            <div class="box" onclick="location.href='';">       
+                <img src="https://i.ibb.co/9HjHyzB/matrix.png" height="90" width="90" />
+                <span style="margin-left: 20px;"> UNIT - III </span>
+            </div> 
+            <!-- UNIT - Iv -->
+            <div class="box" onclick="location.href='';"> 
+                <img src="https://i.ibb.co/2PxKWNZ/graphs.png" height="90" width="90"/>
+                <span > UNIT - IV </span>
+            </div> 
+        </div> <br/><br/>
+
         <!-- LAB MANUALS -->
         <p class="label"> Data Structure &nbsp; & &nbsp; Java&nbsp; Lab Manual</p> 
         <div class="rec-container">
-            <!-- DAA LAB MANUAL -->
-            <div class="box" onclick="location.href=' ';">
+            <!-- JAVA LAB MANUAL -->
+            <div class="box" onclick="location.href='https://drive.google.com/file/d/1zrypdC5PUM-C7GbpwBvINUWLG7-Koacm/view';">
                 <img src="https://i.ibb.co/k28s6nc/notebook.png" height="110" width="110" >
                 <span> Java</span>   
             </div>
@@ -250,6 +332,10 @@ a{
 <!-- CONTAINER ENDS HERE -->  
 
 <!-- FOOTER -->
-<p class="footer">Design and Devloped BY : <a href="https://www.instagram.com/itz.ankith.sharma" style="text-decoration: underline;">ANKITH</a></p>
+ <div class="footer-head">
+    <p class="footer">Design and Devloped BY : <a href="https://www.instagram.com/itz.ankith.sharma" style="text-decoration: underline;">ANKITH</a></p>
+    <p class="footer">Maintain BY : <a href="https://www.linkedin.com/in/mohammed-shaiq" style="text-decoration: underline;">MOHAMMED SHAIQ</a></p>
+ </div>
+
 </body>
 </html>
